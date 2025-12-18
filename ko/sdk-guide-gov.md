@@ -1,12 +1,20 @@
+<a id="machine.learning.sdk.usage.guide"></a>
+
 ## Machine Learning > AI EasyMaker > SDK 사용 가이드
 
+<a id="sdk.settings"></a>
+
 ## SDK 설정
+
+<a id="sdk.settings.sdk.install"></a>
 
 ### AI EasyMaker 파이썬 SDK 설치
 
 python -m pip install easymaker
 
 - AI EasyMaker 노트북에는 기본적으로 설치되어 있습니다.
+
+<a id="sdk.settings.sdk.init"></a>
 
 ### AI EasyMaker SDK 초기화
 
@@ -27,7 +35,11 @@ easymaker.init(
 )
 ```
 
+<a id="experiment"></a>
+
 ## 실험
+
+<a id="experiment.create"></a>
 
 ### 실험 생성
 
@@ -49,6 +61,8 @@ experiment = easymaker.Experiment().create(
 )
 ```
 
+<a id="experiment.list"></a>
+
 ### 실험 목록 조회
 
 ```python
@@ -56,6 +70,8 @@ experiment_list = easymaker.Experiment.get_list()
 for experiment in experiment_list:
     experiment.print_info()
 ```
+
+<a id="experiment.delete"></a>
 
 ### 실험 삭제
 
@@ -69,7 +85,11 @@ for experiment in experiment_list:
 easymaker.Experiment(experiment_id).delete()
 ```
 
+<a id="training"></a>
+
 ## 학습
+
+<a id="training.image.list"></a>
 
 ### 이미지 목록 조회
 
@@ -79,6 +99,8 @@ for image in image_list:
     image.print_info()
 ```
 
+<a id="training.instance.list"></a>
+
 ### 인스턴스 목록 조회
 
 ```python
@@ -86,6 +108,8 @@ instance_type_list = easymaker.Training.get_instance_type_list()
 for instance in instance_type_list:
     instance.print_info()
 ```
+
+<a id="training.create"></a>
 
 ### 학습 생성
 
@@ -158,6 +182,8 @@ training = easymaker.Training().run(
 )
 ```
 
+<a id="training.list"></a>
+
 ### 학습 목록 조회
 
 ```python
@@ -165,6 +191,8 @@ training_list = easymaker.Training.get_list()
 for training in training_list:
     training.print_info()
 ```
+
+<a id="training.delete"></a>
 
 ### 학습 삭제
 
@@ -178,7 +206,11 @@ for training in training_list:
 easymaker.Training(training_id).delete()
 ```
 
+<a id="hyperparameter.tuning"></a>
+
 ## 하이퍼파라미터 튜닝
+
+<a id="hyperparameter.tuning.image.list"></a>
 
 ### 이미지 목록 조회
 
@@ -188,6 +220,8 @@ for image in image_list:
     image.print_info()
 ```
 
+<a id="hyperparameter.tuning.instance.list"></a>
+
 ### 인스턴스 목록 조회
 
 ```python
@@ -195,6 +229,8 @@ instance_type_list = easymaker.HyperparameterTuning.get_instance_type_list()
 for instance in instance_type_list:
     instance.print_info()
 ```
+
+<a id="hyperparameter.tuning.create"></a>
 
 ### 하이퍼파라미터 튜닝 생성
 
@@ -306,6 +342,8 @@ hyperparameter_tuning = easymaker.HyperparameterTuning().run(
 )
 ```
 
+<a id="hyperparameter.tuning.list"></a>
+
 ### 하이퍼파라미터 튜닝 목록 조회
 
 ```python
@@ -313,6 +351,8 @@ hyperparameter_tuning_list = easymaker.HyperparameterTuning.get_list()
 for hyperparameter_tuning in hyperparameter_tuning_list:
     hyperparameter_tuning.print_info()
 ```
+
+<a id="hyperparameter.tuning.delete"></a>
 
 ### 하이퍼파라미터 튜닝 삭제
 
@@ -326,7 +366,11 @@ for hyperparameter_tuning in hyperparameter_tuning_list:
 easymaker.HyperparameterTuning(hyperparameter_tuning_id).delete()
 ```
 
+<a id="model"></a>
+
 ## 모델
+
+<a id="model.create"></a>
 
 ### 모델 생성
 
@@ -388,6 +432,8 @@ model = easymaker.Model().create_hugging_face_model(
 )
 ```
 
+<a id="model.list"></a>
+
 ### 모델 목록 조회
 
 ```python
@@ -395,6 +441,8 @@ model_list = easymaker.Model.get_list()
 for model in model_list:
     model.print_info()
 ```
+
+<a id="model.delete"></a>
 
 ### 모델 삭제
 
@@ -408,7 +456,11 @@ for model in model_list:
 easymaker.Model(model_id).delete()
 ```
 
+<a id="model.evaluation"></a>
+
 ## 모델 평가
+
+<a id="model.evaluation.instance.list"></a>
 
 ### 인스턴스 목록 조회
 
@@ -417,6 +469,8 @@ instance_type_list = easymaker.ModelEvaluation.get_instance_type_list()
 for instance in instance_type_list:
     instance.print_info()
 ```
+
+<a id="model.evaluation.create"></a>
 
 ### 모델 평가 생성
 
@@ -489,6 +543,8 @@ classification_model_evaluation  = easymaker.ModelEvaluation().create(
 )
 ```
 
+<a id="model.evaluation.list"></a>
+
 ### 모델 평가 목록 조회
 
 ```python
@@ -496,6 +552,8 @@ model_evaluation_list = easymaker.ModelEvaluation.get_list()
 for model_evaluation in model_evaluation_list:
     model_evaluation.print_info()
 ```
+
+<a id="model.evaluation.delete"></a>
 
 ### 모델 평가 삭제
 
@@ -509,7 +567,11 @@ for model_evaluation in model_evaluation_list:
 easymaker.ModelEvaluation(model_evaluation_id).delete()
 ```
 
+<a id="endpoint"></a>
+
 ## 엔드포인트
+
+<a id="endpoint.instance.list"></a>
 
 ### 인스턴스 목록 조회
 
@@ -518,6 +580,8 @@ instance_type_list = easymaker.Endpoint.get_instance_type_list()
 for instance in instance_type_list:
     instance.print_info()
 ```
+
+<a id="endpoint.create"></a>
 
 ### 엔드포인트 생성
 
@@ -565,6 +629,8 @@ endpoint = easymaker.Endpoint().create(
     # wait=False,
 )
 ```
+
+<a id="endpoint.stage"></a>
 
 ### 스테이지 추가
 
@@ -616,6 +682,8 @@ endpoint_stage = easymaker.EndpointStage().create(
 )
 ```
 
+<a id="endpoint.stage.list"></a>
+
 ### 스테이지 목록 조회
 
 엔드포인트 스테이지 목록을 조회합니다.
@@ -623,6 +691,8 @@ endpoint_stage = easymaker.EndpointStage().create(
 ```python
 endpoint_stage_list = easymaker.Endpoint(endpoint_id).get_stage_list()
 ```
+
+<a id="endpoint"></a>
 
 ### 엔드포인트 인퍼런스
 
@@ -646,6 +716,8 @@ easymaker.EndpointStage('endpoint_stage_id').predict(
 )
 ```
 
+<a id="endpoint.list"></a>
+
 ### 엔드포인트 목록 조회
 
 ```python
@@ -653,6 +725,8 @@ endpoint_list = easymaker.Endpoint.get_list()
 for endpoint in endpoint_list:
     endpoint.print_info()
 ```
+
+<a id="endpoint.delete"></a>
 
 ### 엔드포인트 삭제
 
@@ -666,6 +740,8 @@ for endpoint in endpoint_list:
 easymaker.Endpoint(endpoint_id).delete()
 ```
 
+<a id="endpoint.stage.delete"></a>
+
 ### 엔드포인트 스테이지 삭제
 
 [파라미터]
@@ -678,7 +754,11 @@ easymaker.Endpoint(endpoint_id).delete()
 easymaker.EndpointStage(stage_id).delete()
 ```
 
+<a id="batch.inference"></a>
+
 ## 배치 추론
+
+<a id="batch.inference.instance.list"></a>
 
 ### 인스턴스 목록 조회
 
@@ -687,6 +767,8 @@ instance_type_list = easymaker.BatchInference.get_instance_type_list()
 for instance in instance_type_list:
     instance.print_info()
 ```
+
+<a id="batch.inference.create"></a>
 
 ### 배치 추론 생성
 
@@ -734,6 +816,8 @@ batch_inference = easymaker.BatchInference().run(
 )
 ```
 
+<a id="batch.inference.list"></a>
+
 ### 배치 추론 목록 조회
 
 ```python
@@ -741,6 +825,8 @@ batch_inference_list = easymaker.BatchInference.get_list()
 for batch_inference in batch_inference_list:
     batch_inference.print_info()
 ```
+
+<a id="batch.inference.delete"></a>
 
 ### 배치 추론 삭제
 
@@ -754,7 +840,11 @@ for batch_inference in batch_inference_list:
 easymaker.BatchInference(batch_inference_id).delete()
 ```
 
+<a id="pipeline"></a>
+
 ## 파이프라인
+
+<a id="pipeline.create"></a>
 
 ### 파이프라인 생성
 
@@ -776,6 +866,8 @@ pipeline = easymaker.Pipeline().upload(
 )
 ```
 
+<a id="pipeline.list"></a>
+
 ### 파이프라인 목록 조회
 
 ```python
@@ -783,6 +875,8 @@ pipeline_list = easymaker.Pipeline.get_list()
 for pipeline in pipeline_list:
     pipeline.print_info()
 ```
+
+<a id="pipeline.delete"></a>
 
 ### 파이프라인 삭제
 
@@ -796,6 +890,8 @@ for pipeline in pipeline_list:
 easymaker.Pipeline(pipeline_id).delete()
 ```
 
+<a id="pipeline.instance.list"></a>
+
 ### 인스턴스 목록 조회
 
 ```python
@@ -803,6 +899,8 @@ instance_type_list = easymaker.PipelineRun.get_instance_type_list()
 for instance in instance_type_list:
     instance.print_info()
 ```
+
+<a id="pipeline.run.create"></a>
 
 ### 파이프라인 실행 생성
 
@@ -844,6 +942,8 @@ pipeline_run = easymaker.PipelineRun().create(
 )
 ```
 
+<a id="pipeline.run.list"></a>
+
 ### 파이프라인 실행 목록 조회
 
 ```python
@@ -851,6 +951,8 @@ pipeline_run_list = easymaker.PipelineRun.get_list()
 for pipeline_run in pipeline_run_list:
     pipeline_run.print_info()
 ```
+
+<a id="pipeline.run.delete"></a>
 
 ### 파이프라인 실행 삭제
 
@@ -863,6 +965,8 @@ for pipeline_run in pipeline_run_list:
 ```python
 easymaker.PipelineRun(pipeline_run_id).delete()
 ```
+
+<a id="pipeline.schedule.create"></a>
 
 ### 파이프라인 일정 생성
 
@@ -912,6 +1016,8 @@ pipeline_recurring_run = easymaker.PipelineRecurringRun().create(
 )
 ```
 
+<a id="pipeline.schedule.stop.start"></a>
+
 ### 파이프라인 일정 중지/재시작
 
 [파라미터]
@@ -926,6 +1032,8 @@ easymaker.PipelineRecurringRun(pipeline_recurring_run_id).start()
 
 ```
 
+<a id="pipeline.schedule.list"></a>
+
 ### 파이프라인 일정 목록 조회
 
 ```python
@@ -933,6 +1041,8 @@ pipeline_recurring_run_list = easymaker.PipelineRecurringRun.get_list()
 for pipeline_recurring_run in pipeline_recurring_run_list:
     pipeline_recurring_run.print_info()
 ```
+
+<a id="pipeline.schedule.delete"></a>
 
 ### 파이프라인 일정 삭제
 
@@ -946,7 +1056,11 @@ for pipeline_recurring_run in pipeline_recurring_run_list:
 easymaker.PipelineRecurringRun(pipeline_recurring_run_id).delete()
 ```
 
+<a id="feature"></a>
+
 ## 기타 기능
+
+<a id="feature.log.and.crash.search.log"></a>
 
 ### NHN Cloud - Log & Crash Search 로그 전송
 
@@ -958,6 +1072,8 @@ easymaker_logger.send(log_message='log meassage',
                       project_version='2.0.0',  # default: 1.0.0
                       parameters={'serviceType': 'EasyMakerSample'})  # Add custom parameters
 ```
+
+<a id="feature.object.storage"></a>
 
 ### NHN Cloud - Object Storage 파일 전송
 

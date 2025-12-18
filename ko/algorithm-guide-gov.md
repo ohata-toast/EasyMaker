@@ -1,11 +1,17 @@
+<a id="machine.learning.algorithm.guide"></a>
+
 ## Machine Learning > AI EasyMaker > NHN Cloud 제공 알고리즘 가이드
 
 NHN Cloud AI EasyMaker에서 제공하는 알고리즘을 소개합니다.
 기본 알고리즘을 활용하면 데이터 세트만 준비하면 별도로 학습 코드를 작성하지 않아도 머신 러닝 모델을 생성할 수 있습니다.
 
+<a id="image.classification"></a>
+
 ## Image Classification
 
 이미지의 종류를 분류하는 알고리즘(ResNet-50)입니다.
+
+<a id="image.classification.hyperparameter"></a>
 
 ### 하이퍼파라미터
 
@@ -18,9 +24,13 @@ NHN Cloud AI EasyMaker에서 제공하는 알고리즘을 소개합니다.
 | num_train_epochs | False | int | 3 | [1~∞)   | 전체 training을 수행하는 총횟수  |
 | logging_steps  | False | int | 500 | [500~∞)   | 로그를 출력하는 step 주기 |
 
+<a id="image.classification.data.set"></a>
+
 ### 데이터 세트
 
 train, validation, test 데이터 세트를 준비합니다.
+
+<a id="image.classification.data.set.train"></a>
 
 #### train(필수)
 
@@ -42,6 +52,8 @@ folder/train/dog/golden_retriever.png
 ...
 ```
 
+<a id="image.classification.data.set.validation"></a>
+
 #### validation(필수)
 
 검증을 위한 데이터 세트입니다. 데이터 세트는 다음과 같이 정의된 디렉터리 구조로 준비해야 합니다.
@@ -61,6 +73,8 @@ folder/validation/dog/billy.png
 folder/validation/dog/calupoh.png
 ...
 ```
+
+<a id="image.classification.data.set.test"></a>
 
 #### test(선택)
 
@@ -82,6 +96,8 @@ folder/test/dog/cretan_hound.png
 ...
 ```
 
+<a id="image.classification.metric"></a>
+
 ### 지표
 
 Image Classification 알고리즘은 다음의 지표를 생성합니다.
@@ -94,9 +110,13 @@ Image Classification 알고리즘은 다음의 지표를 생성합니다.
 | Recall | 각 클래스 별(모델이 올바르게 예측한 데이터 수/모델이 해당 클래스로 예측한 데이터 수)의 평균 |
 | F1-Score | Precision과 Recall의 조화 평균 |
 
+<a id="image.classification.inference"></a>
+
 ### 추론
 
 학습된 모델로 엔드포인트를 생성하고 추론을 요청하려면 [엔드포인트 생성과 추론 요청](./algorithm-guide-gov/#_15) 문서를 참고하세요.
+
+<a id="image.classification.inference.response.format"></a>
 
 #### 응답 형식
 
@@ -117,9 +137,13 @@ Image Classification 알고리즘은 다음의 지표를 생성합니다.
 ]
 ```
 
+<a id="semantic.segmentation"></a>
+
 ## Semantic Segmentation
 
 이미지 내의 모든 픽셀 영역의 레이블을 예측하는 알고리즘(SegFormer-B3)입니다.
+
+<a id="semantic.segmentation.hyperparameter"></a>
 
 ### 하이퍼파라미터
 
@@ -130,9 +154,13 @@ Image Classification 알고리즘은 다음의 지표를 생성합니다.
 | num_train_epochs | False | float | 3.0           | [0.0~∞) | 전체 training을 수행하는 총횟수  |
 | logging_steps  | False | int | 500            | [500~∞)   | 로그를 출력하는 step 주기 |
 
+<a id="semantic.segmentation.data.set"></a>
+
 ### 데이터 세트
 
 train, validation, resources, test 데이터 세트를 준비합니다.
+
+<a id="semantic.segmentation.data.set.train"></a>
 
 #### train(필수)
 
@@ -177,6 +205,8 @@ folder/train/annotations/0003.png
 * image: 이미지 파일 경로를 작성합니다.
 * seg_map: segmentation map 파일 경로를 작성합니다.
 
+<a id="semantic.segmentation.data.set.validation"></a>
+
 #### validation(필수)
 
 검증을 위한 데이터 세트입니다. 데이터 세트는 다음과 같은 정의된 디렉터리 구조로 준비해야 합니다.
@@ -219,6 +249,8 @@ folder/validation/annotations/0003.png
 * image: 이미지 파일 경로를 작성합니다.
 * seg_map: segmentation map 파일 경로를 작성합니다.
 
+<a id="semantic.segmentation.data.set.resources"></a>
+
 #### resources(필수)
 
 모델을 설정할 때 필요한 레이블 클래스에 레이블 ID를 매핑하기 위한 Key-Value 형식의 Dictionary를 작성합니다.
@@ -238,6 +270,8 @@ folder/resources/id2lable.json
     "...": "..."
 }
 ```
+
+<a id="semantic.segmentation.data.set.test"></a>
 
 #### test(선택)
 
@@ -281,6 +315,8 @@ image와 segmentation map의 매핑 파일을 작성합니다.
 * image: 이미지 파일 경로를 작성합니다.
 * seg_map: segmentation map 파일 경로를 작성합니다.
 
+<a id="semantic.segmentation.metric"></a>
+
 ### 지표
 
 Semantic Segmentation 알고리즘은 다음의 지표를 생성합니다.
@@ -294,9 +330,13 @@ Semantic Segmentation 알고리즘은 다음의 지표를 생성합니다.
 | per_category_accuracy | 클래스 별 모델이 예측한 값과 정답이 같은 비율 |
 | per_category_iou | 클래스 별 모델이 예측한 영역과 정답 영역의 겹치는 비율 |
 
+<a id="semantic.segmentation.inference"></a>
+
 ### 추론
 
 학습된 모델로 엔드포인트를 생성하고 추론을 요청하려면 [엔드포인트 생성과 추론 요청](./algorithm-guide-gov/#_15) 문서를 참고하세요.
+
+<a id="semantic.segmentation.inference.response.format"></a>
 
 #### 응답 형식
 
@@ -318,9 +358,13 @@ Semantic Segmentation 알고리즘은 다음의 지표를 생성합니다.
 }
 ```
 
+<a id="object.detection"></a>
+
 ## Object Detection
 
 이미지 내 존재하는 모든 객체의 위치(bbox) 및 종류(class)를 예측하는 알고리즘(detr-resnet-50)입니다.
+
+<a id="object.detection.hyperparameter"></a>
 
 ### 하이퍼파라미터
 
@@ -332,9 +376,13 @@ Semantic Segmentation 알고리즘은 다음의 지표를 생성합니다.
 | num_train_epochs | False | float | 3.0 | [0.0~∞)   | 전체 training을 수행하는 총횟수 |
 | logging_steps  | False | int | 500 | [500~∞)   | 로그를 출력하는 step 주기 |
 
+<a id="object.detection.data.set"></a>
+
 ### 데이터 세트
 
 train, test 데이터 세트를 준비합니다.
+
+<a id="object.detection.data.set.train"></a>
 
 #### train(필수)
 
@@ -457,6 +505,8 @@ COCO Dataset의 형식으로 작성합니다.
 }
 ```
 
+<a id="object.detection.data.set.validation"></a>
+
 #### validation(필수)
 
 검증을 위한 데이터 세트입니다. 데이터 세트는 다음과 같이 정의된 디렉터리 구조로 준비해야 합니다.
@@ -473,6 +523,8 @@ folder/validation/0003.png
 * _annotations.coco.json 파일
 COCO Dataset의 형식으로 작성합니다.
 자세한 형식은 [COCO Dataset의 format-data](https://cocodataset.org/#format-data) 문서의 Data format과 Object Detection 내용을 참고합니다.
+
+<a id="object.detection.data.set.test"></a>
 
 #### test(필수)
 
@@ -491,9 +543,13 @@ folder/test/0003.png
 COCO Dataset의 형식으로 작성합니다.
 자세한 형식은 [COCO Dataset의 format-data](https://cocodataset.org/#format-data) 문서의 Data format과 Object Detection 내용을 참고합니다.
 
+<a id="object.detection.inference"></a>
+
 ### 추론
 
 학습된 모델로 엔드포인트를 생성하고 추론을 요청하려면 [엔드포인트 생성과 추론 요청](./algorithm-guide-gov/#_15) 문서를 참고하세요.
+
+<a id="object.detection.inference.response.format"></a>
 
 #### 응답 형식
 
@@ -524,6 +580,8 @@ detection된 object의 bbox(xmin, ymin, xmax, ymax) 목록을 반환합니다.
 }
 ```
 
+<a id="endpoint.create.inference.request"></a>
+
 ## 엔드포인트 생성과 추론 요청
 
 학습이 완료된 모델로 엔드포인트를 생성하고 추론을 하려면 다음의 가이드를 참고하세요.
@@ -533,6 +591,8 @@ detection된 object의 bbox(xmin, ymin, xmax, ymax) 목록을 반환합니다.
 3. (2) 에서 생성한 모델로 **엔드포인트 생성** 을 클릭합니다. 엔드포인트 설정 정보를 입력한 후 엔드포인트를 생성합니다.
 4. 생성 완료된 엔드포인트 이름을 클릭하고, 스테이지를 선택합니다.
 5. 스테이지 엔드포인트 URL을 통해 실시간 추론 API를 요청할 수 있습니다.
+
+<a id="endpoint.create.inference.request"></a>
 
 ### 요청
 
@@ -550,6 +610,8 @@ detection된 object의 bbox(xmin, ymin, xmax, ymax) 목록을 반환합니다.
 ```
 
 * image_to_bytes_array 값은 이미지를 Base64 Byte Array 변환한 값입니다. [참고] 이미지 바이트 배열 변환 파이썬 코드 내용을 참고하세요.
+
+<a id="endpoint.create.inference.request.note.image"></a>
 
 ### [참고] 이미지 바이트 배열 변환 파이썬 코드
 
