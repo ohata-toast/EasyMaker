@@ -114,7 +114,7 @@ Image Classification 알고리즘은 다음의 지표를 생성합니다.
 
 ### 추론
 
-학습된 모델로 엔드포인트를 생성하고 추론을 요청하려면 [엔드포인트 생성과 추론 요청](./algorithm-guide/#_15) 문서를 참고하세요.
+학습된 모델로 엔드포인트를 생성하고 추론을 요청하려면 [엔드포인트 생성과 추론 요청](#endpoint.create.inference.request) 문서를 참고하세요.
 
 <a id="image.classification.inference.response.format"></a>
 
@@ -334,7 +334,7 @@ Semantic Segmentation 알고리즘은 다음의 지표를 생성합니다.
 
 ### 추론
 
-학습된 모델로 엔드포인트를 생성하고 추론을 요청하려면 [엔드포인트 생성과 추론 요청](./algorithm-guide/#_15) 문서를 참고하세요.
+학습된 모델로 엔드포인트를 생성하고 추론을 요청하려면 [엔드포인트 생성과 추론 요청](#endpoint.create.inference.request) 문서를 참고하세요.
 
 <a id="semantic.segmentation.inference.response.format"></a>
 
@@ -547,7 +547,7 @@ COCO Dataset의 형식으로 작성합니다.
 
 ### 추론
 
-학습된 모델로 엔드포인트를 생성하고 추론을 요청하려면 [엔드포인트 생성과 추론 요청](./algorithm-guide/#_15) 문서를 참고하세요.
+학습된 모델로 엔드포인트를 생성하고 추론을 요청하려면 [엔드포인트 생성과 추론 요청](#endpoint.create.inference.request) 문서를 참고하세요.
 
 <a id="object.detection.inference.response.format"></a>
 

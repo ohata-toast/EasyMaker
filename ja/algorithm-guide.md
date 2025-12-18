@@ -114,7 +114,7 @@ Image Classificationアルゴリズムは、次の指標を作成します。
 
 ### 推論
 
-学習されたモデルでエンドポイントを作成し、推論をリクエストするには、[エンドポイント作成と推論リクエスト](./algorithm-guide/#_15)文書を参照してください。
+学習されたモデルでエンドポイントを作成し、推論をリクエストするには、[エンドポイント作成と推論リクエスト](#endpoint.create.inference.request)文書を参照してください。
 
 <a id="image.classification.inference.response.format"></a>
 
@@ -334,7 +334,7 @@ Semantic Segmentationアルゴリズムは、次の指標を作成します。
 
 ### 推論
 
-学習されたモデルでエンドポイントを作成し、推論をリクエストするには、[エンドポイント作成と推論リクエスト](./algorithm-guide/#_15)文書を参照してください。
+学習されたモデルでエンドポイントを作成し、推論をリクエストするには、[エンドポイント作成と推論リクエスト](#endpoint.create.inference.request)文書を参照してください。
 
 <a id="semantic.segmentation.inference.response.format"></a>
 
@@ -547,7 +547,7 @@ COCO Datasetの形式で作成します。
 
 ### 推論
 
-学習されたモデルでエンドポイントを作成し、推論をリクエストするには、[エンドポイント作成と推論リクエスト](./algorithm-guide/#_15)文書を参照してください。
+学習されたモデルでエンドポイントを作成し、推論をリクエストするには、[エンドポイント作成と推論リクエスト](#endpoint.create.inference.request)文書を参照してください。
 
 <a id="object.detection.inference.response.format"></a>
 

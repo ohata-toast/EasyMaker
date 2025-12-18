@@ -42,7 +42,7 @@
 
 - ML 파이프라인 기능 추가
     - ML 파이프라인은 이식 가능하고 확장 가능한 기계 학습 워크플로우를 관리하고 실행하기 위한 기능입니다.
-    - 자세한 내용은 [ML 파이프라인 가이드](./console-guide/#_68) 문서를 참고하세요.
+    - 자세한 내용은 [ML 파이프라인 가이드](./console-guide/#pipeline) 문서를 참고하세요.
 - 엔드포인트 기능 개선
     - 리소스 할당을 최적화했습니다.
 - PyTorch no-archive 모델 서빙 지원
@@ -68,7 +68,7 @@
 
 - 배치 추론 기능 추가
     - AI EasyMaker의 모델로 배치 추론하고 추론 결과를 통계로 확인할 수 있는 환경을 제공합니다.
-    - 자세한 내용은 [배치 추론 가이드](./console-guide/#_51) 문서를 참고하세요.
+    - 자세한 내용은 [배치 추론 가이드](./console-guide/#batch.inference) 문서를 참고하세요.
 - 리소스 검색 기능 추가
     - 콘솔 화면에서 리소스를 검색하고, 링크를 통해서 다른 리소스 화면으로 이동할 수 있습니다.
 - 노트북 NAS 변경 기능 추가
@@ -134,12 +134,12 @@
 
 - 하이퍼파라미터 튜닝 기능 추가
     - 하이퍼파라미터 튜닝은 머신러닝 모델의 예측 정확도와 성능을 높이기 위해 최적화된 하이퍼파라미터를 찾아 낼 수 있도록 반복 실험을 자동화하는 기능입니다.
-    - 자세한 내용은 [하이퍼파라미터 튜닝 가이드](./console-guide/#_18) 문서를 참고하세요.
+    - 자세한 내용은 [하이퍼파라미터 튜닝 가이드](./console-guide/#hyperparameter.tuning) 문서를 참고하세요.
 - NHN Cloud AI EasyMaker에서 제공하는 기본 알고리즘 3종 추가
     - 자세한 내용은 각 알고리즘의 가이드 문서를 참고하세요.
-    - [Image Classification 가이드](./algorithm-guide/#image-classification)
-    - [Object Detection 가이드](./algorithm-guide/#object-detection)
-    - [Semantic Segmentation 가이드](./algorithm-guide/#semantic-segmentation)
+    - [Image Classification 가이드](./algorithm-guide/#image.classification)
+    - [Object Detection 가이드](./algorithm-guide/#object.detection)
+    - [Semantic Segmentation 가이드](./algorithm-guide/#semantic.segmentation)
 
 <a id="ai.easymaker.release.notes.2022.12.27"></a>
 

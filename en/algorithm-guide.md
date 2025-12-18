@@ -114,7 +114,7 @@ Indicators generated during training can be checked through **Training > Go to T
 
 ### Inference
 
-To create an endpoint with a trained model and request inference, see [Create Endpoint and Request Inference](./algorithm-guide/#create-endpoint-and-request-inference).
+To create an endpoint with a trained model and request inference, see [Create Endpoint and Request Inference](#endpoint.create.inference.request).
 
 <a id="image.classification.inference.response.format"></a>
 
@@ -334,7 +334,7 @@ Indicators generated during training can be checked through **Training > Go to T
 
 ### Inference
 
-To create an endpoint with a trained model and request inference, see [Create Endpoint and Request Inference](./#create-endpoint-and-request-inference).
+To create an endpoint with a trained model and request inference, see [Create Endpoint and Request Inference](#endpoint.create.inference.request).
 
 <a id="semantic.segmentation.inference.response.format"></a>
 
@@ -547,7 +547,7 @@ For detailed format, refer to Data format and Object Detection in the [format-da
 
 ### Inference
 
-To create an endpoint with a trained model and request inference, see [Create Endpoint and Request Inference](./algorithm-guide/#create-endpoint-and-request-inference).
+To create an endpoint with a trained model and request inference, see [Create Endpoint and Request Inference](#endpoint.create.inference.request).
 
 <a id="object.detection.inference.response.format"></a>
 

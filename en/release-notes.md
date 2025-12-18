@@ -68,7 +68,7 @@
 
 - Added the batch inference feature
     - Provides an environment to make batch inferences from an AI EasyMaker model and view inference results in statistics.
-    - For more information, see the [Batch Inference Guide](./console-guide/#_51) article.
+    - For more information, see the [Batch Inference Guide](./console-guide/#batch.inference) article.
 - Added the resource search feature
     - You can search for resources from the console screen, and navigate to other resource screens via links.
 - Added the feature to change NAS of notebooks
@@ -134,12 +134,12 @@
 
 - Added hyperparameter tuning feature
     - Hyperparameter tuning is the feature to automate repetitive experiments to find optimized hyperparameters to improve the predictive accuracy and performance of machine learning models.
-    - For more information, please see the [Hyperparameter Tuning Guide](./console-guide/#hyperparameter-tuning).
+    - For more information, please see the [Hyperparameter Tuning Guide](./console-guide/#hyperparameter.tuning).
 - Added 3 basic algorithms provided by NHN Cloud AI EasyMaker
     - For more information, please see the guide document of each algorithm.
-    - [Image Classification Guide](./algorithm-guide/#image-classification)
-    - [Object Detection Guide](./algorithm-guide/#object-detection)
-    - [Semantic Segmentation Guide](./algorithm-guide/#semantic-segmentation)
+    - [Image Classification Guide](./algorithm-guide/#image.classification)
+    - [Object Detection Guide](./algorithm-guide/#object.detection)
+    - [Semantic Segmentation Guide](./algorithm-guide/#semantic.segmentation)
 
 <a id="ai.easymaker.release.notes.2022.12.27"></a>
 

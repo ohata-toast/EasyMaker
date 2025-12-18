@@ -42,7 +42,7 @@
 
 - MLパイプライン機能追加
     - MLパイプラインは、移植可能で拡張可能な機械学習ワークフローを管理・実行するための機能です。
-    - 詳細は[MLパイプラインガイド](./console-guide/#_68)を参照してください。
+    - 詳細は[MLパイプラインガイド](./console-guide/#pipeline)を参照してください。
 - エンドポイント機能の改善
     - リソースの割り当てを最適化しました。
 - PyTorch no-archiveモデルサービングをサポート
@@ -68,7 +68,7 @@
 
 - バッチ推論機能を追加
     - AI EasyMakerのモデルでバッチ推論し、推論結果を統計で確認できる環境を提供します。
-    - 詳細は、[バッチ推論ガイド](./console-guide/#_51)文書を参照してください。
+    - 詳細は、[バッチ推論ガイド](./console-guide/#batch.inference)文書を参照してください。
 - リソース検索機能を追加
     - コンソール画面でリソースを検索し、リンクを介して他のリソース画面に移動できます。
 - ノートPCNAS変更機能を追加
@@ -134,12 +134,12 @@
 
 - ハイパーパラメータチューニング機能を追加
     - ハイパーパラメータチューニングは、マシンラーニングモデルの予測精度と性能を高めるために最適化されたハイパーパラメータを見つけられるように実験を自動化する機能です。
-    - 詳細は[ハイパーパラメータチューニングガイド](./console-guide/#_18)文書を参照してください。
+    - 詳細は[ハイパーパラメータチューニングガイド](./console-guide/#hyperparameter.tuning)文書を参照してください。
 - NHN Cloud AI EasyMakerが提供する基本アルゴリズムを3種追加
     - 詳細については、各アルゴリズムのガイド文書を参照してください。
-    - [Image Classificationガイド](./algorithm-guide/#image-classification)
-    - [Object Detectionガイド](./algorithm-guide/#object-detection)
-    - [Semantic Segmentationガイド](./algorithm-guide/#semantic-segmentation)
+    - [Image Classificationガイド](./algorithm-guide/#image.classification)
+    - [Object Detectionガイド](./algorithm-guide/#object.detection)
+    - [Semantic Segmentationガイド](./algorithm-guide/#semantic.segmentation)
 
 <a id="ai.easymaker.release.notes.2022.12.27"></a>
 
