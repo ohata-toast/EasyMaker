@@ -1,4 +1,4 @@
-<a id="ai.easymaker.console.usage.guide"></a>
+<a id="ai.easymaker.console.guide"></a>
 
 ## Machine Learning > AI EasyMaker > Console Guide
 
@@ -292,7 +292,7 @@ Set the training environment by selecting the instance and OS image to be traine
             - **algorithm path**
                 - **NHN Cloud Object Storage** : Enter the path of NHN Cloud Object Storage where algorithms are stored.<br>
                     - obs://{Object Enter the directory path in the format Storage API endpoint}/{containerName}/{path}.
-                    - When using NHN Cloud Object Storage, refer to [Appendix > 1. Adding AI EasyMaker System Account Permissions to NHN Cloud Object Storage](#appendix.1.object.storage.account) to set permissions. Model creation will fail if you do not set the necessary permissions.
+                    - When using NHN Cloud Object Storage, refer to [Appendix > 1. Adding AI EasyMaker System Account Permissions to NHN Cloud Object Storage](#appendix.1.object.storage.account.permission) to set permissions. Model creation will fail if you do not set the necessary permissions.
                 - **NHN Cloud NAS** : Enter the NHN Cloud NAS path where the algorithm is stored. <br>
                     nas://{NAS Enter the directory path in the format ID}:/{path}.
 
@@ -328,7 +328,7 @@ Set the training environment by selecting the instance and OS image to be traine
         - Used only when using NHN Cloud Object Storage. Please specify a size large enough to store all the data required for training.
     - **Maximum training time** : Specifies the maximum waiting time until training is complete. training that exceeds the maximum waiting time will be terminated.
     - **Log Management** : Logs generated during training can be stored in the NHN Cloud Log & Crash service.
-        - For more information, please refer to [Appendix > 2. NHN Cloud Log & Crash Search Service User Guide and Log Check](#appendix.2.log.and.crash.search.service.usage.log.list-service-usage-guide-and-log-inquiry-guide).
+        - For more information, please refer to [Appendix > 2. NHN Cloud Log & Crash Search Service User Guide and Log Check](#appendix.2.lncs.service.usage.guide.and.log.inquiry.guide).
 
 !!! danger "Caution"
     - Only NHN Cloud NAS created in the same project as AI EasyMaker can be used.
@@ -357,7 +357,7 @@ A list of studies is displayed. If you select a training from the list, you can 
 
 - **Operation**
     - **Go to TensorBoard** : TensorBoard, where you can check the statistical information of training, opens in a new browser window.<br/>
-    For how to leave a TensorBoard log, refer to [Appendix > 5. Store Indicator Logs for TensorBoard Usage](#appendix.5.metric.log-store-indicator-logs-for-tensorboard-usage). TensorBoard can only be accessed by users logged into the console.
+    For how to leave a TensorBoard log, refer to [Appendix > 5. Store Indicator Logs for TensorBoard Usage](#appendix.5.tensorboard.store.metric.log). TensorBoard can only be accessed by users logged into the console.
     - **Stop training** : You can stop training in progress.
 
 - **Hyperparameters** : You can check the hyperparameter values set for training on **the hyperparameter** tab of the detailed screen displayed when selecting training.
@@ -437,7 +437,7 @@ How to configure a hyperparameter tuning job.
             - **Algorithm Path**
                 - **NHN Cloud Object Storage**: Enter the path of NHN Cloud Object Storage where algorithms are stored.<br>
                     - obs: Enter the directory path in the format of obs://{ObjectStorage API endpoint}/{containerName}/{path}.
-                    - When using NHN Cloud Object Storage, please set permissions by referring to [Appendix > 1. Adding AI EasyMaker system account permissions to NHN Cloud Object Storage](#appendix.1.object.storage.account).If you do not set the required permissions, model creation will fail.
+                    - When using NHN Cloud Object Storage, please set permissions by referring to [Appendix > 1. Adding AI EasyMaker system account permissions to NHN Cloud Object Storage](#appendix.1.object.storage.account.permission).If you do not set the required permissions, model creation will fail.
                 - **NHN Cloud NAS**: Enter the NHN Cloud NAS path where the algorithm is stored.
                     - nas://{NAS Enter the directory path in the format ID}:/{path}.
             - **Entry Point**
@@ -490,7 +490,7 @@ How to configure a hyperparameter tuning job.
         - Used only when using NHN Cloud Object Storage. Please specify a size large enough to store all the data required for training.
     - **Maximum Progress Time**: Specifies the maximum progress time until training is completed. training that exceeds the maximum progress time will be terminated.
     - **Log Management** : Logs generated during training can be stored in the NHN Cloud Log & Crash service.
-        - For more information, please refer to [Appendix > 2. NHN Cloud Log & Crash Search Service User Guide and Log Check](#appendix.2.log.and.crash.search.service.usage.log.list-service-usage-guide-and-log-inquiry-guide).
+        - For more information, please refer to [Appendix > 2. NHN Cloud Log & Crash Search Service User Guide and Log Check](#appendix.2.lncs.service.usage.guide.and.log.inquiry.guide).
 
 !!! danger "Caution"
     - Only NHN Cloud NAS created in the same project as AI EasyMaker can be used.
@@ -531,7 +531,7 @@ A list of hyperparameter tunings is displayed. Select a hyperparameter tuning fr
 
 - **Operation**
     - **Go to TensorBoard** : TensorBoard, where you can check the statistical information of training, opens in a new browser window.<br/>
-    For instructions on how to leave TensorBoard logs, please refer to [Appendix > 5. Store Indicator Logs for TensorBoard Usage](#appendix.5.metric.log-store-indicator-logs-for-tensorboard-usage). TensorBoard can only be accessed by users logged into the console.
+    For instructions on how to leave TensorBoard logs, please refer to [Appendix > 5. Store Indicator Logs for TensorBoard Usage](#appendix.5.tensorboard.store.metric.log). TensorBoard can only be accessed by users logged into the console.
     - **Stop Hyperparameter Tuning** : You can stop hyperparameter tuning in progress.
 
 - **Monitoring**: When you select hyperparameter tuning, you can check the list of monitored instances and basic indicator charts in the Monitoring tab of the detailed screen that appears.
@@ -591,19 +591,19 @@ Delete a hyperparameter tuning.
 !!! tip "Note"
     Hyperparameter tuning cannot be deleted if the model created by the hyperparameter tuning you want to delete exists. Please delete the model first, then the hyperparameter tuning.
 
-<a id="training"></a>
+<a id="training.template"></a>
 
 ## Training Template
 
 By creating a training template in advance, you can import the values entered into the template when creating training or hyperparameter tuning.
 
-<a id="training.create"></a>
+<a id="training.template.create"></a>
 
 ### Create Training Template
 
 For information on what you can set in your training template, see [Creating a training](#training.create).
 
-<a id="training.list"></a>
+<a id="training.template.list"></a>
 
 ### List of Training Templates
 
@@ -613,7 +613,7 @@ Displays a list of training templates. Select a training template from the list 
     - **Change** : You can change training template information.
 - **Hyperparameters** : You can check the names of hyperparameters set in the training template on **the Hyperparameters** tab of the detailed screen displayed when you select a training template.
 
-<a id="training.copy"></a>
+<a id="training.template.copy"></a>
 
 ### Copy Training Template
 
@@ -624,7 +624,7 @@ Create a new training template with the same settings as an existing training te
 3. The Create training Template screen appears with the same settings as the existing training template.
 4. If there is any information you would like to change the settings for, change it and then click **Create Training Template** to create a training template.
 
-<a id="training.delete"></a>
+<a id="training.template.delete"></a>
 
 ### Delete Training Template
 
@@ -655,7 +655,7 @@ Can manage models of AI EasyMaker's training outcomes or external models as arti
     - **Model Artifact**: Select a repository where model artifacts are saved.
         - **NHN Cloud Object Storage**: Enter the path to Object Storage where the model artifacts are stored.
             - Enter the directory path in the format `obs://{Object Storage API endpoint}/{containerName}/{path}`.
-            - If you are using NHN Cloud Object Storage, refer to [Appendix > 1. Add AI EasyMaker system account permissions to NHN Cloud Object Storage](#appendix.1.object.storage.account) to set permissions. If you do not set permissions, you will not be able to access the model's artifacts and model creation will fail.
+            - If you are using NHN Cloud Object Storage, refer to [Appendix > 1. Add AI EasyMaker system account permissions to NHN Cloud Object Storage](#appendix.1.object.storage.account.permission) to set permissions. If you do not set permissions, you will not be able to access the model's artifacts and model creation will fail.
         - **NHN Cloud NAS**: Enter the path to the NHN Cloud NAS where the model artifact is stored.
             - Enter the directory path in the format `nas://{NAS ID}:/{path}`.
     - **Parameter**: Enter the model's parameter information.
@@ -794,7 +794,7 @@ Batch inferences are automatically created during the model evaluation process.
 - **Additional Settings**
     - **Maximum Duration**: Specify the maximum progress time until the model evaluation is complete. Model evaluations that exceed the maximum progress time are terminated.
     - **Log management**: Logs generated during model evaluation can be stored in the NHN Cloud Log & Crash Search service.
-        - For more information, see [Appendix > 2. How to use NHN Cloud Log & Crash Search service and check logs](#appendix.2.log.and.crash.search.service.usage.log.list).
+        - For more information, see [Appendix > 2. How to use NHN Cloud Log & Crash Search service and check logs](#appendix.2.lncs.service.usage.guide.and.log.inquiry.guide).
 
 !!! danger "Caution"
     - Only NHN Cloud NAS created on the same project as AI EasyMaker is available to use.
@@ -827,7 +827,7 @@ A list of model evaluations is displayed. Select a model evaluation in the list 
 - **Task**
     - **Stop**: You can stop an ongoing model evaluation.
 
-<a id="model.evaluation.metric"></a>
+<a id="model.evaluation.classification.metric"></a>
 
 ### Classification Model Evaluation Metrics
 
@@ -842,7 +842,7 @@ A list of model evaluations is displayed. Select a model evaluation in the list 
 - **Precision-recall curve by threshold**: A graph illustrating how precision and recall change at a specific threshold. It serves as a reference when defining operational criteria.
 - **Confusion matrix**: A matrix that categorizes prediction results into true positives, false positives, false negatives, and true negatives. It allows easy identification of error types for each class.
 
-<a id="model.evaluation.metric"></a>
+<a id="model.evaluation.regression.metric"></a>
 
 ### Regression Model Evaluation Metrics
 
@@ -920,7 +920,7 @@ Create and manage endpoints that can serve the model.
     - **Resource Information:**: You can see the resources you're actually using. Allocates resource room usage to each model based on the quota for the model you entered. For more information, please see [Appendix > 9. Resource Information](#appendix.9.resource.info).
 
 !!! tip "Note"
-    The AI EasyMaker service provides endpoints based on the open inference protocol (OIP) specification. For the endpoint API specification, see [Appendix > 10. Endpoint API specification](#appendix.10.endpoint.api).
+    The AI EasyMaker service provides endpoints based on the open inference protocol (OIP) specification. For the endpoint API specification, see [Appendix > 10. Endpoint API specification](#appendix.10.endpoint.api.specification).
     To use a separate endpoint, refer to the resources created in the API Gateway service and create a new resource to use it.
     For more information about the OIP specification, see [OIP specification](https://github.com/kserve/open-inference-protocol).
 
@@ -1061,7 +1061,7 @@ A list of resources created under the endpoint stage is displayed.
     | CREATE FAILED |  Creating stage resource failed. Please try again. |
 
 - **Model Name**: The name of the model deployed to the stage.
-- **API Gateway Resource Path**: The inference URL of the model deployed to the stage. API clients can request inference at the displayed URL. For more information, see [Appendix > 10. Endpoint API Specfication](#appendix.10.endpoint.api).
+- **API Gateway Resource Path**: The inference URL of the model deployed to the stage. API clients can request inference at the displayed URL. For more information, see [Appendix > 10. Endpoint API Specfication](#appendix.10.endpoint.api.specification).
 - **Number of Pods**: Shows the number of healthy pods and total pods in use on the resource.
 
 <a id="endpoint.inference.call"></a>
@@ -1195,7 +1195,7 @@ Set up the environment in which batch inference will be performed by selecting a
         - Used only when using NHN Cloud Object Storage. Please specify a size large enough to store all the data required for batch inference.
     - **Maximum Batch Inference Time** : Specify the maximum waiting time until batch inference is complete. Batch inference that exceeds the maximum waiting time will be terminated.
     - **Log Management** : Logs generated during batch inference can be stored in the NHN Cloud Log & Crash Search service.
-        - For more information, please refer to [Appendix > 2. NHN Cloud Log & Crash Search Service User Guide and Log Check](#appendix.2.log.and.crash.search.service.usage.log.list-service-usage-guide-and-log-inquiry-guide).
+        - For more information, please refer to [Appendix > 2. NHN Cloud Log & Crash Search Service User Guide and Log Check](#appendix.2.lncs.service.usage.guide.and.log.inquiry.guide).
 
 !!! tip "Note"
     - If the Glob pattern is not entered properly, batch inference may not work properly because the input data cannot be found.
@@ -1377,7 +1377,7 @@ Create a new registry account.
 
 ### Modify Registry Account
 
-<a id="registry.account.modify.registry.modify"></a>
+<a id="registry.account.modify.account.modify"></a>
 
 #### Modify registry ID and password
 
@@ -1391,7 +1391,7 @@ Create a new registry account.
 !!! danger "Caution"
     If there are resources being created with a private image that has a registry account associated with it, or if there are studies and hyperparameters in progress, you cannot modify them.
 
-<a id="registry.account.modify.registry.account.change"></a>
+<a id="registry.account.modify.account.info.modify"></a>
 
 #### Registry Account > Change Name, Description
 
@@ -1431,7 +1431,7 @@ You can use the Kubeflow Pipelines (KFP) Python SDK to write components and pipe
     - [KFP User Guide](https://www.kubeflow.org/docs/components/pipelines/user-guides/)
     - [KFP SDK Reference](https://kubeflow-pipelines.readthedocs.io/en/stable/)
 
-<a id="pipeline"></a>
+<a id="pipeline.upload"></a>
 
 ### Upload a Pipeline
 
@@ -1460,7 +1460,7 @@ A list of pipelines is displayed. Select a pipeline in the list to view details 
     | CREATE FAILED      | Pipeline creation failed. Try again. |
     | ACTIVE             | The pipeline was created successfully.        |
 
-<a id="pipeline"></a>
+<a id="pipeline.graph"></a>
 
 ### Pipeline Graph
 
@@ -1510,7 +1510,7 @@ Run the pipeline.
         - **The name of the mount directory**: Enter the name of the directory to mount on the instance.
         - **NAS Path**: Enter the path in the following format: `nas://{NAS ID}:/{path}`.
     - **Manage Logs**: Logs that occur during pipeline execution can be stored in the NHN Cloud Log & Crash Search service.
-        - For more information, refer to [Appendix > 2. NHN Cloud Log & Crash Search service usage guide and checking logs](#appendix.2.log.and.crash.search.service.usage.log.list).
+        - For more information, refer to [Appendix > 2. NHN Cloud Log & Crash Search service usage guide and checking logs](#appendix.2.lncs.service.usage.guide.and.log.inquiry.guide).
 
 !!! tip "Note"
     Creating a pipeline run can take a few minutes.
@@ -1545,7 +1545,7 @@ A list of pipeline runs is displayed. Select a pipeline run in the list to view 
 - **Monitoring**: When you select Run a pipeline from the list, you can see a list of monitored instances and a basic metrics chart on the **Monitoring** tab of the detail screen that appears.
     - The **Monitoring** tab is disabled while a pipeline run is being created.
 
-<a id="pipeline.run"></a>
+<a id="pipeline.run.graph"></a>
 
 ### Pipeline Run Graph
 
@@ -1598,7 +1598,7 @@ Delete a pipeline run.
 
 You can create and manage a recurring run to periodically run the uploaded pipeline repeatedly in AI EasyMaker.
 
-<a id="pipeline.schedule.create"></a>
+<a id="pipeline.recurring.run.create"></a>
 
 ### Create a Recurring Run
 
@@ -1626,7 +1626,7 @@ For information beyond the items below that you can set in creating a pipeline s
     The Cron expression uses six space-separated fields to represent the time.
     For more information, see the [Cron Expression Format](https://pkg.go.dev/github.com/robfig/cron#hdr-CRON_Expression_Format) documentation.
 
-<a id="pipeline.schedule.list"></a>
+<a id="pipeline.recurring.run.list"></a>
 
 ### Pipeline Recurring Runs
 
@@ -1644,7 +1644,7 @@ A list of pipeline schedules is displayed. Select a pipeline recurring run in th
 
 - **Manage Execution**: When you select a pipeline recurring run in the list, you can view the list of runs generated by the pipeline recurring run on the **Manage Run** tab of the detail screen that appears.
 
-<a id="pipeline.schedule.start.stop"></a>
+<a id="pipeline.recurring.run.start.stop"></a>
 
 ### Start and Stop Recurring Run
 
@@ -1653,7 +1653,7 @@ Stop a started pipeline recurring run or start a stopped pipeline recurring run.
 1. Select the pipeline recurring run you want to start or stop from the list.
 2. Click **Start Recurring Run** or **Stop Recurring Run**.
 
-<a id="pipeline.schedule.copy"></a>
+<a id="pipeline.recurring.run.copy"></a>
 
 ### Copy a Pipeline Recurring Run
 
@@ -1664,7 +1664,7 @@ Create a new pipeline recurring run with the same settings as an existing pipeli
 3. The Create pipeline schedule screen displays with the same settings as an existing pipeline schedule.
 4. Make any changes to the settings you want to make, and then click **Create Pipeline Recurring Run**.
 
-<a id="pipeline.schedule.delete"></a>
+<a id="pipeline.recurring.run.delete"></a>
 
 ### Delete a pipeline recurring run
 
@@ -1734,7 +1734,7 @@ Create a new RAG.
     - **No. of instances**: the number of the instances to execute LLM.
 - **Addtional Settings**
     - **Log Management**: You can save logs generated during RAG execution to the NHN Cloud Log & Crash Search service.
-        - For more information, refer to [Addpendix > 2. NHN Cloud Log & Crash Search Service Usage Guide and Log Check](#appendix.2.log.and.crash.search.service.usage.log.list).
+        - For more information, refer to [Addpendix > 2. NHN Cloud Log & Crash Search Service Usage Guide and Log Check](#appendix.2.lncs.service.usage.guide.and.log.inquiry.guide).
 
 !!! tip "Note"
     There may be limitations on the format, size, and number of files available for ingestion. For more information, see [Collect Sync](#rag.ingestion.sync).
@@ -1935,7 +1935,7 @@ echo "---------------- 스트리밍 종료 ----------------" >&2
 
 ## Appendix
 
-<a id="appendix.1.object.storage.account"></a>
+<a id="appendix.1.object.storage.account.permission"></a>
 
 ### 1. Add AI EasyMaker system account permissions to NHN Cloud Object Storage
 
@@ -1965,11 +1965,11 @@ To add read/write permissions to AI EasyMaker system account in Object Storage, 
 3. Go to the NHN Cloud Object Storage console.
 4. [Allow specific projects or users to read/write](https://docs.nhncloud.com/en/Storage/Object%20Storage/en/acl-guide/#allow-readwrite-to-specific-projects-or-specific-users) Refer to documents to add required read and write permissions to AI EasyMaker system account in NHN Cloud Object Storage console.
 
-<a id="appendix.2.log.and.crash.search.service.usage.log.list"></a>
+<a id="appendix.2.lncs.service.usage.guide.and.log.inquiry.guide"></a>
 
 ### 2. NHN Cloud Log & Crash Search Service Usage Guide and Log Inquiry Guide
 
-<a id="appendix.2.log.and.crash.search.service.usage.log.list.log.and.crash.search.service.usage"></a>
+<a id="appendix.2.lncs.service.usage.guide"></a>
 
 #### NHN Cloud Log & Crash Search Service Usage Guide
 
@@ -1981,7 +1981,7 @@ To store logs in the Log & Crash Search service, you have to enable Log & Crash 
         - [Log & Crash Search Service Guide](https://docs.nhncloud.com/en/Data%20&%20Analytics/Log%20&%20Crash%20Search/en/Overview/)
         - [Log & Crash Search Fee](https://www.nhncloud.com/kr/pricing/by-service?c=Data%20%26%20Analytics&s=Log%20%26%20Crash%20Search)
 
-<a id="appendix.2.log.and.crash.search.service.usage.log.list.log.list"></a>
+<a id="appendix.2.lncs.service.log.inquiry.guide"></a>
 
 #### Log Query
 
@@ -2104,7 +2104,7 @@ As shown in the example below, you can use hyperparameter values entered during 
         model_dir = os.environ.get("EM_MODEL_DIR")
         model.save(model_dir)
 
-<a id="appendix.5.metric.log"></a>
+<a id="appendix.5.tensorboard.store.metric.log"></a>
 
 ### 5. Store Indicator Logs for TensorBoard Usage
 
@@ -2154,7 +2154,7 @@ The AI EasyMaker service periodically upgrades the cluster version to provide st
 When a new cluster version is deployed, you need to move the notebooks and endpoints that are running on the old version of the cluster to the new cluster.
 Explains how to move new clusters by resource.
 
-<a id="appendix.7.cluster.upgrade.notebook.cluster.upgrade"></a>
+<a id="appendix.7.cluster.upgrade.notebook"></a>
 
 #### Upgrade Notebook Cluster Version
 
@@ -2168,7 +2168,7 @@ Hovering the mouse pointer over the**Restart** button displays restart instructi
 Restarts take about 25 minutes for the first run, and about 10 minutes for subsequent runs.
 Failed restarts are automatically reported to the administrator.
 
-<a id="appendix.7.cluster.upgrade.endpoint.cluster.upgrade"></a>
+<a id="appendix.7.cluster.upgrade.endpoint"></a>
 
 #### Upgrade the endpoint cluster version
 
@@ -2176,7 +2176,7 @@ On the **endpoints list** screen, endpoints that need to be moved to the new clu
 If you hover over the **! Notice**, it displays a version upgrade announcement and an expiration date.
 Before the expiration, you must follow these instructions to move stages running on the old version cluster to the new version cluster.
 
-<a id="appendix.7.cluster.upgrade.endpoint.cluster.upgrade.stage.cluster.upgrade"></a>
+<a id="appendix.7.cluster.upgrade.endpoint.stage"></a>
 
 ##### Upgrade the cluster version of a general stage
 
@@ -2187,7 +2187,7 @@ Before the expiration, you must follow these instructions to move stages running
 !!! danger "Caution"
     Deleting a stage will shut down the endpoint, preventing API calls. Ensure that the stage is not in service before deleting it.
 
-<a id="appendix.7.cluster.upgrade.endpoint.cluster.upgrade.default.stage.cluster.upgrade"></a>
+<a id="appendix.7.cluster.upgrade.endpoint.default.stage"></a>
 
 ##### Upgrade the cluster version of the default stage
 
@@ -2222,7 +2222,7 @@ The amount of resources you need depends on the demand and complexity of your mo
 Batch inference allocates resources to each pod by dividing the actual usage by the number of pods. Endpoint cannot allow the quota you enter to exceed the actual usage of your instance, so check your resource usage beforehand.
 Note that both batch inference and endpoints can fail to create if the allocated resources are less than the minimum usage required by the inference.
 
-<a id="appendix.10.endpoint.api"></a>
+<a id="appendix.10.endpoint.api.specification"></a>
 
 ### 10. Endpoint API Specification
 
@@ -2329,7 +2329,7 @@ The `model-settings.json`, which is required when using mlserver directly, is no
 
 The Hugging Face model can be served using the Runtime provided by AI EasyMaker, TensorFlow Serving, or TorchServe.
 
-<a id="appendix.11.framework.note.hugging.face.framework.hugging.face.runtime"></a>
+<a id="appendix.11.framework.note.hugging.face.framework.runtime"></a>
 
 ##### Hugging Face Runtime
 

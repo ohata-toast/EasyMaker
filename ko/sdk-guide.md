@@ -965,7 +965,7 @@ for pipeline_run in pipeline_run_list:
 easymaker.PipelineRun(pipeline_run_id).delete()
 ```
 
-<a id="pipeline.schedule.create"></a>
+<a id="pipeline.recurring.run.create"></a>
 
 ### 파이프라인 일정 생성
 
@@ -1015,7 +1015,7 @@ pipeline_recurring_run = easymaker.PipelineRecurringRun().create(
 )
 ```
 
-<a id="pipeline.schedule.stop.start"></a>
+<a id="pipeline.recurring.run.stop.start"></a>
 
 ### 파이프라인 일정 중지/재시작
 
@@ -1031,7 +1031,7 @@ easymaker.PipelineRecurringRun(pipeline_recurring_run_id).start()
 
 ```
 
-<a id="pipeline.schedule.list"></a>
+<a id="pipeline.recurring.run.list"></a>
 
 ### 파이프라인 일정 목록 조회
 
@@ -1041,7 +1041,7 @@ for pipeline_recurring_run in pipeline_recurring_run_list:
     pipeline_recurring_run.print_info()
 ```
 
-<a id="pipeline.schedule.delete"></a>
+<a id="pipeline.recurring.run.delete"></a>
 
 ### 파이프라인 일정 삭제
 

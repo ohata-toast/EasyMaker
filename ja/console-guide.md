@@ -1,4 +1,4 @@
-<a id="ai.easymaker.console.usage.guide"></a>
+<a id="ai.easymaker.console.guide"></a>
 
 ## Machine Learning > AI EasyMaker > コンソール使用ガイド
 
@@ -294,7 +294,7 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
             - **アルゴリズムパス**
                 - **NHN Cloud Object Storage**：アルゴリズムが保存されているNHN Cloud Object Storageのパスを入力します。<br>
                     - obs://{Object Storage APIエンドポイント}/{containerName}/{path}形式でディレクトリパスを入力します。
-                    - NHN Cloud Object Storageを利用する場合[付録 > 1. NHN Cloud Object StorageにAI EasyMakerシステムアカウント権限追加](#appendix.1.object.storage.account)を参照して権限を設定してください。必要な権限を設定しない場合はモデルの作成に失敗します。
+                    - NHN Cloud Object Storageを利用する場合[付録 > 1. NHN Cloud Object StorageにAI EasyMakerシステムアカウント権限追加](#appendix.1.object.storage.account.permission)を参照して権限を設定してください。必要な権限を設定しない場合はモデルの作成に失敗します。
                 - **NHN Cloud NAS**：アルゴリズムが保存されたNHN Cloud NASパスを入力します。<br>
                     nas://{NAS ID}:/{path}形式でディレクトリパスを入力します。
 
@@ -330,7 +330,7 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
         - NHN Cloud Object Storageを使用する場合にのみ使用されます。学習に必要なデータがすべて保存できるように十分なサイズで指定する必要があります。
     - **最大学習時間**：学習が完了するまでの最大待機時間を指定します。最大待機時間を超えた学習は終了処理されます。
     - **ログ管理**：学習進行中に発生するログをNHN Cloud Log & Crashサービスに保存できます。
-        - 詳細は[付録 > 2. NHN Cloud Log & Crash Searchサービス利用案内およびログ確認](#appendix.2.log.and.crash.search.service.usage.log.list)を参照してください。
+        - 詳細は[付録 > 2. NHN Cloud Log & Crash Searchサービス利用案内およびログ確認](#appendix.2.lncs.service.usage.guide.and.log.inquiry.guide)を参照してください。
 
 !!! danger "注意"
     - AI EasyMakerと同じプロジェクトで作成されたNHN Cloud NASのみ使用できます。
@@ -359,7 +359,7 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 
 - **作業**
     - **Tensorboard**：学習の統計情報を確認できるTensorboardがブラウザの新しいウィンドウで開きます。<br/>
-    Tensorboardログを残す方法は[付録 > 5. Tensorboardを活用するための指標ログを保存](#appendix.5.metric.log-tensorboard)を参照してください。Tensorboardはコンソールにログインしたユーザーのみ接続できます。
+    Tensorboardログを残す方法は[付録 > 5. Tensorboardを活用するための指標ログを保存](#appendix.5.tensorboard.store.metric.log)を参照してください。Tensorboardはコンソールにログインしたユーザーのみ接続できます。
     - **学習の停止**：進行中の学習を停止できます。
 
 - **ハイパーパラメータ**：学習を選択すると、表示される詳細画面の**ハイパーパラメータ**タブで学習に設定したハイパーパラメータ値を確認できます。
@@ -439,7 +439,7 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
             - **アルゴリズムパス**
                 - **NHN Cloud Object Storage**：アルゴリズムが保存されているNHN Cloud Object Storageのパスを入力します。
                     - obs://{Object Storage APIエンドポイント}/{containerName}/{path}形式でディレクトリパスを入力します。
-                    - NHN Cloud Object Storageを利用する場合[付録 > 1. NHN Cloud Object StorageにAI EasyMakerシステムアカウント権限追加](#appendix.1.object.storage.account)を参照して権限を設定してください。必要な権限を設定しない場合はモデルの作成に失敗します。
+                    - NHN Cloud Object Storageを利用する場合[付録 > 1. NHN Cloud Object StorageにAI EasyMakerシステムアカウント権限追加](#appendix.1.object.storage.account.permission)を参照して権限を設定してください。必要な権限を設定しない場合はモデルの作成に失敗します。
                 - **NHN Cloud NAS**：アルゴリズムが保存されているNHN Cloud NASパスを入力します。
                     - nas://{NAS ID}:/{path}形式でディレクトリパスを入力します。
             - **エントリーポイント**
@@ -497,7 +497,7 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
         - NHN Cloud Object Storageを使用する場合にのみ使用されます。学習に必要なデータがすべて保存されるように十分なサイズで指定する必要があります。
     - **最大進行時間**：学習が完了するまでの最大進行時間を指定します。最大進行時間を超過した学習は終了処理されます。
     - **ログ管理**：学習の進行中に発生するログをNHN Cloud Log & Crashサービスに保存できます。
-        - 詳しい内容は[付録 > 2. NHN Cloud Log & Crash Searchサービス利用案内及び、ログ確認](#appendix.2.log.and.crash.search.service.usage.log.list)を参照してください。
+        - 詳しい内容は[付録 > 2. NHN Cloud Log & Crash Searchサービス利用案内及び、ログ確認](#appendix.2.lncs.service.usage.guide.and.log.inquiry.guide)を参照してください。
 
 !!! danger "注意"
     - AI EasyMakerと同じプロジェクトで作成されたNHN Cloud NASのみ使用可能です。
@@ -538,7 +538,7 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 
 - **作業**
     - **Tensorboardショートカット**：学習の統計情報を確認できるTensorboardがブラウザの新しいウィンドウで開きます。<br/>
-    Tensorboardログを残す方法は[付録 > 5. Tensorboardを活用するための指標ログを保存](#appendix.5.metric.log-tensorboard)を参照してください。Tensorboardはコンソールにログインしたユーザーのみ接続できます。
+    Tensorboardログを残す方法は[付録 > 5. Tensorboardを活用するための指標ログを保存](#appendix.5.tensorboard.store.metric.log)を参照してください。Tensorboardはコンソールにログインしたユーザーのみ接続できます。
     - **ハイパーパラメータチューニングの停止**：進行中のハイパーパラメータチューニングを停止できます。
 
 - **モニタリング**:ハイパーパラメータチューニングを選択すると表示される詳細画面の**モニタリング**タブで、モニタリング対象インスタンスリストと基本指標チャートを確認できます。
@@ -598,19 +598,19 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 !!! tip "参考"
     削除するハイパーパラメータチューニングで作成されたモデルが存在する場合、ハイパーパラメータチューニングは削除できません。先にモデルを削除してから、ハイパーパラメータチューニングを削除してください。
 
-<a id="training"></a>
+<a id="training.template"></a>
 
 ## 学習テンプレート
 
 学習テンプレートを事前に作成しておくと、学習やハイパーパラメータチューニングを作成する際にテンプレートに入力した値を取り込むことができます。
 
-<a id="training.create"></a>
+<a id="training.template.create"></a>
 
 ### 学習テンプレートの作成
 
 学習テンプレートに設定できる情報は[学習の作成](#training.create)を参照してください。
 
-<a id="training.list"></a>
+<a id="training.template.list"></a>
 
 ### 学習テンプレートリスト
 
@@ -620,7 +620,7 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
     - **変更**：学習テンプレート情報を変更できます。
 - **ハイパーパラメータ**：学習テンプレートを選択すると表示される詳細画面の**ハイパーパラメータ**タブで学習テンプレートに設定したハイパーパラメータ名を確認できます。
 
-<a id="training.copy"></a>
+<a id="training.template.copy"></a>
 
 ### 学習テンプレートのコピー
 
@@ -631,7 +631,7 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 3. 既存の学習テンプレートと同じ設定で学習テンプレートの作成画面が表示されます。
 4. 設定を変更したい情報がある場合、変更後、**学習テンプレートの作成**をクリックして学習テンプレートを作成します。
 
-<a id="training.delete"></a>
+<a id="training.template.delete"></a>
 
 ### 学習テンプレートの削除
 
@@ -662,7 +662,7 @@ AI EasyMakerの学習結果のモデルまたは外部のモデルをアーテ�
     - **モデルアーティファクト**:モデルアーティファクトが保存されたストレージを選択します。
         - **NHN Cloud Object Storage**:モデルアーティファクトが保存されたObject Storageパスを入力します。
             - `obs://{Object Storage APIエンドポイント}/{containerName}/{path}`形式でディレクトリパスを入力します。
-            - NHN Cloud Object Storageを利用する場合[付録 > 1. NHN Cloud Object StorageにAI EasyMakerシステムアカウント権限追加](#appendix.1.object.storage.account)を参考にして権限を設定してください。権限を設定しないと、モデルのアーティファクトにアクセスできず、モデルの作成に失敗します。
+            - NHN Cloud Object Storageを利用する場合[付録 > 1. NHN Cloud Object StorageにAI EasyMakerシステムアカウント権限追加](#appendix.1.object.storage.account.permission)を参考にして権限を設定してください。権限を設定しないと、モデルのアーティファクトにアクセスできず、モデルの作成に失敗します。
         - **NHN Cloud NAS**:モデルアーティファクトが保存されたNHN Cloud NASパスを入力します。
             - `nas://{NAS ID}:/{path}`形式でディレクトリパスを入力します。
     - **パラメータ**:モデルのパラメータ情報を入力します。
@@ -801,7 +801,7 @@ AI EasyMakerの学習結果のモデルまたは外部のモデルをアーテ�
 - **追加設定**
     - **最大進行時間**:モデル評価が完了するまでの最大実行時間を指定します。最大実行時間を超過したモデル評価は終了処理されます。
     - **ログ管理**:モデル評価実行中に発生するログをNHN Cloud Log & Crashサービスに保存できます。
-        - 詳細は[付録 > 2. NHN Cloud Log & Crash Searchサービス利用案内及びログ確認](#appendix.2.log.and.crash.search.service.usage.log.list)を参照してください。
+        - 詳細は[付録 > 2. NHN Cloud Log & Crash Searchサービス利用案内及びログ確認](#appendix.2.lncs.service.usage.guide.and.log.inquiry.guide)を参照してください。
 
 !!! danger "注意"
     - AI EasyMakerと同じプロジェクトで作成されたNHN Cloud NASのみ使用可能です。
@@ -834,7 +834,7 @@ AI EasyMakerの学習結果のモデルまたは外部のモデルをアーテ�
 - **作業**
     - **停止**:進行中のモデル評価を停止できます。
 
-<a id="model.evaluation.metric"></a>
+<a id="model.evaluation.classification.metric"></a>
 
 ### 分類モデル評価指標
 
@@ -849,7 +849,7 @@ AI EasyMakerの学習結果のモデルまたは外部のモデルをアーテ�
 - **しきい値別精度-再現率曲線**:特定のしきい値で精度と再現率がどのように変化するかを示すグラフです。実際の運用基準を設定する際の参考になります。
 - **混同行列(confusion matrix)**:予測結果をTP、FP、FN、TNの4つに分類した行列です。クラスごとの誤りタイプを簡単に把握できます。
 
-<a id="model.evaluation.metric"></a>
+<a id="model.evaluation.regression.metric"></a>
 
 ### 回帰モデル評価指標
 
@@ -927,7 +927,7 @@ AI EasyMakerの学習結果のモデルまたは外部のモデルをアーテ�
     - **リソース情報**:実際に使用しているリソースを確認できます。入力したモデルの割り当て量に基づいてリソース実使用量を各モデルに割り当てます。詳細は[付録 > 9.リソース情報](#appendix.9.resource.info)を参照してください。
 
 !!! tip "参考"
-    AI EasyMakerサービスはOIP(open inference protocol)スペックに基づいたエンドポイントを提供します。エンドポイントAPIスペックの仕様は[付録 > 10. エンドポイントAPIスペック仕様](#appendix.10.endpoint.api)を参照してください。
+    AI EasyMakerサービスはOIP(open inference protocol)スペックに基づいたエンドポイントを提供します。エンドポイントAPIスペックの仕様は[付録 > 10. エンドポイントAPIスペック仕様](#appendix.10.endpoint.api.specification)を参照してください。
     別途のエンドポイントを使用するにはAPI Gatewayサービスに作成されたリソースを参考にして新しいリソースを作成して使用します。
     OIPスペックの詳細は[OIPスペック](https://github.com/kserve/open-inference-protocol)を参照してください。
 
@@ -1067,7 +1067,7 @@ AI EasyMakerの学習結果のモデルまたは外部のモデルをアーテ�
     | CREATE FAILED | ステージリソースの作成に失敗した状態です。もう一度お試しください。 |
 
 - **モデル名**:ステージに配布されたモデルの名前です。
-- **API Gatewayリソースパス**：ステージに配布されたモデルの推論URLです。表示されたURLで推論をリクエストできます。詳細は[付録 > 10. エンドポイントAPIスペック仕様](#appendix.10.endpoint.api)をご確認ください。
+- **API Gatewayリソースパス**：ステージに配布されたモデルの推論URLです。表示されたURLで推論をリクエストできます。詳細は[付録 > 10. エンドポイントAPIスペック仕様](#appendix.10.endpoint.api.specification)をご確認ください。
 - **Pod数**:リソースで使用中の正常Podと全体Pod数が表示されます。
 
 <a id="endpoint.inference.call"></a>
@@ -1201,7 +1201,7 @@ AI EasyMakerのモデルでバッチ推論を行い、推論結果を統計で�
         - NHN Cloud Object Storageを利用する場合のみ使用されます。バッチ推論に必要なデータがすべて保存できるように十分なサイズを指定する必要があります。
     - **最大バッチ推論時間**: バッチ推論が完了するまでの最大待機時間を指定します。最大待ち時間を超えたバッチ推論は終了処理されます。
     - **ログ管理**:バッチ推論の進行中に発生するログをNHN Cloud Log \& Crash Searchサービスに保存できます。
-        - 詳細は、[付録 > 2. NHN Cloud Log & Crash Searchサービス利用案内及びログ確認](#appendix.2.log.and.crash.search.service.usage.log.list)を参照してください。
+        - 詳細は、[付録 > 2. NHN Cloud Log & Crash Searchサービス利用案内及びログ確認](#appendix.2.lncs.service.usage.guide.and.log.inquiry.guide)を参照してください。
 
 !!! tip "参考"
     - Globパターンを適切に入力しなかった場合、入力データが見つからず、バッチ推論が正常に動作しない場合があります。
@@ -1382,7 +1382,7 @@ AI EasyMakerが、個人イメージが保存されているユーザーのレ�
 
 ### レジストリアカウントの修正
 
-<a id="registry.account.modify.registry.modify"></a>
+<a id="registry.account.modify.account.modify"></a>
 
 #### レジストリID、パスワードの修正
 
@@ -1396,7 +1396,7 @@ AI EasyMakerが、個人イメージが保存されているユーザーのレ�
 !!! danger "注意"
     レジストリアカウントが連動された個人イメージで作成中のリソースがあったり、実行中の学習やハイパーパラメータがある場合は修正できません。
 
-<a id="registry.account.modify.registry.account.change"></a>
+<a id="registry.account.modify.account.info.modify"></a>
 
 #### レジストリアカウント > 名前、説明の変更
 
@@ -1436,7 +1436,7 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
     - [KFPユーザーガイド](https://www.kubeflow.org/docs/components/pipelines/user-guides/)
     - [KFP SDKリファレンス](https://kubeflow-pipelines.readthedocs.io/en/stable/)
 
-<a id="pipeline"></a>
+<a id="pipeline.upload"></a>
 
 ### パイプラインのアップロード
 
@@ -1465,7 +1465,7 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
     | CREATE FAILED      | パイプラインの作成に失敗した状態です。再試行してください。 |
     | ACTIVE             | パイプラインが正常に作成された状態です。        |
 
-<a id="pipeline"></a>
+<a id="pipeline.graph"></a>
 
 ### パイプライングラフ
 
@@ -1515,7 +1515,7 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
         - **マウントディレクトリ名**:インスタンスにマウントするディレクトリ名を入力します。
         - **NASパス**: `nas://{NAS ID}:/{path}`形式のパスを入力します。
     - **ログ管理**:パイプライン実行中に発生するログをNHN Cloud Log & Crash Searchサービスに保存できます。
-        - 詳細は、[付録 > 2. NHN Cloud Log & Crash Searchサービス利用案内及びログ確認](#appendix.2.log.and.crash.search.service.usage.log.list)を参照してください。
+        - 詳細は、[付録 > 2. NHN Cloud Log & Crash Searchサービス利用案内及びログ確認](#appendix.2.lncs.service.usage.guide.and.log.inquiry.guide)を参照してください。
 
 !!! tip "参考"
     パイプライン実行の作成には数分かかる場合があります。
@@ -1550,7 +1550,7 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 - **モニタリング**:リストのパイプライン実行を選択すると表示される詳細画面の**モニタリング**タブで、モニタリング対象インスタンスのリストと基本指標チャートを確認できます。
     - **モニタリング** *タブは、パイプライン実行が作成中の状態では無効になります。
 
-<a id="pipeline.run"></a>
+<a id="pipeline.run.graph"></a>
 
 ### パイプライン実行グラフ
 
@@ -1603,7 +1603,7 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 
 アップロードしたパイプラインをAI EasyMakerで定期的に繰り返し実行するスケジュールを作成して管理できます。
 
-<a id="pipeline.schedule.create"></a>
+<a id="pipeline.recurring.run.create"></a>
 
 ### パイプラインスケジュールの作成
 
@@ -1631,7 +1631,7 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
     Cron式は、6つのスペースで区切られたフィールドを使用して時間を表します。
     詳細は[Cron式形式](https://pkg.go.dev/github.com/robfig/cron#hdr-CRON_Expression_Format)文書を参照してください。
 
-<a id="pipeline.schedule.list"></a>
+<a id="pipeline.recurring.run.list"></a>
 
 ### パイプラインスケジュールリスト
 
@@ -1649,7 +1649,7 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 
 - **実行管理**:リストのパイプラインスケジュールを選択すると表示される詳細画面の**実行管理**タブで、パイプラインスケジュールによって作成された実行リストを確認できます。
 
-<a id="pipeline.schedule.start.stop"></a>
+<a id="pipeline.recurring.run.start.stop"></a>
 
 ### パイプラインスケジュールの開始と停止
 
@@ -1658,7 +1658,7 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 1. リストから開始または停止したいパイプラインスケジュールを選択します。
 2. **スケジュール開始**または**スケジュール停止**をクリックします。
 
-<a id="pipeline.schedule.copy"></a>
+<a id="pipeline.recurring.run.copy"></a>
 
 ### パイプラインスケジュールのコピー
 
@@ -1669,7 +1669,7 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 3. 既存のパイプラインスケジュールと同じ設定でパイプラインスケジュール作成画面が表示されます。
 4. 設定を変更したい情報があれば、変更した後、**パイプラインスケジュールの作成**をクリックします。
 
-<a id="pipeline.schedule.delete"></a>
+<a id="pipeline.recurring.run.delete"></a>
 
 ### パイプラインスケジュールの削除
 
@@ -1739,7 +1739,7 @@ RAG(Retrieval-Augmented Generation、検索拡張生成)は、ユーザーのド
     - **インスタンス数**: LLMを実行するインスタンス数です。
 - **追加設定**
     - **ログ管理**: RAGの実行中に発生するログをNHN Cloud Log & Crash Searchサービスに保存できます。
-        - 詳細は[付録 > 2. NHN Cloud Log & Crash Searchサービス利用のご案内及びログ確認](#appendix.2.log.and.crash.search.service.usage.log.list)をご参照ください。
+        - 詳細は[付録 > 2. NHN Cloud Log & Crash Searchサービス利用のご案内及びログ確認](#appendix.2.lncs.service.usage.guide.and.log.inquiry.guide)をご参照ください。
 
 !!! tip "参考"
     収集で使用できるファイルの形式、サイズ、個数が制限される場合があります。詳細は[収集の同期](#rag.ingestion.sync)をご参照ください。
@@ -1940,7 +1940,7 @@ echo "---------------- 스트리밍 종료 ----------------" >&2
 
 ## 付録
 
-<a id="appendix.1.object.storage.account"></a>
+<a id="appendix.1.object.storage.account.permission"></a>
 
 ### 1. NHN Cloud Object StorageにAI EasyMakerシステムアカウント権限を追加
 
@@ -1970,11 +1970,11 @@ NHN Cloud Object StorageにAI EasyMakerシステムアカウントの読み取�
 3. NHN Cloud Object Storageコンソールに移動します。
 4. [特定プロジェクトまたは特定ユーザーに読み取り/書き込み許可](https://docs.nhncloud.com/ja/Storage/Object%20Storage/ja/acl-guide/#_4)文書を参照してNHN Cloud Object StorageコンソールでAI EasyMakerシステムアカウントに必要な読み取りおよび書き込み許可権限を追加します。
 
-<a id="appendix.2.log.and.crash.search.service.usage.log.list"></a>
+<a id="appendix.2.lncs.service.usage.guide.and.log.inquiry.guide"></a>
 
 ### 2. NHN Cloud Log & Crash Searchサービス利用案内およびログ照会方法
 
-<a id="appendix.2.log.and.crash.search.service.usage.log.list.log.and.crash.search.service.usage"></a>
+<a id="appendix.2.lncs.service.usage.guide"></a>
 
 #### NHN Cloud Log & Crash Searchサービスの利用案内
 
@@ -1986,7 +1986,7 @@ Log & Crash Searchサービスにログを保存するには、Log & Crashサー
         - [Log & Crash Searchサービス案内](https://docs.nhncloud.com/ja/Data%20&%20Analytics/Log%20&%20Crash%20Search/ja/Overview/)
         - [Log & Crash Search利用料金](https://www.nhncloud.com/kr/pricing/by-service?c=Data%20%26%20Analytics&s=Log%20%26%20Crash%20Search)
 
-<a id="appendix.2.log.and.crash.search.service.usage.log.list.log.list"></a>
+<a id="appendix.2.lncs.service.log.inquiry.guide"></a>
 
 #### ログ照会
 
@@ -2097,7 +2097,7 @@ AI EasyMakerサービスは、Log & Crash Searchサービスに次のように�
         model_dir = os.environ.get("EM_MODEL_DIR")
         model.save(model_dir)
 
-<a id="appendix.5.metric.log"></a>
+<a id="appendix.5.tensorboard.store.metric.log"></a>
 
 ### 5. Tensorboardを活用するための指標ログを保存
 
@@ -2147,7 +2147,7 @@ AI EasyMakerサービスは、安定したサービスと新規機能を提供�
 新規クラスタのバージョンが配布されると、旧バージョンのクラスタで駆動されたノートパソコンおよびエンドポイントを新規クラスタに移行する必要があります。
 リソース別の新規クラスタ移行方法を案内します。
 
-<a id="appendix.7.cluster.upgrade.notebook.cluster.upgrade"></a>
+<a id="appendix.7.cluster.upgrade.notebook"></a>
 
 #### ノートパソコンクラスタバージョンアップグレード
 
@@ -2161,7 +2161,7 @@ AI EasyMakerサービスは、安定したサービスと新規機能を提供�
 再起動は初回実行時に約25分かかり、その後は約10分かかります。
 再起動に失敗した場合、管理者に自動的に報告されます。
 
-<a id="appendix.7.cluster.upgrade.endpoint.cluster.upgrade"></a>
+<a id="appendix.7.cluster.upgrade.endpoint"></a>
 
 #### エンドポイントクラスタバージョンアップグレード
 
@@ -2169,7 +2169,7 @@ AI EasyMakerサービスは、安定したサービスと新規機能を提供�
 **!案内**文言の上にマウスポインタを合わせると、バージョンアップグレードの案内文言と有効期限が表示されます。
 期限が切れるまでに、次の案内に従って旧バージョンのクラスタで運営されているステージを新バージョンのクラスタに移行する必要があります。
 
-<a id="appendix.7.cluster.upgrade.endpoint.cluster.upgrade.stage.cluster.upgrade"></a>
+<a id="appendix.7.cluster.upgrade.endpoint.stage"></a>
 
 ##### 一般ステージのクラスタバージョンアップグレード
 
@@ -2180,7 +2180,7 @@ AI EasyMakerサービスは、安定したサービスと新規機能を提供�
 !!! danger "注意"
     ステージを削除すると、エンドポイントが終了し、API呼び出しができなくなります。削除する前にサービス中でないステージであることを確認してください。
 
-<a id="appendix.7.cluster.upgrade.endpoint.cluster.upgrade.default.stage.cluster.upgrade"></a>
+<a id="appendix.7.cluster.upgrade.endpoint.default.stage"></a>
 
 ##### 基本ステージのクラスタバージョンアップグレード
 
@@ -2215,7 +2215,7 @@ AI EasyMakerでバッチ推論とエンドポイントを作成する際、選�
 バッチ推論は、実際の使用量をPodの数で割って各Podにリソースを割り当てます。エンドポイントは、入力した割り当て量がインスタンスの実際の使用量を超えることができないので、事前にリソースの使用量を確認してください。
 バッチ推論とエンドポイントともに、割り当てられたリソースが推論に必要な最小使用量より少ない場合、作成に失敗する可能性があるので注意してください。
 
-<a id="appendix.10.endpoint.api"></a>
+<a id="appendix.10.endpoint.api.specification"></a>
 
 ### 10. エンドポイントAPIスペック仕様
 
@@ -2322,7 +2322,7 @@ mlserverを直接使用する場合には必要な`model-settings.json`は、AI 
 
 Hugging Faceモデルは、AI EasyMakerが提供するRuntimeやTensorFlow Serving、TorchServeを利用してサービングできます。
 
-<a id="appendix.11.framework.note.hugging.face.framework.hugging.face.runtime"></a>
+<a id="appendix.11.framework.note.hugging.face.framework.runtime"></a>
 
 ##### Hugging Face Runtime
 

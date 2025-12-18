@@ -842,7 +842,7 @@ for pipeline_run in pipeline_run_list:
 easymaker.PipelineRun(pipeline_run_id).delete()
 ```
 
-<a id="pipeline.schedule.create"></a>
+<a id="pipeline.recurring.run.create"></a>
 
 ### パイプラインスケジュール作成
 
@@ -892,7 +892,7 @@ pipeline_recurring_run = easymaker.PipelineRecurringRun().create(
 )
 ```
 
-<a id="pipeline.schedule.stop.start"></a>
+<a id="pipeline.recurring.run.stop.start"></a>
 
 ### パイプラインスケジュールの停止/再起動
 
@@ -907,7 +907,7 @@ easymaker.PipelineRecurringRun(pipeline_recurring_run_id).stop()
 easymaker.PipelineRecurringRun(pipeline_recurring_run_id).start()
 ```
 
-<a id="pipeline.schedule.delete"></a>
+<a id="pipeline.recurring.run.delete"></a>
 
 ### パイプラインスケジュールの削除
 
