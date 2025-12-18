@@ -1,8 +1,14 @@
+<a id="ai.easymaker.console.usage.guide"></a>
+
 ## Machine Learning > AI EasyMaker > Console Guide
+
+<a id="dashboard"></a>
 
 ## Dashboard
 
 You can view the usage status of all AI EasyMaker resources in the dashboard.
+
+<a id="dashboard.service.usage.status"></a>
 
 ### Service Usage
 
@@ -13,19 +19,27 @@ Displays the number of resources in use per resource.
 - Hyperparameter tuning: Number of hyperparameter tunings that are COMPLETE
 - Endpoints: Number of endpoints in the ACTIVE state
 
+<a id="dashboard.service.monitoring"></a>
+
 ### Monitoring Services
 
 - Displays the top 3 endpoints with the most API calls.
 - Select an endpoint to see the aggregate API success/failure metrics for the child endpoint stage.
+
+<a id="dashboard.resource.usage"></a>
 
 ### Resource Utilization
 
 - You can see the most utilized resources by CPU and GPU core type.
 - If you hover over a metric, it displays resource information.
 
+<a id="notebook"></a>
+
 ## Notebook
 
 Create and manage Jupyter notebook with essential packages installed for machine learning development.
+
+<a id="notebook.create"></a>
 
 ### Create Notebook
 
@@ -60,6 +74,8 @@ Create a Jupyter notebook.
 > Notebooks can take several minutes to create.
 > Creation of the initial resources (notebooks, training, experiments, endpoint) takes additional few minutes to configure the service environment.
 
+<a id="notebook.list"></a>
+
 ### Notebook List
 
 A list of notebooks are displayed. Select a notebook in the list to check details and make changes to it.
@@ -89,6 +105,8 @@ A list of notebooks are displayed. Select a notebook in the list to check detail
 - **Monitoring**: On the **Monitoring** tab of the detail screen that appears when you select the notebook, you can see a list of monitored instances and a chart of basic metrics.
     - The **Monitoring** tab is disabled when the notebook is being created or when there is a task in progress.
 
+<a id="notebook.user.virtual.run.environment.configuration"></a>
+
 ### Configure User Virtual Execution Environment
 
 AI EasyMaker notebook instance provides native Conda virtual environment with various libraries and kernels required for machine learning.
@@ -117,6 +135,8 @@ Please refer to the following guide to configure your virtual environment.
         base                *   /opt/miniconda3
         easymaker_env           /root/easymaker/custom-conda-envs/easymaker_env
 
+<a id="notebook.user.script"></a>
+
 ### User Script
 
 You can register scripts in the path `/root/easymaker/cont-init.d` that should run automatically when the notebook is stopped and started.
@@ -133,6 +153,8 @@ The scripts are executed in ascending alphanumeric order.
     - Script standard output and standard error streams: `/root/easymaker/cont-init.d/{SCRIPT}.output`
     - Full execution log: `/root/easymaker/cont-init.output`
 
+<a id="notebook.stop"></a>
+
 ### Stop Notebook
 
 Stop the running notebook or start the stopped notebook.
@@ -148,6 +170,8 @@ Stop the running notebook or start the stopped notebook.
 > [Note] Time to start and stop notebooks:
 > It may take several minutes to start and stop notebooks.
 
+<a id="notebook.instance.type.change"></a>
+
 ### Change Notebook Instance Type
 
 Change the instance type of the created notebook.
@@ -160,6 +184,8 @@ Instance type you want to change can only be changed to the same core type insta
 
 > [Note] Time to change instance types:
 > It may take several minutes to change the instance type.
+
+<a id="notebook.reboot"></a>
 
 ### Reboot Notebook
 
@@ -174,6 +200,8 @@ you can reboot the notebook.
 > When rebooting the notebook, the virtual environment and external libraries that the user create can be initialized.
 > In order to retain, configure your virtual environment by referring to [User Virtual Execution Environment Configuration](./console-guide/#_8).
 
+<a id="notebook.delete"></a>
+
 ### Delete Notebook
 
 Delete the created notebook.
@@ -186,9 +214,13 @@ Delete the created notebook.
 > When deleting a notebook, boot storage and data storage are to be deleted.
 > Connected NHN Cloud NAS is not deleted and must be deleted individually from **NHN Cloud NAS**.
 
+<a id="experiment"></a>
+
 ## Experiment
 
 Experiments are managed by grouping related trainings into experiments.
+
+<a id="experiment.create"></a>
 
 ### Create Experiment
 
@@ -198,6 +230,8 @@ Experiments are managed by grouping related trainings into experiments.
 > [Note] Experiment creation time:
 Creating experiments can take several minutes.
 When creating the initial resources (laptops, trainings, labs, endpoints), it takes an extra few minutes to configure the service environment.
+
+<a id="experiment.list"></a>
 
 ### List of Experiments
 
@@ -217,6 +251,8 @@ Experiments appears. Select an experiment to view and modify detailed informatio
     - **Retry**: If the experiment status is FAIL, you can recover the experiment by clicking **Retry**.
 - **Training**: The **Training** tab on the detailed screen that appears when selecting Training shows trainings included in the experiment.
 
+<a id="experiment.delete"></a>
+
 ### Delete Experiment
 
 Delete an experiment.
@@ -229,9 +265,13 @@ Delete an experiment.
 > You cannot delete an experiment if a pipeline schedule associated with the experiment exists, or if there are training, hyperparameter tuning, or pipeline execution in production. Delete the resources associated with the experiment first, then delete the experiment.
 > For associated resources, you can check the list by clicking the **[Training]** tab in the detail screen at the bottom that is displayed when you click the experiment you want to delete.
 
+<a id="training"></a>
+
 ## Training
 
 Provides an training environment where you can learn and identify machine training algorithms based on training results.
+
+<a id="training.create"></a>
 
 ### Create Training
 
@@ -296,6 +336,8 @@ Set the training environment by selecting the instance and OS image to be traine
 > [Caution] training failure when deleting training input data:
 > Training may fail if the input data is deleted before training is completed.
 
+<a id="training.list"></a>
+
 ### Training List
 
 A list of studies is displayed. If you select a training from the list, you can check detailed information and change the information.
@@ -325,6 +367,8 @@ A list of studies is displayed. If you select a training from the list, you can 
 - **Monitoring**: When you select the endpoint stage, you can see a list of monitored instances and basic metrics charts in the **Monitoring** tab of the detailed screen that appears.
     - The **Monitoring** tab is disabled while an endpoint stage is being created.
 
+<a id="training.copy"></a>
+
 ### Copy Training
 
 Create a new training with the same settings as an existing training.
@@ -334,6 +378,8 @@ Create a new training with the same settings as an existing training.
 3. The create training screen is displayed with the same settings as the existing training.
 4. If there is any information you would like to change the settings for, make the changes and then click **Create Training** to create the training.
 
+<a id="training.model.create"></a>
+
 ### Create a Model from Training
 
 Create a model with training in the completed state.
@@ -341,6 +387,8 @@ Create a model with training in the completed state.
 1. Choose the training you want to create as a model.
 2. Click **Generate Model** Only training in the COMPLETE state can be created as a model.
 3. You will be taken to the model creation page. After checking the contents, click **Create Model** to create a model. For more information on model creation, see [the model](./console-guide/#model) documentation.
+
+<a id="training.delete"></a>
 
 ### Delete Training
 
@@ -353,9 +401,13 @@ Deletes a training.
 > [Note] Training cannot be deleted if a related model exists:
 Training cannot be deleted if a model created by the training to be deleted exists. Please delete the model first and then the training.
 
+<a id="hyperparameter.tuning"></a>
+
 ## Hyperparameter Tuning
 
 Hyperparameter tuning is the process of optimizing hyperparameter values to maximize a model's predictive accuracy. If you don't use this feature, you'll have to manually tune the hyperparameters to find the optimal values while running many training jobs yourself.
+
+<a id="hyperparameter.tuning.create"></a>
 
 ### Create Hyperparameter Tuning
 
@@ -448,6 +500,8 @@ How to configure a hyperparameter tuning job.
 > [Caution] Training failure when deleting training input data:
 > Training may fail if the input data is deleted before training is completed.
 
+<a id="hyperparameter.tuning.list"></a>
+
 ### Hyperparameter Tuning List
 
 A list of hyperparameter tunings is displayed. Select a hyperparameter tuning from the list to view details and change information.
@@ -487,6 +541,8 @@ A list of hyperparameter tunings is displayed. Select a hyperparameter tuning fr
 - **Monitoring**: When you select hyperparameter tuning, you can check the list of monitored instances and basic indicator charts in the Monitoring tab of the detailed screen that appears.
     - The **Monitoring** tab is disabled while hyperparameter tuning is being created.
 
+<a id="hyperparameter.tuning.training.list"></a>
+
 ### List of Trainings for Hyperparameter Tuning
 
 Displays a list of trainings auto-generated by hyperparameter tuning. Select a training from the list to check detailed information.
@@ -504,6 +560,8 @@ Displays a list of trainings auto-generated by hyperparameter tuning. Select a t
     | METRICS_UNAVAILABLE | This is a state where target metrics cannot be collected. |
     | EARLY_STOPPED | Performance (goal metric) is not getting better while training is in progress, so it is in an early-stopped state. |
 
+<a id="hyperparameter.tuning.copy"></a>
+
 ### Copy Hyperparameter Tuning
 
 Create a new hyperparameter tuning with the same settings as the existing hyperparameter tuning.
@@ -513,6 +571,8 @@ Create a new hyperparameter tuning with the same settings as the existing hyperp
 3. The Create Hyperparameter Tuning screen is displayed with the same settings as the existing hyperparameter tuning.
 4. If there is any information you would like to change the settings for, make the changes and click **Create Hyperparameter Tuning** to create a hyperparameter tuning.
 
+<a id="hyperparameter.tuning.model.create"></a>
+
 ### Create a Model from Hyperparameter Tuning
 
 Create a model with the best training of hyperparameter tuning in the completed state.
@@ -521,6 +581,8 @@ Create a model with the best training of hyperparameter tuning in the completed 
 2. Click **Create Model**. Only hyperparameter tuning in the COMPLETE state can be created as a model.
 3. You will be taken to the model creation page. After checking the contents, click **Create Model** to create a model.
 For more information on model creation, see [the model](./console-guide/#model) documentation.
+
+<a id="hyperparameter.tuning.delete"></a>
 
 ### Delete Hyperparameter Tuning
 
@@ -533,13 +595,19 @@ Delete a hyperparameter tuning.
 > [Note] Hyperparameter tuning cannot be deleted if the associated model exists:
 > Hyperparameter tuning cannot be deleted if the model created by the hyperparameter tuning you want to delete exists. Please delete the model first, then the hyperparameter tuning.
 
+<a id="training"></a>
+
 ## Training Template
 
 By creating a training template in advance, you can import the values entered into the template when creating training or hyperparameter tuning.
 
+<a id="training.create"></a>
+
 ### Create Training Template
 
 For information on what you can set in your training template, see [Creating a training](./console-guide/#create-training).
+
+<a id="training.list"></a>
 
 ### List of Training Templates
 
@@ -548,6 +616,8 @@ Displays a list of training templates. Select a training template from the list 
 - **Operation**
     - **Change** : You can change training template information.
 - **Hyperparameters** : You can check the names of hyperparameters set in the training template on **the Hyperparameters** tab of the detailed screen displayed when you select a training template.
+
+<a id="training.copy"></a>
 
 ### Copy Training Template
 
@@ -558,6 +628,8 @@ Create a new training template with the same settings as an existing training te
 3. The Create training Template screen appears with the same settings as the existing training template.
 4. If there is any information you would like to change the settings for, change it and then click **Create Training Template** to create a training template.
 
+<a id="training.delete"></a>
+
 ### Delete Training Template
 
 Delete the training template.
@@ -566,9 +638,13 @@ Delete the training template.
 2. Click **Delete Training Template**
 3. Requested deletion cannot be undone. Click **OK** to proceed.
 
+<a id="model"></a>
+
 ## Model
 
 Can manage models of AI EasyMaker's training outcomes or external models as artifacts.
+
+<a id="model.create"></a>
 
 ### Create Model
 
@@ -625,6 +701,8 @@ model_name/
             └── variables.index
 ```
 
+<a id="model.list"></a>
+
 ### Model List
 
 Model list is displayed. Selecting a model in the list allows to check detailed information and make changes to it.
@@ -647,6 +725,8 @@ Model list is displayed. Selecting a model in the list allows to check detailed 
 - **Framework**: Model's framework information is displayed.
 - **Parameter**: Model's parameter is displayed. Parameters are used for inference.
 
+<a id="model.endpoint.create"></a>
+
 ### Create Endpoint from Model
 
 Create an endpoint that can serve the selected model.
@@ -656,6 +736,8 @@ Create an endpoint that can serve the selected model.
 3. Go to **Create Endpoint** page. After checking the contents, click **Create Endpoint** to create a model.
 For more information on creating models, refer to **Endpoint** documents.
 
+<a id="model.batch.inference.create"></a>
+
 ### Create Batch Inference in a Model
 
 Create batch inferences with the selected model and view the inference results as statistics.
@@ -664,6 +746,8 @@ Create batch inferences with the selected model and view the inference results a
 2. Click **Create Batch Inference**.
 3. You will be taken to the **Create Batch Inference** page. Check the contents and click Create Batch Inference.
 For more information about creating batch inferences, see [Batch Inference](./console-guide/#_54).
+
+<a id="model.delete"></a>
 
 ### Delete Model
 
@@ -677,9 +761,13 @@ Delete a model.
 > You cannot delete model if endpoint created by model want to delete is existed.
 > To delete, delete the endpoint created by the model first and then delete the model.
 
+<a id="model.evaluation"></a>
+
 ## Evaluate models
 
 Measure the performance of models, and compare performance across different models.
+
+<a id="model.evaluation.create"></a>
 
 ### Create a model evaluation
 
@@ -719,6 +807,8 @@ The size of the input data used to evaluate the model must be 20GB or less.
 > [Caution] Number of classes in a classification model evaluation:
 The number of classes in a classification model evaluation must be 50 or fewer.
 
+<a id="model.evaluation.list"></a>
+
 ### Model Evaluation List
 
 A list of model evaluations is displayed. Select a model evaluation in the list to view details and make changes to the information.
@@ -743,6 +833,8 @@ A list of model evaluations is displayed. Select a model evaluation in the list 
 - **Task**
     - **Stop**: You can stop an ongoing model evaluation.
 
+<a id="model.evaluation.metric"></a>
+
 ### Classification Model Evaluation Metrics
 
 - **PR AUC**: The area under Precision-Recall (PR) curve. It is effective for measuring a model's classification performance on unbalanced datasets.
@@ -756,6 +848,8 @@ A list of model evaluations is displayed. Select a model evaluation in the list 
 - **Precision-recall curve by threshold**: A graph illustrating how precision and recall change at a specific threshold. It serves as a reference when defining operational criteria.
 - **Confusion matrix**: A matrix that categorizes prediction results into true positives, false positives, false negatives, and true negatives. It allows easy identification of error types for each class.
 
+<a id="model.evaluation.metric"></a>
+
 ### Regression Model Evaluation Metrics
 
 - **MAE(mean absolute error)**: The mean absolute error between actual and predicted values. It intuitively shows the magnitude of prediction errors.
@@ -764,12 +858,16 @@ A list of model evaluations is displayed. Select a model evaluation in the list 
 - **RMSE(root mean squared error)**: The square root of the mean squared error. It is more sensitive to large errors and interprets results on the same scale as the original units.
 - **RMSLE(root mean squared logarithmic error)**: Calculated from the difference between log-transformed actual and predicted values. It is less sensitive to differences in magnitude and useful for evaluating exponentially growing data.
 
+<a id="model.evaluation.compare"></a>
+
 ### Compare Model Evaluations
 
 Compare evaluation metrics across models.
 
 1. In the list, select the model evaluations to compare.
 2. Click **Compare**.
+
+<a id="model.evaluation.delete"></a>
 
 ### Delete Model Evaluation
 
@@ -779,9 +877,13 @@ Delete a model evaluation.
 2. Click **Delete**. An ongoing model evaluation can be stopped and then deleted.
 3. Requested deletion task cannot be cancelled. To proceed, please click **Confirm**
 
+<a id="endpoint"></a>
+
 ## Endpoint
 
 Create and manage endpoints that can serve the model.
+
+<a id="endpoint.create"></a>
 
 ### Create Endpoint
 
@@ -837,6 +939,8 @@ Create and manage endpoints that can serve the model.
 > Adding new stage on existing endpoint creates new stage in API Gateway service.
 > If you exceed the default provision in [API Gateway Service Resource Provision Policy](https://docs.nhncloud.com/en/TOAST/en/resource-policy/#resource-provision-policy-for-api-gateway-service), you might not be able to create endpoints in AI EasyMaker. In this case, adjust API Gateway service resource quota.
 
+<a id="endpoint.list"></a>
+
 ### Endpoint List
 
 Endpoints list is displayed. Select an endpoint in the list to check details and make changes to the information.
@@ -865,6 +969,8 @@ Endpoints list is displayed. Select an endpoint in the list to check details and
     | NOT FOUND: STAGE DEPLOY RESULT | The deployment status of the endpoint default stage is not found.<br/>Please check if the default stage is deployed in API Gateway console. |
     | STAGE DEPLOY FAIL |  API Gateway default stage has failed to deploy. <br/>[Note] Please refer to **Recovery method when the stage's API Gateway in 'Deployment Failure' status** and recover from the deployment failed state. |
 
+<a id="endpoint.stage.create"></a>
+
 ### Create Endpoint Stage
 
 Add new stage to existing endpoint. You can create and test the new stage without affecting default stage.
@@ -873,6 +979,8 @@ Add new stage to existing endpoint. You can create and test the new stage withou
 2. Click **+ Create Stage**.
 3. Adding new stage from existing endpoint is automatically selected, and its setup method is the same as endpoint creation.
 4. Requested deletion task cannot be cancelled. If want to proceed, please click **Confirm**
+
+<a id="endpoint.stage.list"></a>
 
 ### Endpoint Stage List
 
@@ -919,6 +1027,8 @@ Stage list created under endpoint is displayed. Select stage in the list to chec
 > In this case, you can deploy API Gateway stage manually by clicking Select Stage from the Stage list > View API Gateway Settings > 'Deploy Stage' in the bottom detail screen.
 > If this guide couldn’t recover the deployment status, please contact the Customer Center.
 
+<a id="endpoint.stage.resource.create"></a>
+
 ### Create Stage Resource
 
 Add a new resource to an existing endpoint stage.
@@ -940,6 +1050,8 @@ Add a new resource to an existing endpoint stage.
         - **Memory**: Adjust the pod count depending on memory usage.
         - **Threshold value**: The threshold value per increment that the Pod will be scaled to.
 
+<a id="endpoint.stage.resource.list"></a>
+
 ### Stage Resource List
 
 A list of resources created under the endpoint stage is displayed.
@@ -957,6 +1069,8 @@ A list of resources created under the endpoint stage is displayed.
 - **Model Name**: The name of the model deployed to the stage.
 - **API Gateway Resource Path**: The inference URL of the model deployed to the stage. API clients can request inference at the displayed URL. For more information, see [Appendix > 10. Endpoint API Specfication](./console-guide/#10-api).
 - **Number of Pods**: Shows the number of healthy pods and total pods in use on the resource.
+
+<a id="endpoint.inference.call"></a>
 
 ### Call Endpoint Inference
 
@@ -991,6 +1105,8 @@ A list of resources created under the endpoint stage is displayed.
                 ]
             }
 
+<a id="endpoint.stage.resource.delete"></a>
+
 ### Delete Stage Resource
 
 1. In the endpoint list, click the **endpoint name** to move it to the Endpoint Stage list.
@@ -998,6 +1114,8 @@ A list of resources created under the endpoint stage is displayed.
 3. On the **Stage Resource** tab of the details screen, select the stage resource you want to delete.
 3. Click **Delete Stage Resource**.
 4. Requested deletion cannot be undone. Click **OK** to proceed.
+
+<a id="endpoint.default.stage.change"></a>
 
 ### Change Endpoint Default Stage
 
@@ -1012,6 +1130,8 @@ To change the model of an endpoint without service stop, AI EasyMaker recommends
 6. Requested deletion task cannot be cancelled. If want to proceed, please click **Confirm**
 7. Stage that you want to change changes to the default stage, and resources of existing default stage are automatically deleted.
 
+<a id="endpoint.stage.delete"></a>
+
 ### Delete Endpoint Stage
 
 1. In Endpoint list, click **Endpoint Name** to go to Endpoint Stage list.
@@ -1022,6 +1142,8 @@ To change the model of an endpoint without service stop, AI EasyMaker recommends
 > [Caution] Delete stage of API Gateway service when deleting the endpoint stage:
 > Deleting an endpoint stage in AI EasyMaker also deletes the stage in API Gateway service from which the endpoint's stage is deployed.
 > If there is an API running on the API Gateway stage to be deleted, please be noted that API calls cannot be made.
+
+<a id="endpoint.delete"></a>
 
 ### Delete Endpoint
 
@@ -1036,9 +1158,13 @@ Delete an endpoint.
 > Deleting an endpoint stage in AI EasyMaker also deletes API Gateway service from which the endpoint's stage was deployed.
 > If there is API running on the API Gateway service to be deleted, please be noted that API calls cannot be made.
 
+<a id="batch.inference"></a>
+
 ## Batch Inference
 
 Provides an environment to make batch inferences from an AI EasyMaker model and view inference results in statistics.
+
+<a id="batch.inference.create"></a>
 
 ### Create Batch Inference
 
@@ -1096,6 +1222,8 @@ Set up the environment in which batch inference will be performed by selecting a
 > If `Number of Pods / Number of GPUs` is not divisible by an integer, you may encounter unallocated GPUs
 > Unallocated GPUs are not used by batch inference, so set the number of Pods appropriately to use GPU instances efficiently.
 
+<a id="batch.inference.list"></a>
+
 ### Batch Inference List
 
 Displays a list of batch inferences. Select a batch inference from the list to check the details and change the information.
@@ -1120,6 +1248,8 @@ Displays a list of batch inferences. Select a batch inference from the list to c
 - **Monitoring**: When you select a batch inference, you can check the list of monitored instances and basic indicator charts in the **Monitoring** tab of the detailed screen that appears.
     - The **Monitoring** tab is disabled while batch inference is being created.
 
+<a id="batch.inference.copy"></a>
+
 ### Copy Batch Inference
 
 Create a new batch inference with the same settings as an existing batch inference.
@@ -1129,6 +1259,8 @@ Create a new batch inference with the same settings as an existing batch inferen
 3. The Create batch inference screen appears with the same settings as an existing batch inference.
 4. If there is any information you would like to change the settings for, make the changes and then click **Create Batch Inference** to create the batch inference.
 
+<a id="batch.inference.delete"></a>
+
 ### Delete Batch Inference
 
 Delete a batch inference.
@@ -1137,11 +1269,15 @@ Delete a batch inference.
 2. Click **Delete Batch Inference**. Batch inference in progress can be deleted after stopping.
 3. Requested deletion task cannot be cancelled. To proceed, please click **Confirm**
 
+<a id="personal.image"></a>
+
 ## Private Image
 
 User-personalized container images can be used to drive notebooks, training, and hyperparameter tuning.
 Only private images derived from the notebook/deep learning images provided by AI EasyMaker can be used when creating resources in AI EasyMaker.
 See the table below for the base images in AI EasyMaker.
+
+<a id="personal.image.notebook.image"></a>
 
 #### Notebook Image
 
@@ -1153,6 +1289,8 @@ See the table below for the base images in AI EasyMaker.
 | Ubuntu 22.04 GPU PyTorch Notebook    | GPU  | PyTorch    | 2.0.1    | 3.10   | fb34a0a4-kr1-registry.container.nhncloud.com/easymaker/pytorch-notebook:2.0.1-gpu-py310-ubuntu2204    |
 | Ubuntu 22.04 CPU TensorFlow Notebook | CPU  | TensorFlow | 2.12.0   | 3.10   | fb34a0a4-kr1-registry.container.nhncloud.com/easymaker/tensorflow-notebook:2.12.0-cpu-py310-ubuntu2204|
 | Ubuntu 22.04 GPU TensorFlow Notebook | GPU  | TensorFlow | 2.12.0   | 3.10   | fb34a0a4-kr1-registry.container.nhncloud.com/easymaker/tensorflow-notebook:2.12.0-gpu-py310-ubuntu2204|
+
+<a id="personal.image.deep.learning.image"></a>
 
 #### Deep Learning Images
 
@@ -1167,6 +1305,8 @@ See the table below for the base images in AI EasyMaker.
 >
 > Only private images derived from base images provided by AI EasyMaker can be used.
 > Only NHN Container Registry (NCR) can be integrated as a container registry service where private images are stored. (As of December 2023)
+
+<a id="personal.image.create"></a>
 
 ### Create Private Image
 
@@ -1222,11 +1362,15 @@ Build an image with a Dockerfile and save (push) the image to the NCR registry.
 > ID: User Access Key of NHN Cloud user account
 > Password: User Secret Key of NHN Cloud user account
 
+<a id="registry.account"></a>
+
 ## Registry Account
 
 In order for AI EasyMaker to pull an image from a user's registry where private images are stored to power the container, they need to be logged into the user's registry.
 If you save your login information with a registry account, you can reuse it in images linked to that registry account.
 To manage your registry accounts, go to the **Image** menu in the AI EasyMaker console, then select the **Registry Account** tab.
+
+<a id="registry.account.create"></a>
 
 ### Create Registry Account
 
@@ -1238,7 +1382,11 @@ Create a new registry account.
 - ID: Enter the ID of the registry account.
 - Password: Enter the password for the registry account.
 
+<a id="registry.account.modify"></a>
+
 ### Modify Registry Account
+
+<a id="registry.account.modify.registry.modify"></a>
 
 #### Modify registry ID and password
 
@@ -1250,11 +1398,15 @@ Create a new registry account.
 > If you enter an incorrect registry username and password, the login during a private image pull fails and the resource creation fails.
 > If there are resources being created with a private image that has a registry account associated with it, or if there are studies and hyperparameters in progress, you cannot modify them.
 
+<a id="registry.account.modify.registry.account.change"></a>
+
 #### Registry Account > Change Name, Description
 
 1. In the Registry Accounts list, select the account you want to change.
 2. Click **Change** on the bottom screen.
 3. After changing the name and description, click the **Confirm** button.
+
+<a id="registry.account.delete"></a>
 
 ### Delete Registry Account
 
@@ -1262,6 +1414,8 @@ Select the registry account you want to delete from the list, and click **Delete
 
 > [Note]
 > You cannot delete a registry account associated with an image. To delete, delete the associated image first and then delete the registry account.
+
+<a id="pipeline"></a>
 
 ## Pipeline
 
@@ -1289,6 +1443,8 @@ Most pipelines aim to produce one or more ML artifacts, such as datasets, models
 > - [KFP User Guide](https://www.kubeflow.org/docs/components/pipelines/user-guides/)
 > - [KFP SDK Reference](https://kubeflow-pipelines.readthedocs.io/en/stable/)
 
+<a id="pipeline"></a>
+
 ### Upload a Pipeline
 
 Upload a pipeline.
@@ -1300,6 +1456,8 @@ Upload a pipeline.
 > [Note] Pipeline upload time:
 > Uploading a pipeline can take a few minutes.
 > The initial resource creation requires an additional few minutes of time to configure the service environment.
+
+<a id="pipeline.list"></a>
 
 ### Pipeline List
 
@@ -1314,11 +1472,15 @@ A list of pipelines is displayed. Select a pipeline in the list to view details 
     | CREATE FAILED      | Pipeline creation failed. Try again. |
     | ACTIVE             | The pipeline was created successfully.        |
 
+<a id="pipeline"></a>
+
 ### Pipeline Graph
 
 A pipeline graph is displayed. Select a node in the graph to see more information.
 
 A graph is a pictorial representation of a pipeline. Each node in the graph represents a step in the pipeline, with arrows indicating the parent/child relationship between the pipeline components represented by each step.
+
+<a id="pipeline.delete"></a>
 
 ### Delete a Pipeline
 
@@ -1331,9 +1493,13 @@ Delete the pipeline.
 > [Note] Cannot delete a pipeline if an associated pipeline schedule exists:
 > You cannot delete a pipeline if a schedule created with the pipeline you want to delete exists. Delete the pipeline schedule first, then delete the pipeline.
 
+<a id="pipeline.run"></a>
+
 ## Run a Pipeline
 
 You can run and manage your uploaded pipelines in AI EasyMaker.
+
+<a id="pipeline.run.create"></a>
 
 ### Create a Pipeline Run
 
@@ -1365,6 +1531,8 @@ Run the pipeline.
 > Creating a pipeline run can take a few minutes.
 > The initial resource creation requires an additional few minutes of time to configure the service environment.
 
+<a id="pipeline.run.list"></a>
+
 ### Pipeline Run List
 
 A list of pipeline runs is displayed. Select a pipeline run in the list to view details and make changes to the information.
@@ -1389,6 +1557,8 @@ A list of pipeline runs is displayed. Select a pipeline run in the list to view 
 - **Monitoring**: When you select Run a pipeline from the list, you can see a list of monitored instances and a basic metrics chart on the **Monitoring** tab of the detail screen that appears.
     - The **Monitoring** tab is disabled while a pipeline run is being created.
 
+<a id="pipeline.run"></a>
+
 ### Pipeline Run Graph
 
 A graph of the pipeline run is displayed. Select a node in the graph to see more information.
@@ -1399,6 +1569,8 @@ With node-specific details, you can download the generated artifacts.
 
 > [Caution] Pipeline artifact storage cycle:
 > Artifacts older than 120 days are automatically deleted.
+
+<a id="pipeline.run.stop"></a>
 
 ### Stop Pipeline Run
 
@@ -1411,6 +1583,8 @@ Stop running pipelines in progress.
 > [Note] How long it takes to stop running a pipeline:
 > Stopping pipeline execution can take a few minutes.
 
+<a id="pipeline.run.copy"></a>
+
 ### Copy Pipeline Run
 
 Create a new pipeline run with the same settings as an existing pipeline run.
@@ -1420,6 +1594,8 @@ Create a new pipeline run with the same settings as an existing pipeline run.
 3. The Create pipeline run screen displays with the same settings as an existing pipeline run.
 4. If you want to change any settings, make any changes, and then click **Create Pipeline Run**.
 
+<a id="pipeline.run.delete"></a>
+
 ### Delete a Pipeline Run
 
 Delete a pipeline run.
@@ -1428,9 +1604,13 @@ Delete a pipeline run.
 2. Click **Delete Pipeline Run**. You cannot delete a pipeline run that is in progress.
 3. The requested delete task cannot be canceled. Click **Delete** to proceed.
 
+<a id="pipeline.schedule"></a>
+
 ## Pipeline Recurring Run
 
 You can create and manage a recurring run to periodically run the uploaded pipeline repeatedly in AI EasyMaker.
+
+<a id="pipeline.schedule.create"></a>
 
 ### Create a Recurring Run
 
@@ -1458,6 +1638,8 @@ For information beyond the items below that you can set in creating a pipeline s
 > The Cron expression uses six space-separated fields to represent the time.
 > For more information, see the [Cron Expression Format](https://pkg.go.dev/github.com/robfig/cron#hdr-CRON_Expression_Format) documentation.
 
+<a id="pipeline.schedule.list"></a>
+
 ### Pipeline Recurring Runs
 
 A list of pipeline schedules is displayed. Select a pipeline recurring run in the list to view details and make changes to the information.
@@ -1474,12 +1656,16 @@ A list of pipeline schedules is displayed. Select a pipeline recurring run in th
 
 - **Manage Execution**: When you select a pipeline recurring run in the list, you can view the list of runs generated by the pipeline recurring run on the **Manage Run** tab of the detail screen that appears.
 
+<a id="pipeline.schedule.start.stop"></a>
+
 ### Start and Stop Recurring Run
 
 Stop a started pipeline recurring run or start a stopped pipeline recurring run.
 
 1. Select the pipeline recurring run you want to start or stop from the list.
 2. Click **Start Recurring Run** or **Stop Recurring Run**.
+
+<a id="pipeline.schedule.copy"></a>
 
 ### Copy a Pipeline Recurring Run
 
@@ -1489,6 +1675,8 @@ Create a new pipeline recurring run with the same settings as an existing pipeli
 2. Click **Copy Pipeline Recurring Run**.
 3. The Create pipeline schedule screen displays with the same settings as an existing pipeline schedule.
 4. Make any changes to the settings you want to make, and then click **Create Pipeline Recurring Run**.
+
+<a id="pipeline.schedule.delete"></a>
 
 ### Delete a pipeline recurring run
 
@@ -1501,9 +1689,13 @@ Delete a pipeline recurring run.
 > [Note] You cannot delete a pipeline schedule if an associated pipeline run is in progress:
 > You cannot delete a run generated by the pipeline schedule you want to delete if it is in progress. Delete the pipeline schedule after the pipeline run is complete.
 
+<a id="rag"></a>
+
 ## RAG
 
 Retrieval-Augmented Generation (RAG) is a technology that vectorizes and stores users' documents, retrieves content related to the question, and improves the accuracy of Large Language Model (LLM) responses. AI EasyMaker allows you to integrate vector store, embedding model, and LLM to create and manage RAG systems.
+
+<a id="rag.create"></a>
 
 ### Create a RAG
 
@@ -1564,6 +1756,8 @@ Create a new RAG.
 
 > [Note] There may be limitations on the format, size, and number of files available for ingestion. For more information, see [Collect Sync](#rag_ingestion_sync).
 
+<a id="rag.list"></a>
+
 ### RAG List
 
 View and manage the list of generated RAGs. Select a RAG from the list to view detailed information.
@@ -1593,6 +1787,8 @@ View and manage the list of generated RAGs. Select a RAG from the list to view d
 - **API Statistics**: You can check API statistics in the **API Statistics** tab of the detail screen displayed when you select a RAG.
 - **Monitoring**: You can check the list of monitored instances and basic metric charts in the **Monitoring** tab of the details screen displayed when you select a RAG.
 
+<a id="rag.ingestion.sync"></a>
+
 ### Synchronize Ingestions
 
 - The Synchronize Ingestions feature is available in the **Vector Store** tab of the details screen displayed when you select RAG.
@@ -1611,10 +1807,14 @@ View and manage the list of generated RAGs. Select a RAG from the list to view d
 | Spreadsheet | `.csv`, `.xls`, `.xlsx` | 3MB |
 | Presentation | `.ppt`, `.pptx` | 50MB |
 
+<a id="rag.delete"></a>
+
 ### Delete RAG
 
 - You cannot delete the RAG that is on creation or deletion.
 - The requested deletion task cannot be canceled.
+
+<a id="rag.query.request.guide"></a>
 
 ### Guide to Asking RAG Questions
 
@@ -1635,7 +1835,11 @@ curl -X POST https://{API endpoint address}/rag/v1/query \
   }'
 ```
 
+<a id="appendix"></a>
+
 ## Appendix
+
+<a id="appendix.1.object.storage.account"></a>
 
 ### 1. Add AI EasyMaker system account permissions to NHN Cloud Object Storage
 
@@ -1664,7 +1868,11 @@ To add read/write permissions to AI EasyMaker system account in Object Storage, 
 3. Go to the NHN Cloud Object Storage console.
 4. [Allow specific projects or users to read/write](https://docs.nhncloud.com/en/Storage/Object%20Storage/en/acl-guide/#allow-readwrite-to-specific-projects-or-specific-users) Refer to documents to add required read and write permissions to AI EasyMaker system account in NHN Cloud Object Storage console.
 
+<a id="appendix.2.log.and.crash.search.service.usage.log.list"></a>
+
 ### 2. NHN Cloud Log & Crash Search Service Usage Guide and Log Inquiry Guide
+
+<a id="appendix.2.log.and.crash.search.service.usage.log.list.log.and.crash.search.service.usage"></a>
 
 #### NHN Cloud Log & Crash Search Service Usage Guide
 
@@ -1675,6 +1883,8 @@ To store logs in the Log & Crash Search service, you have to enable Log & Crash 
     - For more information and fees on the Log & Crash Search service, please refer to the following documents
         - [Log & Crash Search Service Guide](https://docs.nhncloud.com/en/Data%20&%20Analytics/Log%20&%20Crash%20Search/en/Overview/)
         - [Log & Crash Search Fee](https://www.nhncloud.com/kr/pricing/by-service?c=Data%20%26%20Analytics&s=Log%20%26%20Crash%20Search)
+
+<a id="appendix.2.log.and.crash.search.service.usage.log.list.log.list"></a>
 
 #### Log Query
 
@@ -1729,6 +1939,8 @@ AI EasyMaker service sends logs to Log & Crash Search service in the following d
     | --- | --- |
     | batchInferenceId | AI EasyMaker batch inference ID |
 
+<a id="appendix.3.hyperparameter"></a>
+
 ### 3. Hyperparameters
 
 - Value in Key-Value format entered through the console.
@@ -1751,6 +1963,8 @@ As shown in the example below, you can use hyperparameter values entered during 
             ...
 
             return parser.parse_known_args()
+
+<a id="appendix.4.environment"></a>
 
 ### 4. Environment Variables
 
@@ -1793,6 +2007,8 @@ As shown in the example below, you can use hyperparameter values entered during 
         model_dir = os.environ.get("EM_MODEL_DIR")
         model.save(model_dir)
 
+<a id="appendix.5.metric.log"></a>
+
 ### 5. Store Indicator Logs for TensorBoard Usage
 
 - In order to check result indicators on the TensorBoard screen after training, the TensorBoard log storage space must be set to the specified location (`EM_TENSORBOARD_LOG_DIR`) when writing the training script.
@@ -1814,6 +2030,8 @@ As shown in the example below, you can use hyperparameter values entered during 
 
 ![Check TensorBoard Log](http://static.toastoven.net/prod_ai_easymaker/console-guide_appendix_tensorboard.png)
 
+<a id="appendix.6.framework.training.settings"></a>
+
 ### 6. Distributed Training Settings by Framework
 
 - **Tensorflow**
@@ -1821,11 +2039,15 @@ As shown in the example below, you can use hyperparameter values entered during 
 - **Pytorch**
     - `Backends` settings are required for distributed training. If distributed training is performed on CPU, set it to gloo, and if distributed training is performed on GPU, set it to nccl. For more information, please refer to the [Pytorch guide document](https://pytorch.org/docs/stable/distributed.html).
 
+<a id="appendix.7.cluster.upgrade"></a>
+
 ### 7. Upgrade the cluster version
 
 The AI EasyMaker service periodically upgrades the cluster version to provide stable service and new features.
 When a new cluster version is deployed, you need to move the notebooks and endpoints that are running on the old version of the cluster to the new cluster.
 Explains how to move new clusters by resource.
+
+<a id="appendix.7.cluster.upgrade.notebook.cluster.upgrade"></a>
 
 #### Upgrade Notebook Cluster Version
 
@@ -1839,11 +2061,15 @@ Hovering the mouse pointer over the**Restart** button displays restart instructi
 Restarts take about 25 minutes for the first run, and about 10 minutes for subsequent runs.
 Failed restarts are automatically reported to the administrator.
 
+<a id="appendix.7.cluster.upgrade.endpoint.cluster.upgrade"></a>
+
 #### Upgrade the endpoint cluster version
 
 On the **endpoints list** screen, endpoints that need to be moved to the new cluster will have a **! Notice** to the left of the name.
 If you hover over the **! Notice**, it displays a version upgrade announcement and an expiration date.
 Before the expiration, you must follow these instructions to move stages running on the old version cluster to the new version cluster.
+
+<a id="appendix.7.cluster.upgrade.endpoint.cluster.upgrade.stage.cluster.upgrade"></a>
 
 ##### Upgrade the cluster version of a general stage
 
@@ -1854,6 +2080,8 @@ Before the expiration, you must follow these instructions to move stages running
 > [Caution]
 > Deleting a stage will shut down the endpoint, preventing API calls. Ensure that the stage is not in service before deleting it.
 
+<a id="appendix.7.cluster.upgrade.endpoint.cluster.upgrade.default.stage.cluster.upgrade"></a>
+
 ##### Upgrade the cluster version of the default stage
 
 The default stage is the stage on which the actual service operates.
@@ -1863,6 +2091,8 @@ To move the cluster version of the default stage without disrupting the service,
 2. Verify that API calls and inference responses are coming from the new stage endpoint as normal.
 3. Click **Change Default Stage**. Select a new stage to change it to the default stage.
 4. When the change is complete, the new stage is set as the default stage, and the existing default stage is deleted.
+
+<a id="appendix.8.torchrun.usage"></a>
 
 ### 8. How to Use Torchrun
 
@@ -1875,6 +2105,8 @@ exit code : -9 (pid: {pid})
 
 - For more information about torchrun, see the [Pytorch Guide](https://pytorch.org/docs/stable/elastic/run.html).
 
+<a id="appendix.9.resource.info"></a>
+
 ### 9. Resource Information
 
 When you create batch inferences and endpoints in AI EasyMaker, it allocates resources on the selected instance type, less the default usage.
@@ -1882,6 +2114,8 @@ The amount of resources you need depends on the demand and complexity of your mo
 
 Batch inference allocates resources to each pod by dividing the actual usage by the number of pods. Endpoint cannot allow the quota you enter to exceed the actual usage of your instance, so check your resource usage beforehand.
 Note that both batch inference and endpoints can fail to create if the allocated resources are less than the minimum usage required by the inference.
+
+<a id="appendix.10.endpoint.api"></a>
 
 ### 10. Endpoint API Specification
 
@@ -1908,13 +2142,19 @@ For more information about the OIP specification, see [OIP Specification](https:
 > The inputs required for inference must be entered according to OpenAI's API specification. For more information, see the [OpenAI API documentation](https://platform.openai.com/docs/api-reference/chat).
 > For models that support the Completion and Chat Completion APIs provided by AI EasyMaker, see [Model endpoint compatibility](https://platform.openai.com/docs/models/model-endpoint-compatibility).
 
+<a id="appendix.11.framework.note"></a>
+
 ### 11. Considerations for framework-specific serving
+
+<a id="appendix.11.framework.note.tensorflow.framework"></a>
 
 #### TensorFlow Framework
 
 The TensorFlow model serving provided by AI EasyMaker uses the SavedModel (.pb) recommended by TensorFlow.
 To use checkpoints, save the checkpoint variables directory saved as a SavedModel along with the model directory, which will be used to serve the model.
 Reference: [https://www.tensorflow.org/guide/saved_model](https://www.tensorflow.org/guide/saved_model)
+
+<a id="appendix.11.framework.note.pytorch.framework"></a>
 
 #### PyTorch Framework
 
@@ -1958,14 +2198,20 @@ class TestHandler(BaseHandler):
     # ...
 ```
 
+<a id="appendix.11.framework.note.scikitlearn.framework"></a>
+
 #### Scikit-learn Framework
 
 AI EasyMaker uses mlserver to serve Scikit-learn models (.joblib).
 The `model-settings.json`, which is required when using mlserver directly, is not required when using AI EasyMaker serving.
 
+<a id="appendix.11.framework.note.hugging.face.framework"></a>
+
 #### Hugging Face Framework
 
 The Hugging Face model can be served using the Runtime provided by AI EasyMaker, TensorFlow Serving, or TorchServe.
+
+<a id="appendix.11.framework.note.hugging.face.framework.hugging.face.runtime"></a>
 
 ##### Hugging Face Runtime
 
@@ -1986,6 +2232,8 @@ Hugging Face Runtime Serving does not support fine-tuning. To serve fine-tuned m
 > [Note] Gated Model:
 > To serve a gated model, you must enter the token of an account that is allowed access as a model parameter.
 > If you do not enter a token, or if you enter a token from an account that is not allowed, the model deployment fails.
+
+<a id="appendix.11.framework.note.hugging.face.framework.tensorflow.pytorch.serving"></a>
 
 ##### TensorFlow/PyTorch Serving
 

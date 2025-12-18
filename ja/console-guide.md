@@ -1,8 +1,14 @@
+<a id="ai.easymaker.console.usage.guide"></a>
+
 ## Machine Learning > AI EasyMaker > コンソール使用ガイド
+
+<a id="dashboard"></a>
 
 ## ダッシュボード
 
 ダッシュボードでAI EasyMakerの全リソースの利用状況を確認できます。
+
+<a id="dashboard.service.usage.status"></a>
 
 ### サービス利用状況
 
@@ -13,19 +19,27 @@
 - ハイパーパラメータチューニング:完了(COMPLETE)したハイパーパラメータチューニング数
 - エンドポイント: ACTIVE状態のエンドポイント数
 
+<a id="dashboard.service.monitoring"></a>
+
 ### サービスモニタリング
 
 - API 呼び出しが最も多い Top 3 エンドポイントを表示します。
 - エンドポイントを選択すると、サブエンドポイントステージのAPI成功/失敗の合計指標を確認できます。
+
+<a id="dashboard.resource.usage"></a>
 
 ### リソース使用率
 
 - CPU、GPUコアタイプ別に最も使用量が多いリソースを確認できます。
 - 指標にマウスポインタを合わせると、リソース情報が表示されます。
 
+<a id="notebook"></a>
+
 ## ノートパソコン
 
 機械学習の開発に必要なパッケージがインストールされているJupyterノートパソコンを作成し、管理します。
+
+<a id="notebook.create"></a>
 
 ### ノートパソコンの作成
 
@@ -60,6 +74,8 @@ Jupyterノートパソコンを作成します。
 > ノートパソコンの作成には数分かかる場合があります。
 > 最初のリソース(ノートパソコン、学習、実験、エンドポイント)作成時、サービス環境構成のためにさらに数分かかる場合があります。
 
+<a id="notebook.list"></a>
+
 ### ノートパソコンリスト
 
 ノートパソコンリストが表示されます。リストのノートパソコンを選択すると、詳細情報を確認して情報を変更できます。
@@ -89,6 +105,8 @@ Jupyterノートパソコンを作成します。
 - **モニタリング**:ノートパソコンを選択すると表示される詳細画面の**モニタリング**タブで、モニタリング対象インスタンスリストと基本指標チャートを確認できます。
     - **モニタリング**タブはノートパソコンが作成中または、進行中のタスクがある場合、無効になります。
 
+<a id="notebook.user.virtual.run.environment.configuration"></a>
+
 ### ユーザー仮想実行環の境構成
 
 AI EasyMakerノートパソコンインスタンスは、機械学習に必要なさまざまなライブラリおよびカーネルがインストールされた基本Conda仮想環境を提供します。
@@ -117,6 +135,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
         base                *   /opt/miniconda3
         easymaker_env           /root/easymaker/custom-conda-envs/easymaker_env
 
+<a id="notebook.user.script"></a>
+
 ### ユーザースクリプト
 
 ノートPCを停止して起動する時、自動的に実行されるべきスクリプトを`/root/easymaker/cont-init.d`パスに登録できます。
@@ -133,6 +153,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
     - スクリプト標準出力及び標準エラーストリーム: `/root/easymaker/cont-init.d/{SCRIPT}.output`
     - 全体実行ログ: `/root/easymaker/cont-init.output`
 
+<a id="notebook.stop"></a>
+
 ### ノートパソコンの停止
 
 動作中のノートパソコンを停止するか、停止したノートパソコンを起動します。
@@ -148,6 +170,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 > [参考]ノートパソコンの起動と停止の所要時間:
 > ノートパソコンの起動と停止は数分かかる場合があります。
 
+<a id="notebook.instance.type.change"></a>
+
 ### ノートパソコンインスタンスタイプの変更
 
 作成されたノートパソコンのインスタンスタイプを変更します。
@@ -160,6 +184,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 
 > [参考]インスタンスタイプ変更所要時間:
 > インスタンスタイプの変更は数分かかる場合があります。
+
+<a id="notebook.reboot"></a>
 
 ### ノートパソコン再起動
 
@@ -174,6 +200,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 > ノートパソコンを再起動すると、ユーザーが作成した仮想環境と外部ライブラリが初期化される場合があります。
 > 維持するには[ユーザー仮想実行環境構成](./console-guide/#_8)を参考してユーザー仮想環境を構成してください。
 
+<a id="notebook.delete"></a>
+
 ### ノートパソコンの削除
 
 作成されたノートパソコンを削除します。
@@ -186,9 +214,13 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 > ノートパソコンを削除すると、ブートストレージとデータストレージが削除されます。
 > 接続したNHN Cloud NASは削除されず、**NHN Cloud NAS**から個別に削除する必要があります。
 
+<a id="experiment"></a>
+
 ## 実験
 
 実験は、関連する学習を実験でグループ化し、管理します。
+
+<a id="experiment.create"></a>
 
 ### 実験作成
 
@@ -198,6 +230,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 > [参考]実験作成所要時間:
 > 実験の作成には数分の時間がかかる場合があります。
 > 最初のリソース(ノートパソコン、学習、実験、エンドポイント)作成時、サービス環境の構成にさらに数分かかります。
+
+<a id="experiment.list"></a>
 
 ### 実験リスト
 
@@ -217,6 +251,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
     - **再試行**：実験の状態が失敗の場合、**再試行**をクリックして実験を復旧できます。
 - **学習**：学習を選択すると、表示される詳細画面の**学習**タブには、実験に含まれている学習のリストが表示されます。
 
+<a id="experiment.delete"></a>
+
 ### 実験の削除
 
 実験を削除します。
@@ -230,9 +266,13 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 > 実験に関連するリソースを削除した後、実験を削除してください。
 > 関連するリソースは、削除したい実験をクリックすると表示される下部の詳細画面で確認できます。
 
+<a id="training"></a>
+
 ## 学習
 
 機械学習アルゴリズムを学習し、学習結果を統計で確認できる環境を提供します。
+
+<a id="training.create"></a>
 
 ### 学習作成
 
@@ -298,6 +338,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 > [注意]学習入力データを削除すると学習失敗:
 > 学習が完了する前に入力データを削除すると、学習に失敗する可能性があります。
 
+<a id="training.list"></a>
+
 ### 学習リスト
 
 学習リストが表示されます。リストの学習を選択すると、詳細情報を確認して情報を変更できます。
@@ -327,6 +369,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 - **モニタリング**:学習を選択すると表示される詳細画面の**モニタリング**タブで、モニタリング対象インスタンスリストと基本指標チャートを確認できます。
     - **モニタリング**タブは学習が作成中の場合、無効になります。
 
+<a id="training.copy"></a>
+
 ### 学習のコピー
 
 既存の学習と同じ設定で新しい学習を作成します。
@@ -336,6 +380,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 3. 既存の学習と同じ設定で学習作成画面が表示されます。
 4. 設定を変更する情報がある場合は、変更した後に**学習の作成**をクリックして学習を作成します。
 
+<a id="training.model.create"></a>
+
 ### 学習からモデルを作成する
 
 完了した状態の学習でモデルを作成します。
@@ -343,6 +389,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 1. モデルとして作成する学習を選択します。
 2. **モデルの作成**をクリックします。完了(COMPLETE)状態の学習のみモデルとして作成できます。
 3. モデル作成ページに移動します。内容を確認し、**モデルの作成**をクリックしてモデルを作成します。 モデル作成の詳細については[モデル](./console-guide/#_36)文書を参照してください。
+
+<a id="training.delete"></a>
 
 ### 学習の削除
 
@@ -355,9 +403,13 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 > [参考]関連するモデルが存在する場合は学習の削除不可:
 > 削除する学習で作成されたモデルが存在する場合は学習を削除できません。モデルを先に削除してから学習を削除してください。
 
+<a id="hyperparameter.tuning"></a>
+
 ## ハイパーパラメータチューニング
 
 ハイパーパラメータチューニングは、モデルの予測精度を最大化するためにハイパーパラメータ値を最適化するプロセスです。もしこの機能を使用しない場合、多くの学習タスクを直接実行しながらハイパーパラメータを手動で調整し、最適な値を探す必要があります。
+
+<a id="hyperparameter.tuning.create"></a>
 
 ### ハイパーパラメータチューニングの作成
 
@@ -455,6 +507,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 > [注意]学習入力データ削除時の学習失敗:
 > 学習が完了する前に入力データを削除すると、学習に失敗することがあります。
 
+<a id="hyperparameter.tuning.list"></a>
+
 ### ハイパーパラメータチューニングリスト
 
 ハイパーパラメータチューニングリストが表示されます。リストのハイパーパラメータチューニングを選択すると、詳細情報を確認し、情報を変更できます。
@@ -494,6 +548,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 - **モニタリング**:ハイパーパラメータチューニングを選択すると表示される詳細画面の**モニタリング**タブで、モニタリング対象インスタンスリストと基本指標チャートを確認できます。
     - **モニタリング**タブはハイパーパラメータチューニングが作成中の場合、無効になります。
 
+<a id="hyperparameter.tuning.training.list"></a>
+
 ### ハイパーパラメータチューニングの学習リスト
 
 ハイパーパラメータチューニングによって自動作成された学習リストが表示されます。リストの学習を選択すると、詳細情報を確認できます。
@@ -511,6 +567,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
     | METRICS_UNAVAILABLE | 目標指標を収集できない状態です。 |
     | EARLY_STOPPED | 学習進行中、性能(目標指標)が改善されないため、早期に中止した状態です。 |
 
+<a id="hyperparameter.tuning.copy"></a>
+
 ### ハイパーパラメータチューニングのコピー
 
 既存ハイパーパラメータチューニングと同じ設定で新しいハイパーパラメータチューニングを作成します。
@@ -520,6 +578,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 3. 既存のハイパーパラメータチューニングと同じ設定で、ハイパーパラメータチューニングの作成画面が表示されます。
 4. 設定を変更したい情報がある場合、変更後**ハイパーパラメータチューニングの作成**をクリックしてハイパーパラメータチューニングを作成します。
 
+<a id="hyperparameter.tuning.model.create"></a>
+
 ### ハイパーパラメータチューニングでモデルを作成する
 
 完了した状態のハイパーパラメータチューニングの最高学習でモデルを作成します。
@@ -528,6 +588,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 2. **モデル作成**をクリックします。完了(COMPLETE)状態のハイパーパラメータチューニングのみモデルとして作成できます。
 3. モデル作成ページに移動します。内容を確認後、**モデル作成**をクリックしてモデルを作成します。
 モデルの作成に関する詳細は[モデル](./console-guide/#_36)文書を参照してください。
+
+<a id="hyperparameter.tuning.delete"></a>
 
 ### ハイパーパラメータチューニングの削除
 
@@ -540,13 +602,19 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 > [参照]関連するモデルが存在する場合、ハイパーパラメータチューニングは削除不可:
 > 削除するハイパーパラメータチューニングで作成されたモデルが存在する場合、ハイパーパラメータチューニングは削除できません。先にモデルを削除してから、ハイパーパラメータチューニングを削除してください。
 
+<a id="training"></a>
+
 ## 学習テンプレート
 
 学習テンプレートを事前に作成しておくと、学習やハイパーパラメータチューニングを作成する際にテンプレートに入力した値を取り込むことができます。
 
+<a id="training.create"></a>
+
 ### 学習テンプレートの作成
 
 学習テンプレートに設定できる情報は[学習の作成](./console-guide/#_19)を参照してください。
+
+<a id="training.list"></a>
 
 ### 学習テンプレートリスト
 
@@ -555,6 +623,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 - **作業**
     - **変更**：学習テンプレート情報を変更できます。
 - **ハイパーパラメータ**：学習テンプレートを選択すると表示される詳細画面の**ハイパーパラメータ**タブで学習テンプレートに設定したハイパーパラメータ名を確認できます。
+
+<a id="training.copy"></a>
 
 ### 学習テンプレートのコピー
 
@@ -565,6 +635,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 3. 既存の学習テンプレートと同じ設定で学習テンプレートの作成画面が表示されます。
 4. 設定を変更したい情報がある場合、変更後、**学習テンプレートの作成**をクリックして学習テンプレートを作成します。
 
+<a id="training.delete"></a>
+
 ### 学習テンプレートの削除
 
 学習テンプレートを削除します。
@@ -573,9 +645,13 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 2. **学習テンプレートの削除**をクリックします。
 3. リクエストされた削除作業はキャンセルできません。続行するには**確認**をクリックします。
 
+<a id="model"></a>
+
 ## モデル
 
 AI EasyMakerの学習結果のモデルまたは外部のモデルをアーティファクトとして管理できます。
+
+<a id="model.create"></a>
 
 ### モデルの作成
 
@@ -632,6 +708,8 @@ model_name/
             └── variables.index
 ```
 
+<a id="model.list"></a>
+
 ### モデルリスト
 
 モデルリストが表示されます。リストのモデルを選択すると詳細情報を確認して情報を変更できます。
@@ -654,6 +732,8 @@ model_name/
 - **フレームワーク**：モデルのフレームワーク情報が表示されます。
 - **パラメータ**：モデルのパラメータが表示されます。パラメータは推論に使用されます。
 
+<a id="model.endpoint.create"></a>
+
 ### モデルでエンドポイントを作成する
 
 選択したモデルをサービスできるエンドポイントを作成します。
@@ -663,6 +743,8 @@ model_name/
 3. **エンドポイント作成** ページに移動しまsす。内容を確認後、**エンドポイント作成**をクリックします。
 エンドポイントの作成に関する詳細は、[エンドポイント](./console-guide/#_42)文書を参照してください。
 
+<a id="model.batch.inference.create"></a>
+
 ### モデルでバッチ推論を作成する
 
 選択したモデルでバッチ推論を行い、推論結果を統計で確認できるバッチ推論を作成します。
@@ -671,6 +753,8 @@ model_name/
 2. **バッチ推論作成**をクリックします。
 3. **バッチ推論作成** ページに移動します。内容を確認後 **バッチ推論作成**をクリックします。
  バッチ推論の作成に関する詳細は、[バッチ推論](./console-guide/#_54)文書を参照してください。
+
+<a id="model.delete"></a>
 
 ### モデルの削除
 
@@ -684,9 +768,13 @@ model_name/
 > 削除しようとしているモデルで作成されたエンドポイントが存在する場合、モデルを削除できません。
 > 削除するには先に該当モデルで作成されたエンドポイントを削除してからモデルを削除してください。
 
+<a id="model.evaluation"></a>
+
 ## モデル評価
 
 モデルの性能を測定し、複数のモデル間の性能を比較します。
+
+<a id="model.evaluation.create"></a>
 
 ### モデル評価作成
 
@@ -724,6 +812,8 @@ model_name/
 > [注意]分類モデル評価のクラス数:
 > 分類モデル評価のクラス数は50以下でなければなりません。
 
+<a id="model.evaluation.list"></a>
+
 ### モデル評価リスト
 
 モデル評価の一覧が表示されます。一覧のモデル評価を選択すると、詳細情報を確認したり、情報を変更したりできます。
@@ -748,6 +838,8 @@ model_name/
 - **作業**
     - **停止**:進行中のモデル評価を停止できます。
 
+<a id="model.evaluation.metric"></a>
+
 ### 分類モデル評価指標
 
 - **PR AUC**:精度-再現率(PR)曲線の下面積です。不均衡なデータセットでモデルの分類性能を測定するのに効果的です。
@@ -761,6 +853,8 @@ model_name/
 - **しきい値別精度-再現率曲線**:特定のしきい値で精度と再現率がどのように変化するかを示すグラフです。実際の運用基準を設定する際の参考になります。
 - **混同行列(confusion matrix)**:予測結果をTP、FP、FN、TNの4つに分類した行列です。クラスごとの誤りタイプを簡単に把握できます。
 
+<a id="model.evaluation.metric"></a>
+
 ### 回帰モデル評価指標
 
 - **MAE(mean absolute error)**:実際の値と予測値の差の絶対値の平均です。予測誤差の大きさを直感的に示します。
@@ -769,12 +863,16 @@ model_name/
 - **RMSE(root mean squared error)**:二乗誤差の平均の平方根です。大きな誤差に敏感で、実際の単位と同じ尺度で結果を解釈できます。
 - **RMSLE(root mean squared logarithmic error)**:対数変換された実測値と予測値の差で算出されます。値の大きさの違いに敏感ではないため、指数的に成長するデータの評価に適しています。
 
+<a id="model.evaluation.compare"></a>
+
 ### モデル評価の比較
 
 複数のモデルの評価指標を比較します。
 
 1. リストから比較したいモデル評価を選択します。
 2. **比較**をクリックします。
+
+<a id="model.evaluation.delete"></a>
 
 ### モデル評価の削除
 
@@ -784,9 +882,13 @@ model_name/
 2. **削除**をクリックします。進行中のモデル評価は停止後に削除できます。
 3. リクエストされた削除作業はキャンセルできません。続行するには **確認**をクリックします。
 
+<a id="endpoint"></a>
+
 ## エンドポイント
 
 モデルをサービスできるエンドポイントを作成し、管理します。
+
+<a id="endpoint.create"></a>
 
 ### エンドポイントの作成
 
@@ -842,6 +944,8 @@ model_name/
 > 既存エンドポイントから新規ステージを追加すると、API Gatewayサービスに新規ステージを作成します。
 > [API Gatewayサービスリソース提供ポリシー](https://docs.nhncloud.com/ko/nhncloud/ko/resource-policy/#api-gateway)の基本提供量を超過した場合、AI EasyMakerでエンドポイント作成ができない場合があります。この場合、API Gatewayサービスリソースのクォータを調整して解決できます。
 
+<a id="endpoint.list"></a>
+
 ### エンドポイントリスト
 
 エンドポイントリストが表示されます。リストのエンドポイントを選択すると、詳細情報を確認して情報を変更できます。
@@ -870,6 +974,8 @@ model_name/
     | NOT FOUND: STAGE DEPLOY RESULT | エンドポイント基本ステージの配布状態が見つからない状態です。<br/>API Gatewayコンソールで基本ステージが配布された状態であることを確認してください。|
     | STAGE DEPLOY FAIL |  API Gateway基本ステージが配布失敗した状態です。<br/>**[参考]ステージのAPI Gateway「配布失敗」状態の場合の復旧方法**を参照して配布失敗状態を復旧できます。|
 
+<a id="endpoint.stage.create"></a>
+
 ### エンドポイントステージの作成
 
 既存のエンドポイントに新規ステージを追加します。新規ステージを作成して基本ステージの影響を受けずに新規ステージをテストできます。
@@ -878,6 +984,8 @@ model_name/
 2. **+ ステージ作成**をクリックします。
 3. 既存エンドポイントで新規ステージ追加が自動選択され、設定方法はエンドポイント作成内容と同じです。
 4. リクエストされた削除作業はキャンセルできません。続行するには**[OK]**をクリックします。
+
+<a id="endpoint.stage.list"></a>
 
 ### エンドポイントステージリスト
 
@@ -924,6 +1032,8 @@ model_name/
 > この場合、ステージリストからステージ選択 > 下部の詳細画面のAPI Gateway設定表示 > 「ステージ配布」をクリックしてAPI Gatewayステージを手動で配布できます。
 > 上記のガイドでも配布状態が回復しない場合はサポートにお問い合わせください。
 
+<a id="endpoint.stage.resource.create"></a>
+
 ### ステージリソース作成
 
 既存のエンドポイントステージに新規リソースを追加します。
@@ -944,6 +1054,8 @@ model_name/
         - **Memory**： Memory使用量に応じてPod数が調節されます。
     - **しきい値**：Podが増設される増設単位別のしきい値です。
 
+<a id="endpoint.stage.resource.list"></a>
+
 ### ステージリソースリスト
 
 エンドポイントステージの下に作成されたソースリストが表示されます。
@@ -961,6 +1073,8 @@ model_name/
 - **モデル名**:ステージに配布されたモデルの名前です。
 - **API Gatewayリソースパス**：ステージに配布されたモデルの推論URLです。表示されたURLで推論をリクエストできます。詳細は[付録 > 10. エンドポイントAPIスペック仕様](./console-guide/#10-api)をご確認ください。
 - **Pod数**:リソースで使用中の正常Podと全体Pod数が表示されます。
+
+<a id="endpoint.inference.call"></a>
 
 ### エンドポイント推論の呼び出し
 
@@ -995,6 +1109,8 @@ model_name/
                 ]
             }
 
+<a id="endpoint.stage.resource.delete"></a>
+
 ### ステージリソースの削除
 
 1. エンドポイントリストで**エンドポイント名**をクリックしてエンドポイントステージリストに移動します。
@@ -1002,6 +1118,8 @@ model_name/
 3. 詳細画面のステージリソースタブで削除するステージリソースを選択します。
 4. **ステージリソースの削除**をクリックします。
 5. リクエストされた削除作業はキャンセルできません。続行するには**確認**をクリックします。
+
+<a id="endpoint.default.stage.change"></a>
 
 ### エンドポイントの基本ステージ変更
 
@@ -1016,6 +1134,8 @@ model_name/
 6. 変更リクエスト作業はキャンセルできません。続行するには**[OK]**をクリックします。
 7. 変更するステージが基本ステージに変更され、既存基本ステージのリソースは自動的に削除されます。
 
+<a id="endpoint.stage.delete"></a>
+
 ### エンドポイントステージの削除
 
 1. エンドポイントリストで**エンドポイント名**をクリックしてエンドポイントステージリストに移動します。
@@ -1026,6 +1146,8 @@ model_name/
 > [注意]エンドポイントステージを削除するとAPI Gatewayサービスのステージ削除:
 > AI EasyMakerのエンドポイントステージを削除すると、エンドポイントのステージが配布されたAPI Gatewayサービスのステージも削除されます。
 > 削除されるAPI Gatewayステージに運営中のAPIが存在する場合、API呼び出しができませんので注意してください。
+
+<a id="endpoint.delete"></a>
 
 ### エンドポイントの削除
 
@@ -1040,9 +1162,13 @@ model_name/
 > AI EasyMakerのエンドポイントを削除すると、エンドポイントが配布されたAPI Gatewayサービスも削除されます。
 > 削除されるAPI Gatewayサービスに運営中のAPIが存在する場合、API呼び出しができませんので注意してください。
 
+<a id="batch.inference"></a>
+
 ## バッチ推論
 
 AI EasyMakerのモデルでバッチ推論を行い、推論結果を統計で確認できる環境を提供します。
+
+<a id="batch.inference.create"></a>
 
 ### バッチ推論の作成
 
@@ -1100,6 +1226,8 @@ AI EasyMakerのモデルでバッチ推論を行い、推論結果を統計で�
 > `Pod数 / GPU数`が整数で割り切れない場合、、割り当てられないGPUが発生する場合があります。
 > 割り当てられないGPUはバッチ推論に使用されないため、GPUインスタンスを効率的に使用するために、Podの数を適切に設定してください。
 
+<a id="batch.inference.list"></a>
+
 ### バッチ推論リスト
 
 バッチ推論リストが表示されます。リストのバッチ推論を選択すると、詳細情報を確認し、情報を変更できます。
@@ -1124,6 +1252,8 @@ AI EasyMakerのモデルでバッチ推論を行い、推論結果を統計で�
 - **モニタリング**:バッチ推論を選択すると表示される詳細画面の **モニタリング**タブで、モニタリング対象インスタンスのリストと基本指標チャートを確認できます。
     - **モニタリング** タブは、バッチ推論が作成中の状態では無効になります。
 
+<a id="batch.inference.copy"></a>
+
 ### バッチ推論のコピー
 
 既存のバッチ推論と同じ設定で新しいバッチ推論を作成します。
@@ -1133,6 +1263,8 @@ AI EasyMakerのモデルでバッチ推論を行い、推論結果を統計で�
 3. 既存のバッチ推論と同じ設定でバッチ推論の作成画面が表示されます。
 4. 設定を変更したい情報があれば変更した後、**バッチ推論の作成**をクリックしてバッチ推論を作成します。
 
+<a id="batch.inference.delete"></a>
+
 ### バッチ推論の削除
 
 バッチ推論を削除します。
@@ -1141,11 +1273,15 @@ AI EasyMakerのモデルでバッチ推論を行い、推論結果を統計で�
 2. **バッチ推論の削除**をクリックします。進行中のバッチ推論は停止後に削除できます。
 3. リクエストされた削除作業はキャンセルできません。続行するには**確認**をクリックします。
 
+<a id="personal.image"></a>
+
 ## 個人イメージ
 
 ユーザーがパーソナライズされたコンテナイメージを利用してノートパソコン、学習、ハイパーパラメータチューニングを駆動できます。
 AI EasyMakerで提供するノートパソコン/ディープラーニングイメージを基に派生した個人イメージのみ、AI EasyMakerでリソース作成時に利用できます。
 AI EasyMakerの基盤イメージは下表を確認してください。
+
+<a id="personal.image.notebook.image"></a>
 
 #### ノートパソコンイメージ
 
@@ -1157,6 +1293,8 @@ AI EasyMakerの基盤イメージは下表を確認してください。
 | Ubuntu 22.04 GPU PyTorch Notebook    | GPU  | PyTorch    | 2.0.1    | 3.10   | fb34a0a4-kr1-registry.container.nhncloud.com/easymaker/pytorch-notebook:2.0.1-gpu-py310-ubuntu2204    |
 | Ubuntu 22.04 CPU TensorFlow Notebook | CPU  | TensorFlow | 2.12.0   | 3.10   | fb34a0a4-kr1-registry.container.nhncloud.com/easymaker/tensorflow-notebook:2.12.0-cpu-py310-ubuntu2204|
 | Ubuntu 22.04 GPU TensorFlow Notebook | GPU  | TensorFlow | 2.12.0   | 3.10   | fb34a0a4-kr1-registry.container.nhncloud.com/easymaker/tensorflow-notebook:2.12.0-gpu-py310-ubuntu2204|
+
+<a id="personal.image.deep.learning.image"></a>
 
 #### ディープラーニングイメージ
 
@@ -1171,6 +1309,8 @@ AI EasyMakerの基盤イメージは下表を確認してください。
 >
 > - AI EasyMakerで提供する基盤イメージから派生した個人イメージのみ使用できます。
 > - 個人イメージが保存されるコンテナレジストリサービスは、NHN Container Registry(NCR)のみ連動可能です (2023年12月基準)。
+
+<a id="personal.image.create"></a>
 
 ### 個人イメージの作成
 
@@ -1225,11 +1365,15 @@ DockerfileでイメージをビルドしてNCRレジストリにイメージを�
 > ID: NHN CloudユーザーアカウントのUser Access Key
 > パスワード: NHN CloudユーザーアカウントのUser Secret Key
 
+<a id="registry.account"></a>
+
 ## レジストリアカウント
 
 AI EasyMakerが、個人イメージが保存されているユーザーのレジストリからイメージを取得して(Pull)コンテナを駆動するにはユーザーのレジストリにログインする必要があります。
 レジストリアカウントにログイン情報を保存しておけば、該当レジストリアカウントに連動されたイメージで再使用できます。
 レジストリアカウントを管理するにはAI EasyMakerコンソールの**イメージ**メニューに移動した後、**レジストリアカウント**タブを選択します。
+
+<a id="registry.account.create"></a>
 
 ### レジストリアカウントの作成
 
@@ -1241,7 +1385,11 @@ AI EasyMakerが、個人イメージが保存されているユーザーのレ�
 - ID:レジストリアカウントのIDを入力します。
 - パスワード:レジストリアカウントのパスワードを入力します。
 
+<a id="registry.account.modify"></a>
+
 ### レジストリアカウントの修正
+
+<a id="registry.account.modify.registry.modify"></a>
 
 #### レジストリID、パスワードの修正
 
@@ -1253,11 +1401,15 @@ AI EasyMakerが、個人イメージが保存されているユーザーのレ�
 > 間違ったレジストリID、パスワードを入力すると、個人イメージPullの進行中にログインに失敗し、リソースの作成に失敗します。
 > レジストリアカウントが連動された個人イメージで作成中のリソースがあったり、実行中の学習やハイパーパラメータがある場合は修正できません。
 
+<a id="registry.account.modify.registry.account.change"></a>
+
 #### レジストリアカウント > 名前、説明の変更
 
 1. レジストリアカウントリストから変更するアカウントを選択します。
 2. 下部画面の**変更**ボタンをクリックします。
 3. 名前と説明を変更した後、**確認**ボタンをクリックします。
+
+<a id="registry.account.delete"></a>
 
 ### レジストリアカウントの削除
 
@@ -1265,6 +1417,8 @@ AI EasyMakerが、個人イメージが保存されているユーザーのレ�
 
 > [参考]
 > イメージと連動されたレジストリアカウントは削除できません。 削除するには、連動されたイメージを先に削除した後、レジストリアカウントを削除する必要があります。
+
+<a id="pipeline"></a>
 
 ## パイプライン
 
@@ -1292,6 +1446,8 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 > - [KFPユーザーガイド](https://www.kubeflow.org/docs/components/pipelines/user-guides/)
 > - [KFP SDKリファレンス](https://kubeflow-pipelines.readthedocs.io/en/stable/)
 
+<a id="pipeline"></a>
+
 ### パイプラインのアップロード
 
 パイプラインをアップロードします。
@@ -1303,6 +1459,8 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 > [参考]パイプラインアップロード所要時間:
 > パイプラインのアップロードには数分かかる場合があります。
 > 初回リソース作成時、サービス環境構成のため、さらに数分の時間がかかります。
+
+<a id="pipeline.list"></a>
 
 ### パイプラインリスト
 
@@ -1317,11 +1475,15 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
     | CREATE FAILED      | パイプラインの作成に失敗した状態です。再試行してください。 |
     | ACTIVE             | パイプラインが正常に作成された状態です。        |
 
+<a id="pipeline"></a>
+
 ### パイプライングラフ
 
 パイプライングラフが表示されます。グラフのノードを選択すると、詳細情報を確認できます。
 
 グラフはパイプラインを図で表したもので、グラフ内の各ノードはパイプラインの段階を表し、各段階で表示されたパイプラインコンポーネント間の親/子関係を矢印で表します。
+
+<a id="pipeline.delete"></a>
 
 ### パイプラインの削除
 
@@ -1334,9 +1496,13 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 > [参考]関連するパイプラインスケジュールが存在する場合、パイプライン削除不可：
 > 削除しようとするパイプラインで作成されたスケジュールが存在する場合、パイプラインを削除することはできません。パイプラインスケジュールを先に削除してからパイプラインを削除してください。
 
+<a id="pipeline.run"></a>
+
 ## パイプラインの実行
 
 アップロードしたパイプラインをAI EasyMakerで実行し、管理できます。
+
+<a id="pipeline.run.create"></a>
 
 ### パイプライン実行の作成
 
@@ -1368,6 +1534,8 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 > パイプライン実行の作成には数分かかる場合があります。
 > 初回リソース作成時、サービス環境構成のため、さらに数分の時間がかかります。
 
+<a id="pipeline.run.list"></a>
+
 ### パイプライン実行リスト
 
 パイプライン実行リストが表示されます。リストのパイプライン実行を選択すると、詳細情報を確認し、情報を変更できます。
@@ -1392,6 +1560,8 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 - **モニタリング**:リストのパイプライン実行を選択すると表示される詳細画面の**モニタリング**タブで、モニタリング対象インスタンスのリストと基本指標チャートを確認できます。
     - **モニタリング** *タブは、パイプライン実行が作成中の状態では無効になります。
 
+<a id="pipeline.run"></a>
+
 ### パイプライン実行グラフ
 
 パイプライン実行グラフが表示されます。グラフのノードを選択すると、詳細情報を確認できます。
@@ -1402,6 +1572,8 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 
 > [注意]パイプラインアーティファクト保管周期：
 > 120日が経過したアーティファクトは自動的に削除されます。
+
+<a id="pipeline.run.stop"></a>
 
 ### パイプライン実行停止
 
@@ -1414,6 +1586,8 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 > [参考]パイプライン実行停止所要時間:
 > パイプライン実行停止は数分かかる場合があります。
 
+<a id="pipeline.run.copy"></a>
+
 ### パイプライン実行のコピー
 
 既存のパイプライン実行と同じ設定で新しいパイプライン実行を作成します。
@@ -1423,6 +1597,8 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 3. 既存のパイプライン実行と同じ設定でパイプライン実行の作成画面が表示されます。
 4. 設定を変更したい情報があれば、変更した後、**パイプライン実行の作成**をクリックします。
 
+<a id="pipeline.run.delete"></a>
+
 ### パイプライン実行の削除
 
 パイプライン実行を削除します。
@@ -1431,9 +1607,13 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 2. **パイプライン実行削除**をクリックします。進行中のパイプライン実行は削除できません。
 3. リクエストされた削除作業はキャンセルできません。続行するには**削除**をクリックします。
 
+<a id="pipeline.schedule"></a>
+
 ## パイプラインスケジュール
 
 アップロードしたパイプラインをAI EasyMakerで定期的に繰り返し実行するスケジュールを作成して管理できます。
+
+<a id="pipeline.schedule.create"></a>
 
 ### パイプラインスケジュールの作成
 
@@ -1461,6 +1641,8 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 > Cron式は、6つのスペースで区切られたフィールドを使用して時間を表します。
 > 詳細は[Cron式形式](https://pkg.go.dev/github.com/robfig/cron#hdr-CRON_Expression_Format)文書を参照してください。
 
+<a id="pipeline.schedule.list"></a>
+
 ### パイプラインスケジュールリスト
 
 パイプラインスケジュールリストが表示されます。リストのパイプラインスケジュールを選択すると、詳細情報を確認し、情報を変更できます。
@@ -1477,12 +1659,16 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 
 - **実行管理**:リストのパイプラインスケジュールを選択すると表示される詳細画面の**実行管理**タブで、パイプラインスケジュールによって作成された実行リストを確認できます。
 
+<a id="pipeline.schedule.start.stop"></a>
+
 ### パイプラインスケジュールの開始と停止
 
 開始されたパイプラインスケジュールを停止したり、停止されたパイプラインスケジュールを開始します。
 
 1. リストから開始または停止したいパイプラインスケジュールを選択します。
 2. **スケジュール開始**または**スケジュール停止**をクリックします。
+
+<a id="pipeline.schedule.copy"></a>
 
 ### パイプラインスケジュールのコピー
 
@@ -1492,6 +1678,8 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 2. **パイプラインスケジュールのコピー**をクリックします。
 3. 既存のパイプラインスケジュールと同じ設定でパイプラインスケジュール作成画面が表示されます。
 4. 設定を変更したい情報があれば、変更した後、**パイプラインスケジュールの作成**をクリックします。
+
+<a id="pipeline.schedule.delete"></a>
 
 ### パイプラインスケジュールの削除
 
@@ -1504,9 +1692,13 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 > [参考]関連するパイプライン実行が進行中の場合、パイプラインスケジュール削除不可：
 > 削除しようとするパイプラインスケジュールによって作成された実行が進行中の場合は、削除できません。パイプライン実行が完了した後、パイプラインスケジュールを削除してください。
 
+<a id="rag"></a>
+
 ## RAG
 
 RAG(Retrieval-Augmented Generation、検索拡張生成)は、ユーザーのドキュメントをベクトル化して保存し、質問に関連する内容を検索してLLM(Large Language Model、大規模言語モデル)の応答の精度を高める技術です。AI EasyMakerは、ベクトルストア、埋め込みモデル、LLMを統合してRAGシステムを作成し、管理できます。
+
+<a id="rag.create"></a>
 
 ### RAGの作成
 
@@ -1565,6 +1757,8 @@ RAG(Retrieval-Augmented Generation、検索拡張生成)は、ユーザーのド
 > AI EasyMakerと同じプロジェクトで作成されたNHN Cloud NASのみ使用できます。
 > [参考] 収集で使用できるファイルの形式、サイズ、個数が制限される場合があります。詳細は[収集の同期](#rag_ingestion_sync)をご参照ください。
 
+<a id="rag.list"></a>
+
 ### RAG一覧
 
 作成されたRAGの一覧を確認し、管理します。一覧からRAGを選択すると、詳細情報を確認できます。
@@ -1594,6 +1788,8 @@ RAG(Retrieval-Augmented Generation、検索拡張生成)は、ユーザーのド
 - **API統計**: RAGを選択すると表示される詳細画面の**API統計**タブで、API統計情報を確認できます。
 - **モニタリング**: RAGを選択すると表示される詳細画面の**モニタリング**タブで、モニタリング対象のインスタンス一覧と基本指標のチャートを確認できます。
 
+<a id="rag.ingestion.sync"></a>
+
 ### 収集の同期
 
 - RAGを選択すると表示される詳細画面の**ベクトルストア**タブで、収集の同期機能を使用できます。
@@ -1612,10 +1808,14 @@ RAG(Retrieval-Augmented Generation、検索拡張生成)は、ユーザーのド
 | スプレッドシート | `.csv`, `.xls`, `.xlsx` | 3MB |
 | プレゼンテーション | `.ppt`, `.pptx` | 50MB |
 
+<a id="rag.delete"></a>
+
 ### RAGの削除
 
 - 作成または削除が進行中のRAGは削除できません。
 - リクエストされた削除タスクはキャンセルできません。
+
+<a id="rag.query.request.guide"></a>
 
 ### RAG質問リクエストガイド
 
@@ -1636,7 +1836,11 @@ curl -X POST https://{APIエンドポイントアドレス}/rag/v1/query \
   }'
 ```
 
+<a id="appendix"></a>
+
 ## 付録
+
+<a id="appendix.1.object.storage.account"></a>
 
 ### 1. NHN Cloud Object StorageにAI EasyMakerシステムアカウント権限を追加
 
@@ -1665,7 +1869,11 @@ NHN Cloud Object StorageにAI EasyMakerシステムアカウントの読み取�
 3. NHN Cloud Object Storageコンソールに移動します。
 4. [特定プロジェクトまたは特定ユーザーに読み取り/書き込み許可](https://docs.nhncloud.com/ja/Storage/Object%20Storage/ja/acl-guide/#_4)文書を参照してNHN Cloud Object StorageコンソールでAI EasyMakerシステムアカウントに必要な読み取りおよび書き込み許可権限を追加します。
 
+<a id="appendix.2.log.and.crash.search.service.usage.log.list"></a>
+
 ### 2. NHN Cloud Log & Crash Searchサービス利用案内およびログ照会方法
+
+<a id="appendix.2.log.and.crash.search.service.usage.log.list.log.and.crash.search.service.usage"></a>
 
 #### NHN Cloud Log & Crash Searchサービスの利用案内
 
@@ -1676,6 +1884,8 @@ Log & Crash Searchサービスにログを保存するには、Log & Crashサー
     - Log & Crash Searchサービスの詳細内容と料金は、以下で確認できます。
         - [Log & Crash Searchサービス案内](https://docs.nhncloud.com/ja/Data%20&%20Analytics/Log%20&%20Crash%20Search/ja/Overview/)
         - [Log & Crash Search利用料金](https://www.nhncloud.com/kr/pricing/by-service?c=Data%20%26%20Analytics&s=Log%20%26%20Crash%20Search)
+
+<a id="appendix.2.log.and.crash.search.service.usage.log.list.log.list"></a>
 
 #### ログ照会
 
@@ -1718,6 +1928,8 @@ AI EasyMakerサービスは、Log & Crash Searchサービスに次のように�
     | action | Action区分(Endpoint.Model) |
     | modelName | 推論対象モデル名 |
 
+<a id="appendix.3.hyperparameter"></a>
+
 ### 3. ハイパーパラメータ
 
 - コンソールから入力されたKey-Value形式の値です。
@@ -1740,6 +1952,8 @@ AI EasyMakerサービスは、Log & Crash Searchサービスに次のように�
             ...
 
             return parser.parse_known_args()
+
+<a id="appendix.4.environment"></a>
 
 ### 4. 環境変数
 
@@ -1782,6 +1996,8 @@ AI EasyMakerサービスは、Log & Crash Searchサービスに次のように�
         model_dir = os.environ.get("EM_MODEL_DIR")
         model.save(model_dir)
 
+<a id="appendix.5.metric.log"></a>
+
 ### 5. Tensorboardを活用するための指標ログを保存
 
 - 学習後、Tensorboard画面で結果指標を確認するために、学習スクリプト作成時にTensorboardログ記憶領域を指定された位置(`EM_TENSORBOARD_LOG_DIR`)に設定する必要があります。
@@ -1803,6 +2019,8 @@ AI EasyMakerサービスは、Log & Crash Searchサービスに次のように�
 
 ![Tensorboardログ確認](http://static.toastoven.net/prod_ai_easymaker/console-guide_appendix_tensorboard.png)
 
+<a id="appendix.6.framework.training.settings"></a>
+
 ### 6. フレームワーク別分散学習設定
 
 - **Tensorflow**
@@ -1810,11 +2028,15 @@ AI EasyMakerサービスは、Log & Crash Searchサービスに次のように�
 - **Pytorch**
     - 分散学習をするための`Backends`設定が必要です。分散学習をCPUで行う場合はglooに、GPUで進行する場合はncclに設定してください。詳しい内容は、[Pytorch公式ガイド文書](https://pytorch.org/docs/stable/distributed.html)を参照してください。
 
+<a id="appendix.7.cluster.upgrade"></a>
+
 ### 7. クラスタバージョンのアップグレード
 
 AI EasyMakerサービスは、安定したサービスと新規機能を提供するため、定期的にクラスタバのージョンをアップグレードします。
 新規クラスタのバージョンが配布されると、旧バージョンのクラスタで駆動されたノートパソコンおよびエンドポイントを新規クラスタに移行する必要があります。
 リソース別の新規クラスタ移行方法を案内します。
+
+<a id="appendix.7.cluster.upgrade.notebook.cluster.upgrade"></a>
 
 #### ノートパソコンクラスタバージョンアップグレード
 
@@ -1828,11 +2050,15 @@ AI EasyMakerサービスは、安定したサービスと新規機能を提供�
 再起動は初回実行時に約25分かかり、その後は約10分かかります。
 再起動に失敗した場合、管理者に自動的に報告されます。
 
+<a id="appendix.7.cluster.upgrade.endpoint.cluster.upgrade"></a>
+
 #### エンドポイントクラスタバージョンアップグレード
 
 **エンドポイントリスト**画面で新規クラスタに移行する必要があるエンドポイントは、名前の左側に**! 案内**文言が表示されます。
 **!案内**文言の上にマウスポインタを合わせると、バージョンアップグレードの案内文言と有効期限が表示されます。
 期限が切れるまでに、次の案内に従って旧バージョンのクラスタで運営されているステージを新バージョンのクラスタに移行する必要があります。
+
+<a id="appendix.7.cluster.upgrade.endpoint.cluster.upgrade.stage.cluster.upgrade"></a>
 
 ##### 一般ステージのクラスタバージョンアップグレード
 
@@ -1843,6 +2069,8 @@ AI EasyMakerサービスは、安定したサービスと新規機能を提供�
 > [注意]
 > ステージを削除すると、エンドポイントが終了し、API呼び出しができなくなります。削除する前にサービス中でないステージであることを確認してください。
 
+<a id="appendix.7.cluster.upgrade.endpoint.cluster.upgrade.default.stage.cluster.upgrade"></a>
+
 ##### 基本ステージのクラスタバージョンアップグレード
 
 基本ステージは実際のサービスが運営されるステージです。
@@ -1852,6 +2080,8 @@ AI EasyMakerサービスは、安定したサービスと新規機能を提供�
 2. 新規ステージエンドポイントで正常にAPI呼び出しと推論レスポンスが来るか確認します。
 3. **基本ステージ変更**ボタンをクリックします。新規ステージを選択して基本ステージに変更します。
 4. 変更が完了すると、新規ステージが基本ステージに設定され、既存の基本ステージは削除されます。
+
+<a id="appendix.8.torchrun.usage"></a>
 
 ### 8. torchrun使い方
 
@@ -1864,6 +2094,8 @@ exit code : -9 (pid: {pid})
 
 - torchrun の詳細については、[Pytorch 公式ガイド](https://pytorch.org/docs/stable/elastic/run.html)を参照してください。
 
+<a id="appendix.9.resource.info"></a>
+
 ### 9. リソース情報
 
 AI EasyMakerでバッチ推論とエンドポイントを作成する際、選択したインスタンスタイプから基本使用量を除いたリソースを割り当てます。
@@ -1871,6 +2103,8 @@ AI EasyMakerでバッチ推論とエンドポイントを作成する際、選�
 
 バッチ推論は、実際の使用量をPodの数で割って各Podにリソースを割り当てます。エンドポイントは、入力した割り当て量がインスタンスの実際の使用量を超えることができないので、事前にリソースの使用量を確認してください。
 バッチ推論とエンドポイントともに、割り当てられたリソースが推論に必要な最小使用量より少ない場合、作成に失敗する可能性があるので注意してください。
+
+<a id="appendix.10.endpoint.api"></a>
 
 ### 10. エンドポイントAPIスペック仕様
 
@@ -1897,13 +2131,20 @@ OIPスペックの詳細は[OIPスペック](https://github.com/kserve/open-infe
 > 推論に必要な入力値はOpenAIのAPIスペックに従って入力する必要があります。詳細は[OpenAI API文書](https://platform.openai.com/docs/api-reference/chat)を参照してください。
 > AI EasyMakerで提供するCompletion, Chat Completion APIをサポートするモデルは[Model endpoint compatibillity](https://platform.openai.com/docs/models/model-endpoint-compatibility)をご確認ください。
 >
+
+<a id="appendix.11.framework.note"></a>
+
 ### 11. フレームワーク別のサービングに関する注意事項
+
+<a id="appendix.11.framework.note.tensorflow.framework"></a>
 
 #### TensorFlowフレームワーク
 
 AI EasyMakerで提供するTensorFlowモデルのサービングは、TensorFlowが推奨するSavedModel(.pb)を使用しています。
 チェックポイントを使うためには、SavedModelで保存されたチェックポイントvariablesディレクトリをモデルディレクトリに一緒に保存するとモデルサービングに使われます。
 参考: [https://www.tensorflow.org/guide/saved_model](https://www.tensorflow.org/guide/saved_model)
+
+<a id="appendix.11.framework.note.pytorch.framework"></a>
 
 #### PyTorchフレームワーク
 
@@ -1947,14 +2188,20 @@ class TestHandler(BaseHandler):
     # ...
 ```
 
+<a id="appendix.11.framework.note.scikitlearn.framework"></a>
+
 #### Scikit-learnフレームワーク
 
 AI EasyMakerはmlserverを使用してScikit-learnモデル（.joblib）をサービングします。
 mlserverを直接使用する場合には必要な`model-settings.json`は、AI EasyMakerのサービングを使用する場合に必要ありません。
 
+<a id="appendix.11.framework.note.hugging.face.framework"></a>
+
 #### Hugging Faceフレームワーク
 
 Hugging Faceモデルは、AI EasyMakerが提供するRuntimeやTensorFlow Serving、TorchServeを利用してサービングできます。
+
+<a id="appendix.11.framework.note.hugging.face.framework.hugging.face.runtime"></a>
 
 ##### Hugging Face Runtime
 
@@ -1975,6 +2222,8 @@ Hugging Face Runtimeサービングは微調整をサポートしていません
 > [参考] Gated Model:
 > Gated Modelをサービングするにはアクセスが許可されたアカウントのトークンをモデルパラメータとして入力する必要があります。
 > トークンを入力しなかったり、許可されていないアカウントのトークンを入力した場合、モデルの配布に失敗します。
+
+<a id="appendix.11.framework.note.hugging.face.framework.tensorflow.pytorch.serving"></a>
 
 ##### TensorFlow/PyTorch Serving
 

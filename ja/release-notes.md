@@ -1,4 +1,8 @@
+<a id="ai.easymaker"></a>
+
 ## Machine Learning > AI EasyMaker > リリースノート
+
+<a id="ai.easymaker.release.notes.2025.10.28"></a>
 
 ### 2025. 10. 28.
 
@@ -8,12 +12,18 @@
 - NVIDIA Triton Inference Serverのサポート
     - Triton形式のモデルを作成し、デプロイできる機能が追加されました。
 
+<a id="ai.easymaker.release.notes.2025.06.24"></a>
+
 ### 2025. 06. 24.
+
+<a id="ai.easymaker.release.notes.2025.06.24.feature.change"></a>
 
 #### 機能改善・変更
 
 - モデル評価機能追加
     - モデルの性能を測定し、比較できます。
+
+<a id="ai.easymaker.release.notes.2024.10.29"></a>
 
 ### 2024. 10. 29.
 
@@ -22,7 +32,11 @@
 - Hugging Faceモデルのサービングをサポート
     - Hugging FaceモデルをAI EasyMakerに登録してエンドポイント、バッチ推論でサービングできるようにサポートします。
 
+<a id="ai.easymaker.release.notes.2024.07.23"></a>
+
 ### 2024. 07. 23.
+
+<a id="ai.easymaker.release.notes.2024.07.23.feature.change"></a>
 
 #### 機能改善・変更
 
@@ -34,13 +48,21 @@
 - PyTorch no-archiveモデルサービングをサポート
     - PyTorch no-archiveモデルをAI EasyMakerに登録し、エンドポイントとして提供できるようにサポートします。
 
+<a id="ai.easymaker.release.notes.2024.05.10"></a>
+
 ### 2024. 05. 10.
+
+<a id="ai.easymaker.release.notes.2024.05.10.feature.change"></a>
 
 #### 機能改善・変更
 
 - ノートパソコン再起動機能を追加
 
+<a id="ai.easymaker.release.notes.2024.04.23"></a>
+
 ### 2024. 04. 23.
+
+<a id="ai.easymaker.release.notes.2024.04.23.feature.change"></a>
 
 #### 機能改善・変更
 
@@ -60,7 +82,11 @@
     - チェックポイント保存関連のハイパーパラメータsave_stepsを削除しました。
     - 適切なsave_stepsの数値をアルゴリズム内で自動的に計算し、最大3つまで保存します。
 
+<a id="ai.easymaker.release.notes.2023.12.19"></a>
+
 ### 2023. 12. 19.
+
+<a id="ai.easymaker.release.notes.2023.12.19.feature.change"></a>
 
 #### 機能改善・変更
 
@@ -74,7 +100,11 @@
 - エンドポイント > オートスケーラー
     - エンドポイントノードの増設/縮小ポリシーを設定してノード数を動的に管理できます。
 
+<a id="ai.easymaker.release.notes.2023.09.26"></a>
+
 ### 2023. 09. 26.
+
+<a id="ai.easymaker.release.notes.2023.09.26.feature.change"></a>
 
 #### 機能改善・変更
 
@@ -94,7 +124,11 @@
 - ハイパーパラメータチューニング並列学習をサポート
     - 並列学習数を調整してハイパーパラメータチューニング作業の性能を最適化できます。
 
+<a id="ai.easymaker.release.notes.2023.06.27"></a>
+
 ### 2023. 06. 27.
+
+<a id="ai.easymaker.release.notes.2023.06.27.feature.change"></a>
 
 #### 機能改善・変更
 
@@ -107,7 +141,11 @@
     - [Object Detectionガイド](./algorithm-guide/#object-detection)
     - [Semantic Segmentationガイド](./algorithm-guide/#semantic-segmentation)
 
+<a id="ai.easymaker.release.notes.2022.12.27"></a>
+
 ### 2022. 12. 27.
+
+<a id="ai.easymaker.release.notes.2022.12.27.service"></a>
 
 #### 新規サービスリリース
 

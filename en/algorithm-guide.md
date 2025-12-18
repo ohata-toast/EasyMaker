@@ -1,11 +1,17 @@
+<a id="ai.easymaker.algorithm.guide"></a>
+
 ## Machine Learning > AI EasyMaker > NHN Cloud Algorithms Guide
 
 This document describes algorithms provided by NHN Cloud AI EasyMaker.
 By using the underlying algorithms, you can create a machine learning model by preparing a data set without writing any training code.
 
+<a id="image.classification"></a>
+
 ## Image Classification
 
 It is an algorithm (ResNet-50) that classifies types of images.
+
+<a id="image.classification.hyperparameter"></a>
 
 ### Hyperparameter
 
@@ -18,9 +24,13 @@ It is an algorithm (ResNet-50) that classifies types of images.
 | num_train_epochs | False | int | 3 | [1~∞)   | The total number of times the entire training is performed  |
 | logging_steps  | False | int | 500 | [500~∞)   | Step cycle to output logs |
 
+<a id="image.classification.data.set"></a>
+
 ### Data Set
 
 Prepare train, validation, and test data sets.
+
+<a id="image.classification.data.set.train"></a>
 
 #### Train (required)
 
@@ -42,6 +52,8 @@ folder/train/dog/golden_retriever.png
 ...
 ```
 
+<a id="image.classification.data.set.validation"></a>
+
 #### Validation (required)
 
 This is the data set for validation. Data sets should be prepared in a directory structure defined as follows.
@@ -61,6 +73,8 @@ folder/validation/dog/billy.png
 folder/validation/dog/calupoh.png
 ...
 ```
+
+<a id="image.classification.data.set.test"></a>
 
 #### Test (optional)
 
@@ -82,6 +96,8 @@ folder/test/dog/cretan_hound.png
 ...
 ```
 
+<a id="image.classification.metric"></a>
+
 ### Indicators
 
 The Image Classification algorithm produces the following metrics.
@@ -94,9 +110,13 @@ Indicators generated during training can be checked through **Training > Go to T
 | Recall | Average for each class (number of data correctly predicted by model/number of data predicted by model for that class) |
 | F1-Score | Harmonic Average of Precision and Recall |
 
+<a id="image.classification.inference"></a>
+
 ### Inference
 
 To create an endpoint with a trained model and request inference, see [Create Endpoint and Request Inference](./algorithm-guide/#create-endpoint-and-request-inference).
+
+<a id="image.classification.inference.response.format"></a>
 
 #### Response Format
 
@@ -117,9 +137,13 @@ The score value for each image type (label) is answered.
 ]
 ```
 
+<a id="semantic.segmentation"></a>
+
 ## Semantic Segmentation
 
 An algorithm (SegFormer-B3) that predicts the label of every pixel region within an image.
+
+<a id="semantic.segmentation.hyperparameter"></a>
 
 ### Hyperparameter
 
@@ -130,9 +154,13 @@ An algorithm (SegFormer-B3) that predicts the label of every pixel region within
 | num_train_epochs | False | float | 3.0           | [0.0~∞) | The total number of times the entire training is performed  |
 | logging_steps  | False | int | 500            | [500~∞)   | Step cycle to output logs |
 
+<a id="semantic.segmentation.data.set"></a>
+
 ### Data Set
 
 Prepare train, validation, resources, and test data sets.
+
+<a id="semantic.segmentation.data.set.train"></a>
 
 #### Train (required)
 
@@ -177,6 +205,8 @@ folder/train/annotations/0003.png
 - image: Write the image file path.
 - seg_map: Write the segmentation map file path.
 
+<a id="semantic.segmentation.data.set.validation"></a>
+
 #### Validation (required)
 
 This is the data set for validation. Datasets should be prepared in a defined directory structure like this:
@@ -219,6 +249,8 @@ folder/validation/annotations/0003.png
 - image: Write the image file path.
 - seg_map: Write the segmentation map file path.
 
+<a id="semantic.segmentation.data.set.resources"></a>
+
 #### Resources (required)
 
 Create a dictionary in key-value format to map label IDs to label classes required when setting up the model.
@@ -238,6 +270,8 @@ folder/resources/id2lable.json
     "...": "..."
 }
 ```
+
+<a id="semantic.segmentation.data.set.test"></a>
 
 #### Test (optional)
 
@@ -281,6 +315,8 @@ Create a mapping file of image and segmentation map.
 - image: Write the image file path.
 - seg_map: Write the segmentation map file path.
 
+<a id="semantic.segmentation.metric"></a>
+
 ### Indicators
 
 The Semantic Segmentation algorithm generates the following metrics.
@@ -294,9 +330,13 @@ Indicators generated during training can be checked through **Training > Go to T
 | per_category_accuracy | Percentage of correct answers equal to the value predicted by the model for each class |
 | per_category_iou | The overlapping ratio between the area predicted by the model for each class and the correct area |
 
+<a id="semantic.segmentation.inference"></a>
+
 ### Inference
 
 To create an endpoint with a trained model and request inference, see [Create Endpoint and Request Inference](./#create-endpoint-and-request-inference).
+
+<a id="semantic.segmentation.inference.response.format"></a>
 
 #### Response Format
 
@@ -318,9 +358,13 @@ After resizing the requested image to 512 X 512, the label value for each pixel 
 }
 ```
 
+<a id="object.detection"></a>
+
 ## Object Detection
 
 An algorithm (detr-resnet-50) that predicts the position (bbox) and class (class) of all objects present in an image.
+
+<a id="object.detection.hyperparameter"></a>
 
 ### Hyperparameter
 
@@ -332,9 +376,13 @@ An algorithm (detr-resnet-50) that predicts the position (bbox) and class (class
 | num_train_epochs | False | float | 3.0 | [0.0~∞)   | The total number of times the entire training is performed |
 | logging_steps  | False | int | 500 | [500~∞)   | Step cycle to output logs |
 
+<a id="object.detection.data.set"></a>
+
 ### Data Set
 
 Prepare the train and test data sets.
+
+<a id="object.detection.data.set.train"></a>
 
 #### Train (required)
 
@@ -457,6 +505,8 @@ For detailed format, refer to Data format and Object Detection in the [format-da
 }
 ```
 
+<a id="object.detection.data.set.validation"></a>
+
 #### Validation (required)
 
 This is the data set for validation. Data sets should be prepared in a directory structure defined as follows.
@@ -473,6 +523,8 @@ folder/validation/0003.png
 - \_annotations.coco.json file
 It is written in the format of COCO Dataset.
 For detailed format, refer to Data format and Object Detection in the [format-data document of COCO Dataset](https://cocodataset.org/#format-data).
+
+<a id="object.detection.data.set.test"></a>
 
 #### Test (required)
 
@@ -491,9 +543,13 @@ folder/test/0003.png
 It is written in the format of COCO Dataset.
 For detailed format, refer to Data format and Object Detection in the [format-data document of COCO Dataset](https://cocodataset.org/#format-data).
 
+<a id="object.detection.inference"></a>
+
 ### Inference
 
 To create an endpoint with a trained model and request inference, see [Create Endpoint and Request Inference](./algorithm-guide/#create-endpoint-and-request-inference).
+
+<a id="object.detection.inference.response.format"></a>
 
 #### Response Format
 
@@ -524,6 +580,8 @@ Returns a list of bboxes (xmin, ymin, xmax, ymax) of detected objects.
 }
 ```
 
+<a id="endpoint.create.inference.request"></a>
+
 ## Create Endpoint and Request Inference
 
 Please refer to the following guide to create an endpoint and perform inference with a model that has been trained.
@@ -533,6 +591,8 @@ Please refer to the following guide to create an endpoint and perform inference 
 3. (2) Click **Create Endpoint** with the model created in . After entering the endpoint setup information, create the endpoint.
 4. Click the created endpoint name and select a stage.
 5. You can request the real-time inference API through the stage endpoint URL.
+
+<a id="endpoint.create.inference.request"></a>
 
 ### Request
 
@@ -550,6 +610,8 @@ Please refer to the following guide to create an endpoint and perform inference 
 ```
 
 - The image_to_bytes_array value is a value obtained by converting the image to a Base64 Byte Array. [Note] Please refer to the image byte array conversion python code.
+
+<a id="endpoint.create.inference.request.note.image"></a>
 
 ### [Note] Image byte array conversion python code
 
