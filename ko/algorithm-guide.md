@@ -1,4 +1,4 @@
-<a id="machine.learning.algorithm.guide"></a>
+<a id="ai.easymaker.algorithm.guide"></a>
 
 ## Machine Learning > AI EasyMaker > NHN Cloud 제공 알고리즘 가이드
 

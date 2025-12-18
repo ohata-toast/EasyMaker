@@ -1,4 +1,4 @@
-<a id="machine.learning.console.usage.guide"></a>
+<a id="ai.easymaker.console.usage.guide"></a>
 
 ## Machine Learning > AI EasyMaker > 콘솔 사용 가이드
 

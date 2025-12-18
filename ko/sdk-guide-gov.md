@@ -1,4 +1,4 @@
-<a id="machine.learning.sdk.usage.guide"></a>
+<a id="ai.easymaker.sdk.usage.guide"></a>
 
 ## Machine Learning > AI EasyMaker > SDK 사용 가이드
 

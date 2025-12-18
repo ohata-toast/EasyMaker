@@ -1,4 +1,4 @@
-<a id="machine.learning.algorithm.guide"></a>
+<a id="ai.easymaker.algorithm.guide"></a>
 
 ## Machine Learning > AI EasyMaker > NHN Cloud 제공 알고리즘 가이드
 
@@ -182,7 +182,7 @@ folder/train/annotations/0003.png
 
 ```
 
-* train.json
+- train.json
   image와 segmentation map의 매핑 파일을 작성합니다.
 
 ```
@@ -202,8 +202,8 @@ folder/train/annotations/0003.png
 ]
 ```
 
-* image: 이미지 파일 경로를 작성합니다.
-* seg_map: segmentation map 파일 경로를 작성합니다.
+- image: 이미지 파일 경로를 작성합니다.
+- seg_map: segmentation map 파일 경로를 작성합니다.
 
 <a id="semantic.segmentation.data.set.validation"></a>
 
@@ -226,7 +226,7 @@ folder/validation/annotations/0003.png
 
 ```
 
-* validation.json
+- validation.json
   image와 segmentation map의 매핑 파일을 작성합니다.
 
 ```
@@ -246,8 +246,8 @@ folder/validation/annotations/0003.png
 ]
 ```
 
-* image: 이미지 파일 경로를 작성합니다.
-* seg_map: segmentation map 파일 경로를 작성합니다.
+- image: 이미지 파일 경로를 작성합니다.
+- seg_map: segmentation map 파일 경로를 작성합니다.
 
 <a id="semantic.segmentation.data.set.resources"></a>
 
@@ -259,7 +259,7 @@ folder/validation/annotations/0003.png
 folder/resources/id2lable.json
 ```
 
-* id2lable.json
+- id2lable.json
 
 ```json
 {
@@ -292,7 +292,7 @@ folder/test/annotations/0003.png
 
 ```
 
-* test.json
+- test.json
 image와 segmentation map의 매핑 파일을 작성합니다.
 
 ```json
@@ -312,8 +312,8 @@ image와 segmentation map의 매핑 파일을 작성합니다.
 ]
 ```
 
-* image: 이미지 파일 경로를 작성합니다.
-* seg_map: segmentation map 파일 경로를 작성합니다.
+- image: 이미지 파일 경로를 작성합니다.
+- seg_map: segmentation map 파일 경로를 작성합니다.
 
 <a id="semantic.segmentation.metric"></a>
 
@@ -397,7 +397,7 @@ folder/train/0003.png
 ...
 ```
 
-* _annotations.coco.json 파일
+- _annotations.coco.json 파일
 COCO Dataset의 형식으로 작성합니다.
 자세한 형식은 [COCO Dataset의 format-data](https://cocodataset.org/#format-data) 문서의 Data format과 Object Detection 내용을 참고합니다.
 
@@ -520,7 +520,7 @@ folder/validation/0003.png
 ...
 ```
 
-* _annotations.coco.json 파일
+- _annotations.coco.json 파일
 COCO Dataset의 형식으로 작성합니다.
 자세한 형식은 [COCO Dataset의 format-data](https://cocodataset.org/#format-data) 문서의 Data format과 Object Detection 내용을 참고합니다.
 
@@ -539,7 +539,7 @@ folder/test/0003.png
 ...
 ```
 
-* _annotations.coco.json 파일
+- _annotations.coco.json 파일
 COCO Dataset의 형식으로 작성합니다.
 자세한 형식은 [COCO Dataset의 format-data](https://cocodataset.org/#format-data) 문서의 Data format과 Object Detection 내용을 참고합니다.
 
@@ -596,8 +596,8 @@ detection된 object의 bbox(xmin, ymin, xmax, ymax) 목록을 반환합니다.
 
 ### 요청
 
-* Request URI: POST <https://kr1-{apigwSeviceId}.api.gov-nhncloudservice.com/inference>
-* Request Body
+- Request URI: POST <https://kr1-{apigwSeviceId}.api.gov-nhncloudservice.com/inference>
+- Request Body
 
 ```json
 {
@@ -609,7 +609,7 @@ detection된 object의 bbox(xmin, ymin, xmax, ymax) 목록을 반환합니다.
 }
 ```
 
-* image_to_bytes_array 값은 이미지를 Base64 Byte Array 변환한 값입니다. [참고] 이미지 바이트 배열 변환 파이썬 코드 내용을 참고하세요.
+- image_to_bytes_array 값은 이미지를 Base64 Byte Array 변환한 값입니다. [참고] 이미지 바이트 배열 변환 파이썬 코드 내용을 참고하세요.
 
 <a id="endpoint.create.inference.request.note.image"></a>
 

@@ -1,8 +1,8 @@
-<a id="machine.learning"></a>
+<a id="ai.easymaker"></a>
 
 ## Machine Learning > AI EasyMaker > 릴리스 노트
 
-<a id="machine.learning.2025.10.28"></a>
+<a id="ai.easymaker.release.notes.2025.10.28"></a>
 
 ### 2025. 10. 28.
 
@@ -12,18 +12,18 @@
 - NVIDIA Triton Inference Server 지원
     - Triton 형식의 모델을 생성하고 배포할 수 있는 기능이 추가되었습니다.
 
-<a id="machine.learning.2025.06.24"></a>
+<a id="ai.easymaker.release.notes.2025.06.24"></a>
 
 ### 2025. 06. 24.
 
-<a id="machine.learning.2025.06.24.feature.change"></a>
+<a id="ai.easymaker.release.notes.2025.06.24.feature.change"></a>
 
 #### 기능 개선/변경
 
 - 모델 평가 기능 추가
     - 모델의 성능을 측정하고 비교할 수 있습니다.
 
-<a id="machine.learning.2024.10.29"></a>
+<a id="ai.easymaker.release.notes.2024.10.29"></a>
 
 ### 2024. 10. 29.
 
@@ -32,11 +32,11 @@
 - Hugging Face 모델 서빙 지원
     - Hugging Face 모델을 AI EasyMaker에 등록하여 엔드포인트, 배치 추론으로 서빙할 수 있도록 지원합니다.
 
-<a id="machine.learning.2024.07.23"></a>
+<a id="ai.easymaker.release.notes.2024.07.23"></a>
 
 ### 2024. 07. 23.
 
-<a id="machine.learning.2024.07.23.feature.change"></a>
+<a id="ai.easymaker.release.notes.2024.07.23.feature.change"></a>
 
 #### 기능 개선/변경
 
@@ -48,21 +48,21 @@
 - PyTorch no-archive 모델 서빙 지원
     - PyTorch no-archive 모델을 AI EasyMaker에 등록하여 엔드포인트로 서빙할 수 있도록 지원합니다.
 
-<a id="machine.learning.2024.05.10"></a>
+<a id="ai.easymaker.release.notes.2024.05.10"></a>
 
 ### 2024. 05. 10.
 
-<a id="machine.learning.2024.05.10.feature.change"></a>
+<a id="ai.easymaker.release.notes.2024.05.10.feature.change"></a>
 
 #### 기능 개선/변경
 
 - 노트북 재부팅 기능 추가
 
-<a id="machine.learning.2024.04.23"></a>
+<a id="ai.easymaker.release.notes.2024.04.23"></a>
 
 ### 2024. 04. 23.
 
-<a id="machine.learning.2024.04.23.feature.change"></a>
+<a id="ai.easymaker.release.notes.2024.04.23.feature.change"></a>
 
 #### 기능 개선/변경
 
@@ -82,11 +82,11 @@
     - 체크포인트 저장 관련 하이퍼파라미터 save_steps를 제거했습니다.
     - 적절한 save_steps 수치를 알고리즘 내에서 자동으로 계산하고, 최대 3개 저장합니다.
 
-<a id="machine.learning.2023.12.19"></a>
+<a id="ai.easymaker.release.notes.2023.12.19"></a>
 
 ### 2023. 12. 19.
 
-<a id="machine.learning.2023.12.19.feature.change"></a>
+<a id="ai.easymaker.release.notes.2023.12.19.feature.change"></a>
 
 #### 기능 개선/변경
 
@@ -100,11 +100,11 @@
 - 엔드포인트 > 오토 스케일러
     - 엔드포인트 노드의 증설/감축 정책을 설정하여 노드 수를 동적으로 관리할 수 있습니다.
 
-<a id="machine.learning.2023.09.26"></a>
+<a id="ai.easymaker.release.notes.2023.09.26"></a>
 
 ### 2023. 09. 26.
 
-<a id="machine.learning.2023.09.26.feature.change"></a>
+<a id="ai.easymaker.release.notes.2023.09.26.feature.change"></a>
 
 #### 기능 개선/변경
 
@@ -124,11 +124,11 @@
 - 하이퍼파라미터 튜닝 병렬 학습 지원
     - 병렬 학습 수를 조정하여 하이퍼파라미터 튜닝 작업의 성능을 최적화할 수 있습니다.
 
-<a id="machine.learning.2023.06.27"></a>
+<a id="ai.easymaker.release.notes.2023.06.27"></a>
 
 ### 2023. 06. 27.
 
-<a id="machine.learning.2023.06.27.feature.change"></a>
+<a id="ai.easymaker.release.notes.2023.06.27.feature.change"></a>
 
 #### 기능 개선/변경
 
@@ -141,11 +141,11 @@
     - [Object Detection 가이드](./algorithm-guide/#object-detection)
     - [Semantic Segmentation 가이드](./algorithm-guide/#semantic-segmentation)
 
-<a id="machine.learning.2022.12.27"></a>
+<a id="ai.easymaker.release.notes.2022.12.27"></a>
 
 ### 2022. 12. 27.
 
-<a id="machine.learning.2022.12.27.service"></a>
+<a id="ai.easymaker.release.notes.2022.12.27.service"></a>
 
 #### 신규 서비스 출시
 

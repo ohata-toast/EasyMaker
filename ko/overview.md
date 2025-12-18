@@ -1,4 +1,4 @@
-<a id="machine.learning.overview"></a>
+<a id="ai.easymaker.overview"></a>
 
 ## Machine Learning > AI EasyMaker > 개요
 
