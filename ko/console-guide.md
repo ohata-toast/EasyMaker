@@ -2132,7 +2132,7 @@ model.fit(x_train, y_train, validation_data=(x_test, y_test),
 </details>
 
 <details>
-<summary><strong>텐서보드 화면 예시</strong></summary>
+<summary><strong>텐서보드 로그 확인</strong></summary>
 
 <img src="http://static.toastoven.net/prod_ai_easymaker/console-guide_appendix_tensorboard.png" alt="텐서보드 로그 확인">
 
@@ -2302,7 +2302,7 @@ curl --location --request POST '{API Gateway 리소스 경로}' \
 </details>
 
 <details>
-<summary><strong>handler.py 예시</strong></summary>
+<summary><strong>예시(handler.py)</strong></summary>
 
 ```python
 class TestHandler(BaseHandler):

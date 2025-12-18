@@ -67,12 +67,12 @@ Create a Jupyter notebook.
         - Mount Directory Name: Enter the name of the directory to mount on notebook.
         - NHN Cloud NAS Path: Enter directory path in the format `nas://{NAS ID}:/{path}`.
 
-> [Caution] When using NHN Cloud NAS:
-> Only NHN Cloud NAS created on the same project as AI EasyMaker is available to use.
+!!! tip "Note"
+    Notebooks can take several minutes to create.
+    Creation of the initial resources (notebooks, training, experiments, endpoint) takes additional few minutes to configure the service environment.
 
-> [Note] Time to create notebooks:
-> Notebooks can take several minutes to create.
-> Creation of the initial resources (notebooks, training, experiments, endpoint) takes additional few minutes to configure the service environment.
+!!! danger "Caution"
+    Only NHN Cloud NAS created on the same project as AI EasyMaker is available to use.
 
 <a id="notebook.list"></a>
 
@@ -163,12 +163,12 @@ Stop the running notebook or start the stopped notebook.
 2. Click **Start Notebook** or **Stop Notebook**.
 3. Requested action cannot be cancelled. To proceed, please click **Confirm**
 
-> [Caution] How to retain your virtual environment and external libraries when starting the notebook after stopping it:
-> When stopping and starting the notebook, the virtual environment and external libraries that the user create can be initialized.
-> In order to retain, configure your virtual environment by referring to [User Virtual Execution Environment Configuration](./console-guide/#configure-user-virtual-execution-environment).
+!!! tip "Note"
+    It may take several minutes to start and stop notebooks.
 
-> [Note] Time to start and stop notebooks:
-> It may take several minutes to start and stop notebooks.
+!!! danger "Caution"
+    When stopping and starting the notebook, the virtual environment and external libraries that the user create can be initialized.
+    In order to retain, configure your virtual environment by referring to [User Virtual Execution Environment Configuration](./console-guide/#configure-user-virtual-execution-environment).
 
 <a id="notebook.instance.type.change"></a>
 
@@ -182,8 +182,8 @@ Instance type you want to change can only be changed to the same core type insta
 3. Click **Change Instance type**.
 4. Select the instance type you want to change and click Confirm.
 
-> [Note] Time to change instance types:
-> It may take several minutes to change the instance type.
+!!! tip "Note"
+    It may take several minutes to change the instance type.
 
 <a id="notebook.reboot"></a>
 
@@ -196,9 +196,9 @@ you can reboot the notebook.
 2. Click **Reboot Notebook**
 3. Requested deletion task cannot be cancelled. To proceed, please click **Confirm**
 
-> [Caution] How to retain your virtual environment and external libraries when rebooting the notebook:
-> When rebooting the notebook, the virtual environment and external libraries that the user create can be initialized.
-> In order to retain, configure your virtual environment by referring to [User Virtual Execution Environment Configuration](./console-guide/#_8).
+!!! danger "Caution"
+    When rebooting the notebook, the virtual environment and external libraries that the user create can be initialized.
+    In order to retain, configure your virtual environment by referring to [User Virtual Execution Environment Configuration](./console-guide/#_8).
 
 <a id="notebook.delete"></a>
 
@@ -210,9 +210,9 @@ Delete the created notebook.
 2. Click **Delete Notebook**
 3. Requested deletion task cannot be cancelled. To proceed, please click **Confirm**
 
-> [Note] Storage:
-> When deleting a notebook, boot storage and data storage are to be deleted.
-> Connected NHN Cloud NAS is not deleted and must be deleted individually from **NHN Cloud NAS**.
+!!! tip "Note"
+    When deleting a notebook, boot storage and data storage are to be deleted.
+    Connected NHN Cloud NAS is not deleted and must be deleted individually from **NHN Cloud NAS**.
 
 <a id="experiment"></a>
 
@@ -227,7 +227,7 @@ Experiments are managed by grouping related trainings into experiments.
 1. Click **Create Experiment**
 2. Enter an experiment name and description and click **OK**.
 
-> [Note] Experiment creation time:
+!!! tip "Note"
 Creating experiments can take several minutes.
 When creating the initial resources (laptops, trainings, labs, endpoints), it takes an extra few minutes to configure the service environment.
 
@@ -261,9 +261,9 @@ Delete an experiment.
 2. Click **Delete Experiment**.
 3. Requested deletion cannot be undone. Click **OK** to proceed.
 
-> [Note] Unable to delete experiment if an associated resource exists:
-> You cannot delete an experiment if a pipeline schedule associated with the experiment exists, or if there are training, hyperparameter tuning, or pipeline execution in production. Delete the resources associated with the experiment first, then delete the experiment.
-> For associated resources, you can check the list by clicking the **[Training]** tab in the detail screen at the bottom that is displayed when you click the experiment you want to delete.
+!!! tip "Note"
+    You cannot delete an experiment if a pipeline schedule associated with the experiment exists, or if there are training, hyperparameter tuning, or pipeline execution in production. Delete the resources associated with the experiment first, then delete the experiment.
+    For associated resources, you can check the list by clicking the **[Training]** tab in the detail screen at the bottom that is displayed when you click the experiment you want to delete.
 
 <a id="training"></a>
 
@@ -330,11 +330,9 @@ Set the training environment by selecting the instance and OS image to be traine
     - **Log Management** : Logs generated during training can be stored in the NHN Cloud Log & Crash service.
         - For more information, please refer to [Appendix > 2. NHN Cloud Log & Crash Search Service User Guide and Log Check](./console-guide/#2-nhn-cloud-log-crash-search-service-usage-guide-and-log-inquiry-guide).
 
-> [Caution] When using NHN Cloud NAS:
-> Only NHN Cloud NAS created in the same project as AI EasyMaker can be used.
-
-> [Caution] training failure when deleting training input data:
-> Training may fail if the input data is deleted before training is completed.
+!!! danger "Caution"
+    - Only NHN Cloud NAS created in the same project as AI EasyMaker can be used.
+    - Training may fail if the input data is deleted before training is completed.
 
 <a id="training.list"></a>
 
@@ -398,8 +396,8 @@ Deletes a training.
 2. Click **Delete Training**. Training in progress can be deleted after stopping.
 3. Requested deletion cannot be undone. Click **OK** to proceed.
 
-> [Note] Training cannot be deleted if a related model exists:
-Training cannot be deleted if a model created by the training to be deleted exists. Please delete the model first and then the training.
+!!! tip "Note"
+    Training cannot be deleted if a model created by the training to be deleted exists. Please delete the model first and then the training.
 
 <a id="hyperparameter.tuning"></a>
 
@@ -494,11 +492,9 @@ How to configure a hyperparameter tuning job.
     - **Log Management** : Logs generated during training can be stored in the NHN Cloud Log & Crash service.
         - For more information, please refer to [Appendix > 2. NHN Cloud Log & Crash Search Service User Guide and Log Check](./console-guide/#2-nhn-cloud-log-crash-search-service-usage-guide-and-log-inquiry-guide).
 
-> [Caution] When using NHN Cloud NAS:
-> Only NHN Cloud NAS created in the same project as AI EasyMaker can be used.
-
-> [Caution] Training failure when deleting training input data:
-> Training may fail if the input data is deleted before training is completed.
+!!! danger "Caution"
+    - Only NHN Cloud NAS created in the same project as AI EasyMaker can be used.
+    - Training may fail if the input data is deleted before training is completed.
 
 <a id="hyperparameter.tuning.list"></a>
 
@@ -592,8 +588,8 @@ Delete a hyperparameter tuning.
 2. Click **Delete Hyperparameter Tuning**. Hyperparameter tuning in progress can be stopped and then deleted.
 3. Requested deletion cannot be undone. Click **OK** to proceed.
 
-> [Note] Hyperparameter tuning cannot be deleted if the associated model exists:
-> Hyperparameter tuning cannot be deleted if the model created by the hyperparameter tuning you want to delete exists. Please delete the model first, then the hyperparameter tuning.
+!!! tip "Note"
+    Hyperparameter tuning cannot be deleted if the model created by the hyperparameter tuning you want to delete exists. Please delete the model first, then the hyperparameter tuning.
 
 <a id="training"></a>
 
@@ -666,40 +662,42 @@ Can manage models of AI EasyMaker's training outcomes or external models as arti
         -**Parameter name**: Enter the name of the parameter in the model.
         -**Parameter value**: Enter the values of the parameters in the model.
 
-> [Caution] When using NHN Cloud NAS:
-Only NHN Cloud NAS created on the same project as AI EasyMaker is available to use.
+!!! tip "Note"
+    The values entered as model parameters are used when serving the model. Parameters can be used as arguments and environment variables:
+    Arguments are used as the parameter name as entered, and environment variables are used with the parameter name converted to screaming snake notation.
 
-> [Caution] Retain model artifacts in storage:
-> If not retained the model artifacts stored in storage, the creation of endpoints for that model fails.
+!!! tip "Note"
+    When creating a HuggingFace model, you can create the model by entering the ID of the HuggingFace model as a parameter.
+    The ID of the HuggingFace model can be found in the URL of the HuggingFace model page.
+    For more information, see [Appendix > 11. Framework-specific serving notes](./console-guide/#11).
 
-> [Note] Model Parameter:
-> The values entered as model parameters are used when serving the model. Parameters can be used as arguments and environment variables:
-> Arguments are used as the parameter name as entered, and environment variables are used with the parameter name converted to screaming snake notation.
+!!! danger "Caution"
+    Only NHN Cloud NAS created on the same project as AI EasyMaker is available to use.
 
-> [Note] When creating HuggingFace model:
-> When creating a HuggingFace model, you can create the model by entering the ID of the HuggingFace model as a parameter.
-> The ID of the HuggingFace model can be found in the URL of the HuggingFace model page.
-> For more information, see [Appendix > 11. Framework-specific serving notes](./console-guide/#11).
+!!! danger "Caution"
+    If not retained the model artifacts stored in storage, the creation of endpoints for that model fails.
 
-> [Caution] Supported Type for HuggingFace Model:
-> The file type for the HuggingFace model are limited to safetensors.
-> Safetensors is a safe and efficient machine learning model developed by HuggingFace.
-> Other file types are not supported.
+!!! danger "Caution"
+    The file type for the HuggingFace model are limited to safetensors.
+    Safetensors is a safe and efficient machine learning model developed by HuggingFace.
+    Other file types are not supported.
 
-> [Caution] When creating TensorFlow (Triton), PyTorch (Triton), and ONNX (Triton) model:
-> The model artifact path you enter must contain the model file and the `config.pbtxt` file in a structure that allows the model to be run with Triton.
-> See the example below:
+!!! danger "Caution"
+    The model artifact path you enter must contain the model file and the `config.pbtxt` file in a structure that allows the model to be run with Triton.
+    See the example below:
+    <details>
+    <summary><strong>Example</strong></summary>
 
-```
-model_name/
-├── config.pbtxt                              # Model selection file
-└── 1/                                        # Version 1 directory
-    └── model.savedmodel/                     # TensorFlow SavedModel directory
-        ├── saved_model.pb                    # Metagraph and checkpoint data
-        └── variables/                        # Model weight directory
-            ├── variables.data-00000-of-00001
-            └── variables.index
-```
+        model_name/
+        ├── config.pbtxt                              # Model selection file
+        └── 1/                                        # Version 1 directory
+            └── model.savedmodel/                     # TensorFlow SavedModel directory
+                ├── saved_model.pb                    # Metagraph and checkpoint data
+                └── variables/                        # Model weight directory
+                    ├── variables.data-00000-of-00001
+                    └── variables.index
+
+    </details>
 
 <a id="model.list"></a>
 
@@ -757,9 +755,9 @@ Delete a model.
 2. Click **Delete Model**.
 3. Requested deletion task cannot be cancelled. To proceed, please click **Confirm**
 
-> [Note] Unable to delete model if associated endpoint exists:
-> You cannot delete model if endpoint created by model want to delete is existed.
-> To delete, delete the endpoint created by the model first and then delete the model.
+!!! tip "Note"
+    You cannot delete model if endpoint created by model want to delete is existed.
+    To delete, delete the endpoint created by the model first and then delete the model.
 
 <a id="model.evaluation"></a>
 
@@ -798,14 +796,10 @@ Batch inferences are automatically created during the model evaluation process.
     - **Log management**: Logs generated during model evaluation can be stored in the NHN Cloud Log & Crash Search service.
         - For more information, see [Appendix > 2. How to use NHN Cloud Log & Crash Search service and check logs](./console-guide/#2-nhn-cloud-log-crash-search).
 
-> [Caution] When using NHN Cloud NAS
-Only NHN Cloud NAS created on the same project as AI EasyMaker is available to use.
-
-> [Caution] Input data size:
-The size of the input data used to evaluate the model must be 20GB or less.
-
-> [Caution] Number of classes in a classification model evaluation:
-The number of classes in a classification model evaluation must be 50 or fewer.
+!!! danger "Caution"
+    - Only NHN Cloud NAS created on the same project as AI EasyMaker is available to use.
+    - The size of the input data used to evaluate the model must be 20GB or less.
+    - The number of classes in a classification model evaluation must be 50 or fewer.
 
 <a id="model.evaluation.list"></a>
 
@@ -925,19 +919,19 @@ Create and manage endpoints that can serve the model.
         - **Threshold (%)**: The threshold value per increment at which the Pod will be scaled up.
     - **Resource Information:**: You can see the resources you're actually using. Allocates resource room usage to each model based on the quota for the model you entered. For more information, please see [Appendix > 9. Resource Information](./console-guide/#9).
 
-> [Note] API Specification for Inference Request:
-> The AI EasyMaker service provides endpoints based on the open inference protocol (OIP) specification. For the endpoint API specification, see [Appendix > 10. Endpoint API specification](./console-guide/#10-api).
-> To use a separate endpoint, refer to the resources created in the API Gateway service and create a new resource to use it.
-> For more information about the OIP specification, see [OIP specification](https://github.com/kserve/open-inference-protocol).
+!!! tip "Note"
+    The AI EasyMaker service provides endpoints based on the open inference protocol (OIP) specification. For the endpoint API specification, see [Appendix > 10. Endpoint API specification](./console-guide/#10-api).
+    To use a separate endpoint, refer to the resources created in the API Gateway service and create a new resource to use it.
+    For more information about the OIP specification, see [OIP specification](https://github.com/kserve/open-inference-protocol).
 
-> [Note] Time to create endpoints:
-> Endpoint creation can take several minutes.
-> Creation of the initial resources (notebooks, training, experiments, endpoints) takes additional few minutes to configure the service environment.
+!!! tip "Note"
+    Endpoint creation can take several minutes.
+    Creation of the initial resources (notebooks, training, experiments, endpoints) takes additional few minutes to configure the service environment.
 
-> [Note] Restrictions on API Gateway service resource provision when creating endpoints:
-> When you create a new endpoint, create a new API Gateway service.
-> Adding new stage on existing endpoint creates new stage in API Gateway service.
-> If you exceed the default provision in [API Gateway Service Resource Provision Policy](https://docs.nhncloud.com/en/TOAST/en/resource-policy/#resource-provision-policy-for-api-gateway-service), you might not be able to create endpoints in AI EasyMaker. In this case, adjust API Gateway service resource quota.
+!!! tip "Note"
+    When you create a new endpoint, create a new API Gateway service.
+    Adding new stage on existing endpoint creates new stage in API Gateway service.
+    If you exceed the default provision in [API Gateway Service Resource Provision Policy](https://docs.nhncloud.com/en/TOAST/en/resource-policy/#resource-provision-policy-for-api-gateway-service), you might not be able to create endpoints in AI EasyMaker. In this case, adjust API Gateway service resource quota.
 
 <a id="endpoint.list"></a>
 
@@ -1011,21 +1005,21 @@ Stage list created under endpoint is displayed. Select stage in the list to chec
 - **API Statistics**: You can check the API statistics information of the endpoint stage in the **API Statistics** tab of the details screen that appears when you select the endpoint stage.
     - The **API Statistics** tab is disabled while the endpoint stage is being created.
 
-> [Caution] Precautions when changing settings for API Gateway created by AI EasyMaker:
-> When creating an endpoint or an endpoint stage, AI EasyMaker creates API Gateway services and stages for the endpoint.
-> Please note the following precautions when changing API Gateway services and stages created by AI EasyMaker directly from API Gateway service console.
->
-> 1. Avoid deleting API Gateway services and stages created by AI EasyMaker. Deletion may prevent the endpoint from displaying API Gateway information correctly, and changes made to endpoint may not be applied to API Gateway.
-> 2. Avoid changing or deleting resources in API Gateway resource path that was entered when creating endpoints. Deletion may cause the endpoint's inference API call to fail
-> 3. Avoid adding resources in API Gateway resource path that was entered when creating endpoints. The added resources may be deleted when adding or changing endpoint stages.
-> 4. In the stage settings of API Gateway, do not disable **Backend Endpoint Url Redifinition** or change the URL set in API Gateway resource path. If you change the url, endpoint's inference API call might fail.
-> Other than above precautions, other settings are available with features provided by API Gateway as necessary.
-> For more information about how to use API Gateway, refer to [API Gateway Console Guide](https://docs.nhncloud.com/en/Application%20Service/API%20Gateway/en/console-guide/).
+!!! danger "Caution"
+    When creating an endpoint or an endpoint stage, AI EasyMaker creates API Gateway services and stages for the endpoint.
+    Please note the following precautions when changing API Gateway services and stages created by AI EasyMaker directly from API Gateway service console.
 
-> [Note] Recovery method when the stage's API Gateway is in 'Deployment Failed' status:
-> If stage settings of AI EasyMaker endpoint are not deployed to the API Gateway stage due to a temporary issue, deployment status is displayed as failed.
-> In this case, you can deploy API Gateway stage manually by clicking Select Stage from the Stage list > View API Gateway Settings > 'Deploy Stage' in the bottom detail screen.
-> If this guide couldn’t recover the deployment status, please contact the Customer Center.
+    1. Avoid deleting API Gateway services and stages created by AI EasyMaker. Deletion may prevent the endpoint from displaying API Gateway information correctly, and changes made to endpoint may not be applied to API Gateway.
+    2. Avoid changing or deleting resources in API Gateway resource path that was entered when creating endpoints. Deletion may cause the endpoint's inference API call to fail
+    3. Avoid adding resources in API Gateway resource path that was entered when creating endpoints. The added resources may be deleted when adding or changing endpoint stages.
+    4. In the stage settings of API Gateway, do not disable **Backend Endpoint Url Redifinition** or change the URL set in API Gateway resource path. If you change the url, endpoint's inference API call might fail.
+        Other than above precautions, other settings are available with features provided by API Gateway as necessary.
+        For more information about how to use API Gateway, refer to [API Gateway Console Guide](https://docs.nhncloud.com/en/Application%20Service/API%20Gateway/en/console-guide/).
+
+!!! tip "Note"
+    If stage settings of AI EasyMaker endpoint are not deployed to the API Gateway stage due to a temporary issue, deployment status is displayed as failed.
+    In this case, you can deploy API Gateway stage manually by clicking Select Stage from the Stage list > View API Gateway Settings > 'Deploy Stage' in the bottom detail screen.
+    If this guide couldn’t recover the deployment status, please contact the Customer Center.
 
 <a id="endpoint.stage.resource.create"></a>
 
@@ -1139,9 +1133,9 @@ To change the model of an endpoint without service stop, AI EasyMaker recommends
 3. Click **Delete Stage**.
 4. Requested deletion task cannot be cancelled. If want to proceed, please click **Confirm**
 
-> [Caution] Delete stage of API Gateway service when deleting the endpoint stage:
-> Deleting an endpoint stage in AI EasyMaker also deletes the stage in API Gateway service from which the endpoint's stage is deployed.
-> If there is an API running on the API Gateway stage to be deleted, please be noted that API calls cannot be made.
+!!! danger "Caution"
+    Deleting an endpoint stage in AI EasyMaker also deletes the stage in API Gateway service from which the endpoint's stage is deployed.
+    If there is an API running on the API Gateway stage to be deleted, please be noted that API calls cannot be made.
 
 <a id="endpoint.delete"></a>
 
@@ -1154,9 +1148,9 @@ Delete an endpoint.
 3. Click **Delete Endpoint**.
 4. Requested deletion task cannot be cancelled. If want to proceed, please click **Confirm**
 
-> [Caution] Delete API Gateway service when deleting the endpoint stage:
-> Deleting an endpoint stage in AI EasyMaker also deletes API Gateway service from which the endpoint's stage was deployed.
-> If there is API running on the API Gateway service to be deleted, please be noted that API calls cannot be made.
+!!! danger "Caution"
+    Deleting an endpoint stage in AI EasyMaker also deletes API Gateway service from which the endpoint's stage was deployed.
+    If there is API running on the API Gateway service to be deleted, please be noted that API calls cannot be made.
 
 <a id="batch.inference"></a>
 
@@ -1203,24 +1197,20 @@ Set up the environment in which batch inference will be performed by selecting a
     - **Log Management** : Logs generated during batch inference can be stored in the NHN Cloud Log & Crash Search service.
         - For more information, please refer to [Appendix > 2. NHN Cloud Log & Crash Search Service User Guide and Log Check](./console-guide/#2-nhn-cloud-log-crash-search-service-usage-guide-and-log-inquiry-guide).
 
-> [Caution] When using NHN Cloud NAS:
-> Only NHN Cloud NAS created on the same project as AI EasyMaker is available to use.
+!!! tip "Note"
+    - If the Glob pattern is not entered properly, batch inference may not work properly because the input data cannot be found.
+    When used together with the **Include Glob pattern**, the **Exclude Glob pattern** takes precedence.
+    - You must set the **batch size** and **inference timeout** appropriately based on the performance of the model you are batch inferring.
+    If the settings you enter are incorrect, batch inference might not perform well enough.
 
-> [Caution] Batch inference fails when batch inference input data is deleted:
-> Batch inference can fail if you delete input data before batch inference is complete.
+!!! danger "Caution"
+    - Only NHN Cloud NAS created on the same project as AI EasyMaker is available to use.
+    - Batch inference can fail if you delete input data before batch inference is complete.
 
-> [Caution] When setting input data detailed options:
-> If the Glob pattern is not entered properly, batch inference may not work properly because the input data cannot be found.
-> When used together with the **Include Glob pattern**, the **Exclude Glob pattern** takes precedence.
-
-> [Caution] When setting batch options:
-> You must set the **batch size** and **inference timeout** appropriately based on the performance of the model you are batch inferring.
-> If the settings you enter are incorrect, batch inference might not perform well enough.
-
-> [Caution] When using GPU instances:
-> Batch inference using GPU instances allocates GPU instances based on the number of Pods
-> If `Number of Pods / Number of GPUs` is not divisible by an integer, you may encounter unallocated GPUs
-> Unallocated GPUs are not used by batch inference, so set the number of Pods appropriately to use GPU instances efficiently.
+!!! danger "Caution"
+    Batch inference using GPU instances allocates GPU instances based on the number of Pods
+    If `Number of Pods / Number of GPUs` is not divisible by an integer, you may encounter unallocated GPUs
+    Unallocated GPUs are not used by batch inference, so set the number of Pods appropriately to use GPU instances efficiently.
 
 <a id="batch.inference.list"></a>
 
@@ -1301,10 +1291,11 @@ See the table below for the base images in AI EasyMaker.
 | Ubuntu 22.04 CPU TensorFlow Training | CPU  | TensorFlow | 2.12.0   | 3.10   | fb34a0a4-kr1-registry.container.nhncloud.com/easymaker/tensorflow-train:2.12.0-cpu-py310-ubuntu2204 |
 | Ubuntu 22.04 GPU TensorFlow Training | GPU  | TensorFlow | 2.12.0   | 3.10   | fb34a0a4-kr1-registry.container.nhncloud.com/easymaker/tensorflow-train:2.12.0-gpu-py310-ubuntu2204 |
 
-> [Note] Limitations on using private images:
->
-> Only private images derived from base images provided by AI EasyMaker can be used.
-> Only NHN Container Registry (NCR) can be integrated as a container registry service where private images are stored. (As of December 2023)
+!!! tip "Note"
+    Only NHN Container Registry (NCR) can be integrated as a container registry service where private images are stored. (As of December 2023)
+
+!!! danger "Caution"
+    Only private images derived from base images provided by AI EasyMaker can be used.
 
 <a id="personal.image.create"></a>
 
@@ -1353,14 +1344,14 @@ Build an image with a Dockerfile and save (push) the image to the NCR registry.
     3. Select a private image to use as the notebook container image.
     4. After filling out and creating the other notebook information, the notebook will be running with your private image.
 
-> [Note] Where to use private images:
-> Private images can be used for notebooks, training, and hyperparameter tuning to create resources.
+!!! tip "Note"
+    Private images can be used for notebooks, training, and hyperparameter tuning to create resources.
 
-> [Note] Container registry service: NHN Container Registry (NCR)
-> Only NCR service can be used as a container registry service. (As of December 2023)
-> Enter the following values for the account ID and password for the NCR service.
-> ID: User Access Key of NHN Cloud user account
-> Password: User Secret Key of NHN Cloud user account
+!!! tip "Note"
+    Only NCR service can be used as a container registry service. (As of December 2023)
+    Enter the following values for the account ID and password for the NCR service.
+    ID: User Access Key of NHN Cloud user account
+    Password: User Secret Key of NHN Cloud user account
 
 <a id="registry.account"></a>
 
@@ -1393,10 +1384,12 @@ Create a new registry account.
 - Click **Change Registry Account**.
 - Enter an ID and password, then click **Confirm**.
 
-> [Note]
-> When you change your registry account, you sign in to the registry service with the changed username and password when using images associated with that account.
-> If you enter an incorrect registry username and password, the login during a private image pull fails and the resource creation fails.
-> If there are resources being created with a private image that has a registry account associated with it, or if there are studies and hyperparameters in progress, you cannot modify them.
+!!! tip "Note"
+    When you change your registry account, you sign in to the registry service with the changed username and password when using images associated with that account.
+    If you enter an incorrect registry username and password, the login during a private image pull fails and the resource creation fails.
+
+!!! danger "Caution"
+    If there are resources being created with a private image that has a registry account associated with it, or if there are studies and hyperparameters in progress, you cannot modify them.
 
 <a id="registry.account.modify.registry.account.change"></a>
 
@@ -1412,8 +1405,8 @@ Create a new registry account.
 
 Select the registry account you want to delete from the list, and click **Delete Registry Account**.
 
-> [Note]
-> You cannot delete a registry account associated with an image. To delete, delete the associated image first and then delete the registry account.
+!!! tip "Note"
+    You cannot delete a registry account associated with an image. To delete, delete the associated image first and then delete the registry account.
 
 <a id="pipeline"></a>
 
@@ -1422,26 +1415,21 @@ Select the registry account you want to delete from the list, and click **Delete
 ML Pipeline is a feature for managing and executing portable and scalable machine learning workflows.
 You can use the Kubeflow Pipelines (KFP) Python SDK to write components and pipelines, compile pipelines into intermediate representation YAML, and run them in AI EasyMaker.
 
-> [Note] What is a pipeline?
-> A pipeline is a definition of a workflow that combines one or more components to form a directed acyclic graph (DAG).
-> Each component runs a single container during execution, which can generate ML artifacts.
+!!! tip "Note"
+    A **pipeline** is a definition of a workflow that combines one or more components to form a directed acyclic graph (DAG).
+    - Each component runs a single container during execution, which can generate ML artifacts.
+    - Components can take inputs and produce outputs. There are two types of I/O types. Parameters and artifacts:
+    - Parameters are useful for passing small amounts of data between components.
+    - Artifact types are for ML artifact outputs, such as datasets, models, metrics, etc. Provides a convenient mechanism for saving to object storage.
 
-> [Note] What are ML artifacts?
-> Components can take inputs and produce outputs. There are two types of I/O types. Parameters and artifacts:
->
-> 1. Parameters are useful for passing small amounts of data between components.
-> 2. Artifact types are for ML artifact outputs, such as datasets, models, metrics, etc. Provides a convenient mechanism for saving to object storage.
+!!! tip "Note"
+    The feature to view console output generated while executing a pipeline is not provided.
+    To check the logs of pipeline code, use the [SDK's Log Send feature] (./sdk-guide/#nhn-cloud-log-crash-search) to send the logs to Log & Crash Search.
 
-> [Note] View Pipeline Execution logs
-> The feature to view console output generated while executing a pipeline is not provided.
-> To check the logs of pipeline code, use the [SDK's Log Send feature] (./sdk-guide/#nhn-cloud-log-crash-search) to send the logs to Log & Crash Search.
-
-Most pipelines aim to produce one or more ML artifacts, such as datasets, models, evaluation metrics, etc.
-
-> [Reference] Kubeflow Pipelines (KFP) official documentation
->
-> - [KFP User Guide](https://www.kubeflow.org/docs/components/pipelines/user-guides/)
-> - [KFP SDK Reference](https://kubeflow-pipelines.readthedocs.io/en/stable/)
+!!! tip "Note"
+    Kubeflow Pipelines (KFP) official documentation
+    - [KFP User Guide](https://www.kubeflow.org/docs/components/pipelines/user-guides/)
+    - [KFP SDK Reference](https://kubeflow-pipelines.readthedocs.io/en/stable/)
 
 <a id="pipeline"></a>
 
@@ -1453,9 +1441,9 @@ Upload a pipeline.
 - **Description**: Enter description.
 - **File registration**: Select the YAML file to upload.
 
-> [Note] Pipeline upload time:
-> Uploading a pipeline can take a few minutes.
-> The initial resource creation requires an additional few minutes of time to configure the service environment.
+!!! tip "Note"
+    Uploading a pipeline can take a few minutes.
+    The initial resource creation requires an additional few minutes of time to configure the service environment.
 
 <a id="pipeline.list"></a>
 
@@ -1490,8 +1478,8 @@ Delete the pipeline.
 2. Click **Delete Pipeline**. You can't delete a pipeline while it's being created.
 3. The requested delete task cannot be canceled. Click **Delete** to proceed.
 
-> [Note] Cannot delete a pipeline if an associated pipeline schedule exists:
-> You cannot delete a pipeline if a schedule created with the pipeline you want to delete exists. Delete the pipeline schedule first, then delete the pipeline.
+!!! tip "Note"
+    You cannot delete a pipeline if a schedule created with the pipeline you want to delete exists. Delete the pipeline schedule first, then delete the pipeline.
 
 <a id="pipeline.run"></a>
 
@@ -1524,12 +1512,12 @@ Run the pipeline.
     - **Manage Logs**: Logs that occur during pipeline execution can be stored in the NHN Cloud Log & Crash Search service.
         - For more information, refer to [Appendix > 2. NHN Cloud Log & Crash Search service usage guide and checking logs](./console-guide/#2-nhn-cloud-log-crash-search).
 
-> [Caution] If you are using NHN Cloud NAS:
-> Only NHN Cloud NAS created in the same project as AI EasyMaker is available.
+!!! tip "Note"
+    Creating a pipeline run can take a few minutes.
+    The initial resource creation requires an additional few minutes of time to configure the service environment.
 
-> [Note] Pipeline run generation time:
-> Creating a pipeline run can take a few minutes.
-> The initial resource creation requires an additional few minutes of time to configure the service environment.
+!!! danger "Caution"
+    Only NHN Cloud NAS created in the same project as AI EasyMaker is available.
 
 <a id="pipeline.run.list"></a>
 
@@ -1567,8 +1555,8 @@ The graph is a pictorial representation of the pipeline execution. This graph sh
 
 With node-specific details, you can download the generated artifacts.
 
-> [Caution] Pipeline artifact storage cycle:
-> Artifacts older than 120 days are automatically deleted.
+!!! danger "Caution"
+    Artifacts older than 120 days are automatically deleted.
 
 <a id="pipeline.run.stop"></a>
 
@@ -1580,8 +1568,8 @@ Stop running pipelines in progress.
 2. Click **Stop running**.
 3. The requested action can't be canceled. Click **Confirm** to continue.
 
-> [Note] How long it takes to stop running a pipeline:
-> Stopping pipeline execution can take a few minutes.
+!!! tip "Note"
+    Stopping pipeline execution can take a few minutes.
 
 <a id="pipeline.run.copy"></a>
 
@@ -1630,13 +1618,13 @@ For information beyond the items below that you can set in creating a pipeline s
         - For example, if a pipeline recurring run is briefly stopped and later restarted, Setting **Use** will catch up on missed pipeline runs.
         - If the pipeline handles backfill internally, it should be **disabled** to prevent duplicate backfill operations.
 
-> [Note] How long it takes to create a pipeline recurring run:
-> Creating a recurring run can take a few minutes.
-> The initial resource creation requires an additional few minutes of time to configure the service environment.
+!!! tip "Note"
+    Creating a recurring run can take a few minutes.
+    The initial resource creation requires an additional few minutes of time to configure the service environment.
 
-> [Note] Cron expression format:
-> The Cron expression uses six space-separated fields to represent the time.
-> For more information, see the [Cron Expression Format](https://pkg.go.dev/github.com/robfig/cron#hdr-CRON_Expression_Format) documentation.
+!!! tip "Note"
+    The Cron expression uses six space-separated fields to represent the time.
+    For more information, see the [Cron Expression Format](https://pkg.go.dev/github.com/robfig/cron#hdr-CRON_Expression_Format) documentation.
 
 <a id="pipeline.schedule.list"></a>
 
@@ -1686,8 +1674,8 @@ Delete a pipeline recurring run.
 2. Click **Delete Pipeline Recurring Run**.
 3. The requested delete task cannot be canceled. Click **Delete** to proceed.
 
-> [Note] You cannot delete a pipeline schedule if an associated pipeline run is in progress:
-> You cannot delete a run generated by the pipeline schedule you want to delete if it is in progress. Delete the pipeline schedule after the pipeline run is complete.
+!!! tip "Note"
+    You cannot delete a run generated by the pipeline schedule you want to delete if it is in progress. Delete the pipeline schedule after the pipeline run is complete.
 
 <a id="rag"></a>
 
@@ -1748,13 +1736,14 @@ Create a new RAG.
     - **Log Management**: You can save logs generated during RAG execution to the NHN Cloud Log & Crash Search service.
         - For more information, refer to [Addpendix > 2. NHN Cloud Log & Crash Search Service Usage Guide and Log Check](./console-guide/#2-nhn-cloud-log-crash-search).
 
-> [Caution] When using a PostgreSQL Instance, the port must be set to `15432`.
-> For how to create an instance, refer to [PostgreSQL Instance User Guide](https://docs.nhncloud.com/ko/Compute/Instance/ko/component-guide/#postgresql-instance).
+!!! tip "Note"
+    There may be limitations on the format, size, and number of files available for ingestion. For more information, see [Collect Sync](#rag_ingestion_sync).
 
-> [Caution] When using NHN Cloud NAS
-> Only NHN Cloud NAS created in the same project as AI EasyMaker can be used.
+!!! danger "Caution"
+    For how to create an instance, refer to [PostgreSQL Instance User Guide](https://docs.nhncloud.com/ko/Compute/Instance/ko/component-guide/#postgresql-instance).
 
-> [Note] There may be limitations on the format, size, and number of files available for ingestion. For more information, see [Collect Sync](#rag_ingestion_sync).
+!!! danger "Caution"
+    Only NHN Cloud NAS created in the same project as AI EasyMaker can be used.
 
 <a id="rag.list"></a>
 
@@ -1821,6 +1810,9 @@ View and manage the list of generated RAGs. Select a RAG from the list to view d
 - When requesting a question, include `model` and `messages` in the request body, similar to the OpenAI Chat Completion API. For `model`, include the RAG name.
 - For detailed request examples, please refer to the information below:
 
+<details>
+<summary><strong>Reqeust Example(cURL)</strong></summary>
+
 ```bash
 curl -X POST https://{API endpoint address}/rag/v1/query \
   -H "Content-Type: application/json" \
@@ -1834,6 +1826,110 @@ curl -X POST https://{API endpoint address}/rag/v1/query \
     ]
   }'
 ```
+
+</details>
+
+<details>
+<summary><strong>스트리밍 호출 예시(cURL)</strong></summary>
+
+```bash
+#!/bin/bash
+set -euo pipefail
+
+DEFAULT_URL="https://{API 엔드포인트 주소}/rag/v1/query"
+DEFAULT_MODEL="{RAG 이름}"
+DEFAULT_PROMPT="AI EasyMaker 서비스에 대해 설명해줘."
+
+usage() {
+  cat <<'EOF'
+사용법:
+  <파일 이름> -k <API_KEY> [-u URL] [-m MODEL] [-p PROMPT]
+
+옵션:
+  -k   API 키 (x-nhn-apikey: <API_KEY> 헤더로 전송)
+  -u   호출 URL
+  -m   모델명
+  -p   사용자 프롬프트
+  -h   도움말
+
+설명:
+  - OpenAI 호환 스펙으로 stream=true 호출을 수행하고,
+    스트리밍으로 전달되는 각 chunk의 choices[].delta.content 만을
+    표준출력에 순차적으로 기록합니다.
+
+필수 도구:
+  - curl, jq
+EOF
+}
+
+API_KEY=""
+URL="$DEFAULT_URL"
+MODEL="$DEFAULT_MODEL"
+PROMPT="$DEFAULT_PROMPT"
+
+while getopts ":k:u:m:p:h" opt; do
+  case "$opt" in
+    k) API_KEY="$OPTARG" ;;
+    u) URL="$OPTARG" ;;
+    m) MODEL="$OPTARG" ;;
+    p) PROMPT="$OPTARG" ;;
+    h) usage; exit 0 ;;
+    \?) echo "알 수 없는 옵션: -$OPTARG" >&2; usage; exit 2 ;;
+    :) echo "옵션 -$OPTARG 에 값이 필요합니다." >&2; usage; exit 2 ;;
+  esac
+done
+
+if ! command -v curl >/dev/null 2>&1; then
+  echo "에러: curl 이 필요합니다." >&2
+  exit 1
+fi
+if ! command -v jq >/dev/null 2>&1; then
+  echo "에러: jq 가 필요합니다." >&2
+  exit 1
+fi
+
+# JSON Payload 생성 (OpenAI Chat Completions 호환 형태)
+payload="$(jq -n \
+  --arg model "$MODEL" \
+  --arg prompt "$PROMPT" \
+  '{
+    model: $model,
+    messages: [ { role: "user", content: $prompt } ],
+    stream: true
+  }'
+)"
+
+headers=( -H "Content-Type: application/json" )
+if [[ -n "$API_KEY" ]]; then
+  headers+=( -H "x-nhn-apikey: $API_KEY" )
+fi
+
+echo "요청 URL: $URL" >&2
+echo "모델: $MODEL" >&2
+echo "---------------- 스트리밍 시작 ----------------" >&2
+
+# 스트리밍 처리: data: {json} 라인에서 delta.content 만 추출
+curl -sS -N -X POST "$URL" "${headers[@]}" --data-raw "$payload" \
+| while IFS= read -r line; do
+    [[ -z "$line" ]] && continue
+    if [[ "$line" == "data: [DONE]"* ]]; then
+      break
+    fi
+    if [[ "$line" == data:* ]]; then
+      json="${line#data: }"
+      # 여러 choice 가 있을 수 있으므로 모두 출력
+      # delta.content 가 없을 수도 있어 empty 로 처리
+      while IFS= read -r piece; do
+        printf "%s" "$piece"
+      done < <(printf '%s\n' "$json" | jq -r '.choices[]?.delta?.content // empty')
+    fi
+  done
+
+echo
+echo "---------------- 스트리밍 종료 ----------------" >&2
+```
+
+</details>
 
 <a id="appendix"></a>
 
@@ -1852,7 +1948,8 @@ You have to check this information to set up an access policy in User Object Sto
 
 The 'User' take responsibility for all consequences of allowing the user to access Object Storage for an account other than the AI EasyMaker system account during the access policy setting process, and AI EasyMaker is not responsible for it.
 
-[Note] According to features, AI EasyMaker accesses, reads or writes to Object Storage as follows.
+!!! tip "Note"
+    According to features, AI EasyMaker accesses, reads or writes to Object Storage as follows.
 
 | Feature | Access Right | Access target |
 | --- | --- | --- |
@@ -2013,22 +2110,32 @@ As shown in the example below, you can use hyperparameter values entered during 
 
 - In order to check result indicators on the TensorBoard screen after training, the TensorBoard log storage space must be set to the specified location (`EM_TENSORBOARD_LOG_DIR`) when writing the training script.
 
-> [Caution] TensorBoard metrics logs storage cycle:
-> Metrics older than 120 days will be deleted automatically.
+<details>
+<summary><strong>Example</strong></summary>
 
-- **Example code for Tesnsorboard log storage (TensorFlow)**
+```python
+import tensorflow as tf
 
-        import tensorflow as tf
+# Specify the TensorBoard log path
+tb_log = tf.keras.callbacks.TensorBoard(log_dir=os.environ.get("EM_TENSORBOARD_LOG_DIR"))
 
-        # Specify the TensorBoard log path
-        tb_log = tf.keras.callbacks.TensorBoard(log_dir=os.environ.get("EM_TENSORBOARD_LOG_DIR"))
+model = ... # model implementation
 
-        model = ... # model implementation
+model.fit(x_train, y_train, validation_data=(x_test, y_test),
+        epochs=100, batch_size=20, callbacks=[tb_log])
+```
 
-        model.fit(x_train, y_train, validation_data=(x_test, y_test),
-                epochs=100, batch_size=20, callbacks=[tb_log])
+</details>
 
-![Check TensorBoard Log](http://static.toastoven.net/prod_ai_easymaker/console-guide_appendix_tensorboard.png)
+<details>
+<summary><strong>Check TensorBoard Log</strong></summary>
+
+<img src="http://static.toastoven.net/prod_ai_easymaker/console-guide_appendix_tensorboard.png" alt="Check TensorBoard Log">
+
+</details>
+
+!!! danger "Caution"
+    Metrics older than 120 days will be deleted automatically.
 
 <a id="appendix.6.framework.training.settings"></a>
 
@@ -2077,8 +2184,8 @@ Before the expiration, you must follow these instructions to move stages running
 2. Recreate the stage.
 3. When a new stage becomes ACTIVE, check whether API calls and inference responses come normally to the stage endpoint.
 
-> [Caution]
-> Deleting a stage will shut down the endpoint, preventing API calls. Ensure that the stage is not in service before deleting it.
+!!! danger "Caution"
+    Deleting a stage will shut down the endpoint, preventing API calls. Ensure that the stage is not in service before deleting it.
 
 <a id="appendix.7.cluster.upgrade.endpoint.cluster.upgrade.default.stage.cluster.upgrade"></a>
 
@@ -2137,10 +2244,10 @@ For more information about the OIP specification, see [OIP Specification](https:
 | OpenAI generative model inference | POST   | /{model_name}/openai/v1/completions                                     |
 | OpenAI generative model inference | POST   | /{model_name}/openai/v1/chat/completions                                |
 
-> [Note] OpenAI generative model inference
-> OpenAI generative model inference is used when using a generative model, such as OpenAI's GPT-4o.
-> The inputs required for inference must be entered according to OpenAI's API specification. For more information, see the [OpenAI API documentation](https://platform.openai.com/docs/api-reference/chat).
-> For models that support the Completion and Chat Completion APIs provided by AI EasyMaker, see [Model endpoint compatibility](https://platform.openai.com/docs/models/model-endpoint-compatibility).
+!!! tip "Note"
+    OpenAI generative model inference is used when using a generative model, such as OpenAI's GPT-4o.
+    The inputs required for inference must be entered according to OpenAI's API specification. For more information, see the [OpenAI API documentation](https://platform.openai.com/docs/api-reference/chat).
+    For models that support the Completion and Chat Completion APIs provided by AI EasyMaker, see [Model endpoint compatibility](https://platform.openai.com/docs/models/model-endpoint-compatibility).
 
 <a id="appendix.11.framework.note"></a>
 
@@ -2170,8 +2277,12 @@ See the table below and the [model-archiver documentation](https://github.com/py
 | requirements.txt             | Optional      | Files for installing Python packages needed when serving.        |
 | extra/                       | Optional      | The files in the directory are passed in the extra-files parameter.         |
 
->[Note] There are differences in the request format between using TorchServe directly and using AI EasyMaker serving, so take care when writing the handler.py.
-Refer to the example below to see what values are passed, and implement the handler accordingly.
+!!! tip "Note"
+    There are differences in the request format between using TorchServe directly and using AI EasyMaker serving, so take care when writing the handler.py.
+    Refer to the example below to see what values are passed, and implement the handler accordingly.
+
+<details>
+<summary><strong>Example(cURL)</strong></summary>
 
 ```bash
 # Example request
@@ -2185,6 +2296,11 @@ curl --location --request POST '{API Gateway resource path}' \
 }'
 ```
 
+</details>
+
+<details>
+<summary><strong>Example(handler.py)</strong></summary>
+
 ```python
 class TestHandler(BaseHandler):
     # ...
@@ -2197,6 +2313,8 @@ class TestHandler(BaseHandler):
         return tensor
     # ...
 ```
+
+</details>
 
 <a id="appendix.11.framework.note.scikitlearn.framework"></a>
 
@@ -2224,14 +2342,14 @@ Hugging Face Runtime Serving does not support fine-tuning. To serve fine-tuned m
 4. Create a model by entering the required inputs based on the model.
 5. Verify the created model, and create an endpoint.
 
-> [Note] Supported Hugging Face Tasks:
-> Currently, the Hugging Face Runtime does not support the full range of Tasks in Hugging Face.
-> The following tasks are supported: `sequence_classification`, `token_classification`, `fill_mask`, `text_generation`, and `text2text_generation`.
-> To use unsupported Tasks, use the TensorFlow/Pytorch Serving method.
+!!! tip "Note"
+    Currently, the Hugging Face Runtime does not support the full range of Tasks in Hugging Face.
+    The following tasks are supported: `sequence_classification`, `token_classification`, `fill_mask`, `text_generation`, and `text2text_generation`.
+    To use unsupported Tasks, use the TensorFlow/Pytorch Serving method.
 
-> [Note] Gated Model:
-> To serve a gated model, you must enter the token of an account that is allowed access as a model parameter.
-> If you do not enter a token, or if you enter a token from an account that is not allowed, the model deployment fails.
+!!! tip "Note"
+    To serve a gated model, you must enter the token of an account that is allowed access as a model parameter.
+    If you do not enter a token, or if you enter a token from an account that is not allowed, the model deployment fails.
 
 <a id="appendix.11.framework.note.hugging.face.framework.tensorflow.pytorch.serving"></a>
 

@@ -67,12 +67,12 @@ Jupyterノートパソコンを作成します。
         - マウントディレクトリ名：ノートパソコンにマウントするディレクトリ名を入力します。
         - NHN Cloud NASパス：`nas://{NAS ID}:/{path}`形式のディレクトリパスを入力します。
 
-> [注意] NHN Cloud NASを使用する場合:
-> AI EasyMakerと同じプロジェクトで作成されたNHN Cloud NASのみ使用できます。
+!!! tip "参考"
+    ノートパソコンの作成には数分かかる場合があります。
+    最初のリソース(ノートパソコン、学習、実験、エンドポイント)作成時、サービス環境構成のためにさらに数分かかる場合があります。
 
-> [参考]ノートパソコン作成所要時間:
-> ノートパソコンの作成には数分かかる場合があります。
-> 最初のリソース(ノートパソコン、学習、実験、エンドポイント)作成時、サービス環境構成のためにさらに数分かかる場合があります。
+!!! danger "注意"
+    AI EasyMakerと同じプロジェクトで作成されたNHN Cloud NASのみ使用できます。
 
 <a id="notebook.list"></a>
 
@@ -163,12 +163,12 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 2. **ノートパソコンの起動**または**ノートパソコンの停止**をクリックします。
 3. リクエストされた作業はキャンセルできません。続行するには**[OK]**をクリックします。
 
-> [注意]ノートパソコンの停止後に起動時に仮想環境および外部ライブラリを維持する方法:
-> ノートパソコンを停止して起動する時、ユーザーが作成した仮想環境および外部ライブラリが初期化されることがあります。
-> 維持するには[ユーザー仮想実行環境の構成](./console-guide/#_8)を参照してユーザー仮想環境を構成してください。
+!!! tip "参考"
+    ノートパソコンの起動と停止は数分かかる場合があります。
 
-> [参考]ノートパソコンの起動と停止の所要時間:
-> ノートパソコンの起動と停止は数分かかる場合があります。
+!!! danger "注意"
+    ノートパソコンを停止して起動する時、ユーザーが作成した仮想環境および外部ライブラリが初期化されることがあります。
+    維持するには[ユーザー仮想実行環境の構成](./console-guide/#_8)を参照してユーザー仮想環境を構成してください。
 
 <a id="notebook.instance.type.change"></a>
 
@@ -182,8 +182,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 3. **インスタンスタイプの変更**をクリックします。
 4. 変更するインスタンスタイプを選択し、[OK]をクリックします。
 
-> [参考]インスタンスタイプ変更所要時間:
-> インスタンスタイプの変更は数分かかる場合があります。
+!!! tip "参考"
+    インスタンスタイプの変更は数分かかる場合があります。
 
 <a id="notebook.reboot"></a>
 
@@ -196,9 +196,9 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 2. **ノートパソコン再起動**をクリックします。
 3. リクエストされた削除作業はキャンセルできません。続行するには**確認**をクリックします。
 
-> [注意]ノートパソコンの再起動時に仮想環境及び外部ライブラリを維持する方法:
-> ノートパソコンを再起動すると、ユーザーが作成した仮想環境と外部ライブラリが初期化される場合があります。
-> 維持するには[ユーザー仮想実行環境構成](./console-guide/#_8)を参考してユーザー仮想環境を構成してください。
+!!! danger "注意"
+    ノートパソコンを再起動すると、ユーザーが作成した仮想環境と外部ライブラリが初期化される場合があります。
+    維持するには[ユーザー仮想実行環境構成](./console-guide/#_8)を参考してユーザー仮想環境を構成してください。
 
 <a id="notebook.delete"></a>
 
@@ -210,9 +210,9 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 2. **ノートパソコンの削除**をクリックします。
 3. リクエストされた削除作業はキャンセルできません。続行するには**[OK]**をクリックします。
 
-> [参考]ストレージ:
-> ノートパソコンを削除すると、ブートストレージとデータストレージが削除されます。
-> 接続したNHN Cloud NASは削除されず、**NHN Cloud NAS**から個別に削除する必要があります。
+!!! tip "参考"
+    ノートパソコンを削除すると、ブートストレージとデータストレージが削除されます。
+    接続したNHN Cloud NASは削除されず、**NHN Cloud NAS**から個別に削除する必要があります。
 
 <a id="experiment"></a>
 
@@ -227,9 +227,9 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 1. **実験作成**をクリックします。
 2. 実験の名前と説明を入力し、**確認**をクリックします。
 
-> [参考]実験作成所要時間:
-> 実験の作成には数分の時間がかかる場合があります。
-> 最初のリソース(ノートパソコン、学習、実験、エンドポイント)作成時、サービス環境の構成にさらに数分かかります。
+!!! tip "参考"
+    実験の作成には数分の時間がかかる場合があります。
+    最初のリソース(ノートパソコン、学習、実験、エンドポイント)作成時、サービス環境の構成にさらに数分かかります。
 
 <a id="experiment.list"></a>
 
@@ -261,10 +261,10 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 2. **実験削除**をクリックします。実験が作成中の場合、実験の削除はできません。
 3. リクエストされた削除作業はキャンセルできません。続行するには**確認**をクリックします。
 
-> [参考]関連したリソースが存在する場合、実験の削除不可:
-> 実験に関連するパイプラインスケジュールが存在したり、作成中の学習、ハイパーパラメータチューニング、パイプライン実行が存在する場合、実験を削除することはできません。
-> 実験に関連するリソースを削除した後、実験を削除してください。
-> 関連するリソースは、削除したい実験をクリックすると表示される下部の詳細画面で確認できます。
+!!! tip "参考"
+    実験に関連するパイプラインスケジュールが存在したり、作成中の学習、ハイパーパラメータチューニング、パイプライン実行が存在する場合、実験を削除することはできません。
+    実験に関連するリソースを削除した後、実験を削除してください。
+    関連するリソースは、削除したい実験をクリックすると表示される下部の詳細画面で確認できます。
 
 <a id="training"></a>
 
@@ -332,11 +332,9 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
     - **ログ管理**：学習進行中に発生するログをNHN Cloud Log & Crashサービスに保存できます。
         - 詳細は[付録 > 2. NHN Cloud Log & Crash Searchサービス利用案内およびログ確認](./console-guide/#2-nhn-cloud-log-crash-search)を参照してください。
 
-> [注意] NHN Cloud NASを使用する場合:
-> AI EasyMakerと同じプロジェクトで作成されたNHN Cloud NASのみ使用できます。
-
-> [注意]学習入力データを削除すると学習失敗:
-> 学習が完了する前に入力データを削除すると、学習に失敗する可能性があります。
+!!! danger "注意"
+    - AI EasyMakerと同じプロジェクトで作成されたNHN Cloud NASのみ使用できます。
+    - 学習が完了する前に入力データを削除すると、学習に失敗する可能性があります。
 
 <a id="training.list"></a>
 
@@ -400,8 +398,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 2. **学習の削除**をクリックします。進行中の学習は停止後に削除できます。
 3. リクエストされた削除作業はキャンセルできません。続行するには**[OK]**をクリックします。
 
-> [参考]関連するモデルが存在する場合は学習の削除不可:
-> 削除する学習で作成されたモデルが存在する場合は学習を削除できません。モデルを先に削除してから学習を削除してください。
+!!! tip "参考"
+    削除する学習で作成されたモデルが存在する場合は学習を削除できません。モデルを先に削除してから学習を削除してください。
 
 <a id="hyperparameter.tuning"></a>
 
@@ -501,11 +499,9 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
     - **ログ管理**：学習の進行中に発生するログをNHN Cloud Log & Crashサービスに保存できます。
         - 詳しい内容は[付録 > 2. NHN Cloud Log & Crash Searchサービス利用案内及び、ログ確認](./console-guide/#2-nhn-cloud-log-crash-search)を参照してください。
 
-> [注意]NHN Cloud NASを使用する場合:
-> AI EasyMakerと同じプロジェクトで作成されたNHN Cloud NASのみ使用可能です。
-
-> [注意]学習入力データ削除時の学習失敗:
-> 学習が完了する前に入力データを削除すると、学習に失敗することがあります。
+!!! danger "注意"
+    - AI EasyMakerと同じプロジェクトで作成されたNHN Cloud NASのみ使用可能です。
+    - 学習が完了する前に入力データを削除すると、学習に失敗することがあります。
 
 <a id="hyperparameter.tuning.list"></a>
 
@@ -599,8 +595,8 @@ AI EasyMakerノートパソコンインスタンスは`/root/easymaker/custom-co
 2. **ハイパーパラメータチューニングの削除**をクリックします。進行中のハイパーパラメータチューニングは停止後に削除できます。
 3. リクエストされた削除作業はキャンセルできません。続行するには**[OK]**をクリックします。
 
-> [参照]関連するモデルが存在する場合、ハイパーパラメータチューニングは削除不可:
-> 削除するハイパーパラメータチューニングで作成されたモデルが存在する場合、ハイパーパラメータチューニングは削除できません。先にモデルを削除してから、ハイパーパラメータチューニングを削除してください。
+!!! tip "参考"
+    削除するハイパーパラメータチューニングで作成されたモデルが存在する場合、ハイパーパラメータチューニングは削除できません。先にモデルを削除してから、ハイパーパラメータチューニングを削除してください。
 
 <a id="training"></a>
 
@@ -673,40 +669,42 @@ AI EasyMakerの学習結果のモデルまたは外部のモデルをアーテ�
         - **パラメータ名**：モデルのパラメータ名を入力します。
         - **パラメータ値**：モデルのパラメータ値を入力します。
 
-> [注意] NHN Cloud NASを使用する場合:
-> AI EasyMakerと同じプロジェクトで作成されたNHN Cloud NASのみ使用できます。
+!!! tip "参考"
+    モデルパラメータに入力された値は、モデルをサービングする際に使用されます。パラメータは引数と環境変数として使用できます。
+    引数は入力されたパラメータ名がそのまま使用され、環境変数はパラメータ名がスクリーミングスネーク表記(screaming snake case)に変換されて使用されます。
 
-> [注意]リポジトリのモデルアーティファクトを維持:
-> リポジトリに保存されているモデルアーティファクトを維持しない場合、該当モデルのエンドポイント作成が失敗します。
+!!! tip "参考"
+    HuggingFaceモデルを作成する際、HuggingFaceモデルのIDをパラメータとして入力すると、モデルを作成できます。
+    HuggingFaceモデルのIDはHuggingFaceモデルページのURLで確認できます。
+    詳細は[付録 > 11. フレームワーク別のサービングに関する注意事項](./console-guide/#11)を参照してください。
 
-> [参考]モデルパラメータ：
-> モデルパラメータに入力された値は、モデルをサービングする際に使用されます。パラメータは引数と環境変数として使用できます。
-> 引数は入力されたパラメータ名がそのまま使用され、環境変数はパラメータ名がスクリーミングスネーク表記(screaming snake case)に変換されて使用されます。
+!!! danger "注意"
+    AI EasyMakerと同じプロジェクトで作成されたNHN Cloud NASのみ使用できます。
 
-> [参考] HuggingFaceモデルを作成する場合：
-> HuggingFaceモデルを作成する際、HuggingFaceモデルのIDをパラメータとして入力すると、モデルを作成できます。
-> HuggingFaceモデルのIDはHuggingFaceモデルページのURLで確認できます。
-> 詳細は[付録 > 11. フレームワーク別のサービングに関する注意事項](./console-guide/#11)を参照してください。
+!!! danger "注意"
+    リポジトリに保存されているモデルアーティファクトを維持しない場合、該当モデルのエンドポイント作成が失敗します。
 
-> [注意] HuggingFaceモデルのサポートタイプ：
-> HuggingFaceモデルのファイルタイプはsafetensorsに制限しています。
-> safetensorsはHuggingFaceが開発した安全で効率的な機械学習モデルファイル形式です。
-> それ以外のファイル形式はサポートしません。
+!!! danger "注意"
+    HuggingFaceモデルのファイルタイプはsafetensorsに制限しています。
+    safetensorsはHuggingFaceが開発した安全で効率的な機械学習モデルファイル形式です。
+    それ以外のファイル形式はサポートしません。
 
-> [注意] TensorFlow (Triton)、PyTorch (Triton)、ONNX (Triton)モデルを作成する場合:
-> 入力するモデルアーティファクトのパスには、Tritonでモデルを実行できる構造でモデルファイルと`config.pbtxt`ファイルが保存されている必要があります。
-> 以下の例をご参照ください。
+!!! danger "注意"
+    入力するモデルアーティファクトのパスには、Tritonでモデルを実行できる構造でモデルファイルと`config.pbtxt`ファイルが保存されている必要があります。
+    以下の例をご参照ください。
+    <details>
+    <summary><strong>例</strong></summary>
 
-```
-model_name/
-├── config.pbtxt                              # モデル設定ファイル
-└── 1/                                        # バージョン1ディレクトリ
-    └── model.savedmodel/                     # TensorFlow SavedModelディレクトリ
-        ├── saved_model.pb                    # メタグラフとチェックポイントデータ
-        └── variables/                        # モデルの重みディレクトリ
-            ├── variables.data-00000-of-00001
-            └── variables.index
-```
+        model_name/
+        ├── config.pbtxt                              # モデル設定ファイル
+        └── 1/                                        # バージョン1ディレクトリ
+            └── model.savedmodel/                     # TensorFlow SavedModelディレクトリ
+                ├── saved_model.pb                    # メタグラフとチェックポイントデータ
+                └── variables/                        # モデルの重みディレクトリ
+                    ├── variables.data-00000-of-00001
+                    └── variables.index
+
+    </details>
 
 <a id="model.list"></a>
 
@@ -764,9 +762,9 @@ model_name/
 2. **モデルの削除**をクリックします。
 3. リクエストされた削除作業はキャンセルできません。続行するには**[OK]**をクリックします。
 
-> [参考]関連するエンドポイントが存在する場合はモデル削除不可:
-> 削除しようとしているモデルで作成されたエンドポイントが存在する場合、モデルを削除できません。
-> 削除するには先に該当モデルで作成されたエンドポイントを削除してからモデルを削除してください。
+!!! tip "参考"
+    削除しようとしているモデルで作成されたエンドポイントが存在する場合、モデルを削除できません。
+    削除するには先に該当モデルで作成されたエンドポイントを削除してからモデルを削除してください。
 
 <a id="model.evaluation"></a>
 
@@ -805,12 +803,10 @@ model_name/
     - **ログ管理**:モデル評価実行中に発生するログをNHN Cloud Log & Crashサービスに保存できます。
         - 詳細は[付録 > 2. NHN Cloud Log & Crash Searchサービス利用案内及びログ確認](./console-guide/#2-nhn-cloud-log-crash-search)を参照してください。
 
-> [注意] NHN Cloud NASを使用する場合:
-> AI EasyMakerと同じプロジェクトで作成されたNHN Cloud NASのみ使用可能です。
-> [注意]入力データサイズ:
-> モデル評価に使用される入力データのサイズは20GB以下でなければなりません。
-> [注意]分類モデル評価のクラス数:
-> 分類モデル評価のクラス数は50以下でなければなりません。
+!!! danger "注意"
+    - AI EasyMakerと同じプロジェクトで作成されたNHN Cloud NASのみ使用可能です。
+    - モデル評価に使用される入力データのサイズは20GB以下でなければなりません。
+    - 分類モデル評価のクラス数は50以下でなければなりません。
 
 <a id="model.evaluation.list"></a>
 
@@ -930,19 +926,19 @@ model_name/
         - **しきい値**: Podが増設される増設単位別のしきい値です。
     - **リソース情報**:実際に使用しているリソースを確認できます。入力したモデルの割り当て量に基づいてリソース実使用量を各モデルに割り当てます。詳細は[付録 > 9.リソース情報](./console-guide/#9)を参照してください。
 
-> [参考]推論リクエストAPIスペック：
-> AI EasyMakerサービスはOIP(open inference protocol)スペックに基づいたエンドポイントを提供します。エンドポイントAPIスペックの仕様は[付録 > 10. エンドポイントAPIスペック仕様](./console-guide/#10-api)を参照してください。
-> 別途のエンドポイントを使用するにはAPI Gatewayサービスに作成されたリソースを参考にして新しいリソースを作成して使用します。
-> OIPスペックの詳細は[OIPスペック](https://github.com/kserve/open-inference-protocol)を参照してください。
+!!! tip "参考"
+    AI EasyMakerサービスはOIP(open inference protocol)スペックに基づいたエンドポイントを提供します。エンドポイントAPIスペックの仕様は[付録 > 10. エンドポイントAPIスペック仕様](./console-guide/#10-api)を参照してください。
+    別途のエンドポイントを使用するにはAPI Gatewayサービスに作成されたリソースを参考にして新しいリソースを作成して使用します。
+    OIPスペックの詳細は[OIPスペック](https://github.com/kserve/open-inference-protocol)を参照してください。
 
-> [参考]エンドポイント作成所要時間:
-> エンドポイントの作成には数分かかる場合があります。
-> 最初のリソース(ノートパソコン、学習、実験、エンドポイント)作成時、サービス環境構成のためにさらに数分かかります。
+!!! tip "参考"
+    エンドポイントの作成には数分かかる場合があります。
+    最初のリソース(ノートパソコン、学習、実験、エンドポイント)作成時、サービス環境構成のためにさらに数分かかります。
 
-> [参考]エンドポイント作成時のAPI Gatewayサービスリソース提供制約:
-> 新規エンドポイントを作成すると、API Gatewayサービスを新規作成します。
-> 既存エンドポイントから新規ステージを追加すると、API Gatewayサービスに新規ステージを作成します。
-> [API Gatewayサービスリソース提供ポリシー](https://docs.nhncloud.com/ko/nhncloud/ko/resource-policy/#api-gateway)の基本提供量を超過した場合、AI EasyMakerでエンドポイント作成ができない場合があります。この場合、API Gatewayサービスリソースのクォータを調整して解決できます。
+!!! tip "参考"
+    新規エンドポイントを作成すると、API Gatewayサービスを新規作成します。
+    既存エンドポイントから新規ステージを追加すると、API Gatewayサービスに新規ステージを作成します。
+    [API Gatewayサービスリソース提供ポリシー](https://docs.nhncloud.com/ko/nhncloud/ko/resource-policy/#api-gateway)の基本提供量を超過した場合、AI EasyMakerでエンドポイント作成ができない場合があります。この場合、API Gatewayサービスリソースのクォータを調整して解決できます。
 
 <a id="endpoint.list"></a>
 
@@ -1016,21 +1012,21 @@ model_name/
 - **API統計**:エンドポイントステージを選択すると表示される詳細画面の**API統計**タブで、エンドポイントステージのAPI統計情報を確認できます。
     - **API統計**タブはエンドポイントステージが作成中の場合、無効になります。
 
-> [注意] AI EasyMakerが作成したAPI Gatewayの設定変更時の注意点:
-> AI EasyMakerはエンドポイント作成またはエンドポイントステージ作成を行うと、エンドポイントに対するAPI Gatewayのサービスとステージを作成します。
-> AI EasyMakerによって作成されたAPI GatewayサービスとステージをAPI Gatewayサービスコンソールで直接変更作業を行う場合、次の注意事項を必ず参照してください。
->
-> 1. AI EasyMakerが作成したAPI Gatewayサービスとステージを削除しないようにします。削除すると、エンドポイントにAPI Gateway情報が正常に表示されず、エンドポイントの変更事項がAPI Gatewayに適用されない場合があります。
-> 2. エンドポイント作成時に入力したAPI Gatewayリソースパスのリソースを変更または削除しないようにします。削除すると、エンドポイントの推論APIの呼び出しに失敗する場合があります。
-> 3. エンドポイント作成時に入力したAPI Gatewayリソースパス下位にリソースを追加しないようにします。追加したリソースはエンドポイントステージ追加/変更作業時に削除される場合があります。
-> 4. API Gatewayのステージ設定でAPI Gatewayリソースパスに設定された**バックエンドエンドポイントURL再定義**を無効にするか、URLを変更しないようにします。変更すると、エンドポイントの推論API呼び出しに失敗する可能性があります。
-> 上記の注意事項以外の設定は、必要に応じてAPI Gatewayで提供する機能を利用できます。
-> API Gatewayの詳細については[API Gatewayコンソールガイド](https://docs.nhncloud.com/ja/Application%20Service/API%20Gateway/ja/console-guide/)を参照してください。
+!!! danger "注意"
+    AI EasyMakerはエンドポイント作成またはエンドポイントステージ作成を行うと、エンドポイントに対するAPI Gatewayのサービスとステージを作成します。
+    AI EasyMakerによって作成されたAPI GatewayサービスとステージをAPI Gatewayサービスコンソールで直接変更作業を行う場合、次の注意事項を必ず参照してください。
 
-> [参考]ステージのAPI Gateway 「配布失敗」状態の場合の復旧方法:
-> 一時的な問題でAI EasyMakerエンドポイントのステージ設定がAPI Gatewayステージに配布されていない場合、配布失敗状態と表示されます。
-> この場合、ステージリストからステージ選択 > 下部の詳細画面のAPI Gateway設定表示 > 「ステージ配布」をクリックしてAPI Gatewayステージを手動で配布できます。
-> 上記のガイドでも配布状態が回復しない場合はサポートにお問い合わせください。
+    1. AI EasyMakerが作成したAPI Gatewayサービスとステージを削除しないようにします。削除すると、エンドポイントにAPI Gateway情報が正常に表示されず、エンドポイントの変更事項がAPI Gatewayに適用されない場合があります。
+    2. エンドポイント作成時に入力したAPI Gatewayリソースパスのリソースを変更または削除しないようにします。削除すると、エンドポイントの推論APIの呼び出しに失敗する場合があります。
+    3. エンドポイント作成時に入力したAPI Gatewayリソースパス下位にリソースを追加しないようにします。追加したリソースはエンドポイントステージ追加/変更作業時に削除される場合があります。
+    4. API Gatewayのステージ設定でAPI Gatewayリソースパスに設定された**バックエンドエンドポイントURL再定義**を無効にするか、URLを変更しないようにします。変更すると、エンドポイントの推論API呼び出しに失敗する可能性があります。
+        上記の注意事項以外の設定は、必要に応じてAPI Gatewayで提供する機能を利用できます。
+        API Gatewayの詳細については[API Gatewayコンソールガイド](https://docs.nhncloud.com/ja/Application%20Service/API%20Gateway/ja/console-guide/)を参照してください。
+
+!!! tip "参考"
+    一時的な問題でAI EasyMakerエンドポイントのステージ設定がAPI Gatewayステージに配布されていない場合、配布失敗状態と表示されます。
+    この場合、ステージリストからステージ選択 > 下部の詳細画面のAPI Gateway設定表示 > 「ステージ配布」をクリックしてAPI Gatewayステージを手動で配布できます。
+    上記のガイドでも配布状態が回復しない場合はサポートにお問い合わせください。
 
 <a id="endpoint.stage.resource.create"></a>
 
@@ -1143,9 +1139,9 @@ model_name/
 3. **ステージの削除**をクリックします。
 4. リクエストされた削除作業はキャンセルできません。続行するには**[OK]**をクリックします。
 
-> [注意]エンドポイントステージを削除するとAPI Gatewayサービスのステージ削除:
-> AI EasyMakerのエンドポイントステージを削除すると、エンドポイントのステージが配布されたAPI Gatewayサービスのステージも削除されます。
-> 削除されるAPI Gatewayステージに運営中のAPIが存在する場合、API呼び出しができませんので注意してください。
+!!! danger "注意"
+    AI EasyMakerのエンドポイントステージを削除すると、エンドポイントのステージが配布されたAPI Gatewayサービスのステージも削除されます。
+    削除されるAPI Gatewayステージに運営中のAPIが存在する場合、API呼び出しができませんので注意してください。
 
 <a id="endpoint.delete"></a>
 
@@ -1158,9 +1154,9 @@ model_name/
 3. **エンドポイントの削除**をクリックします。
 4. リクエストされた削除作業はキャンセルできません。続行するには**[OK]**をクリックします。
 
-> [注意]エンドポイントを削除するとAPI Gatewayサービス削除:
-> AI EasyMakerのエンドポイントを削除すると、エンドポイントが配布されたAPI Gatewayサービスも削除されます。
-> 削除されるAPI Gatewayサービスに運営中のAPIが存在する場合、API呼び出しができませんので注意してください。
+!!! danger "注意"
+    AI EasyMakerのエンドポイントを削除すると、エンドポイントが配布されたAPI Gatewayサービスも削除されます。
+    削除されるAPI Gatewayサービスに運営中のAPIが存在する場合、API呼び出しができませんので注意してください。
 
 <a id="batch.inference"></a>
 
@@ -1207,24 +1203,20 @@ AI EasyMakerのモデルでバッチ推論を行い、推論結果を統計で�
     - **ログ管理**:バッチ推論の進行中に発生するログをNHN Cloud Log \& Crash Searchサービスに保存できます。
         - 詳細は、[付録 > 2. NHN Cloud Log & Crash Searchサービス利用案内及びログ確認](./console-guide/#2-nhn-cloud-log-crash-search)を参照してください。
 
-> [注意] NHN Cloud NASを使用する場合:
-> AI EasyMakerと同じプロジェクトで作成されたNHN Cloud NASのみ使用可能です。
+!!! tip "参考"
+    - Globパターンを適切に入力しなかった場合、入力データが見つからず、バッチ推論が正常に動作しない場合があります。
+    **含むGlobパターン**と一緒に使用する場合、**除外Globパターン**が優先的に適用されます。
+    - バッチ推論するモデルの性能に応じて**バッチサイズ**と**推論制限時間**を適切に設定する必要があります。
+    入力した設定値が正しくない場合、バッチ推論が十分な性能を発揮できない場合があります。
 
-> [注意]バッチ推論入力データを削除すると、バッチ推論に失敗:
-> バッチ推論が完了する前に入力データを削除すると、バッチ推論に失敗する可能性があります。
+!!! danger "注意"
+    - AI EasyMakerと同じプロジェクトで作成されたNHN Cloud NASのみ使用可能です。
+    - バッチ推論が完了する前に入力データを削除すると、バッチ推論に失敗する可能性があります。
 
-> [注意]入力データ詳細オプションを設定する場合:
-> Globパターンを適切に入力しなかった場合、入力データが見つからず、バッチ推論が正常に動作しない場合があります。
-> **含むGlobパターン**と一緒に使用する場合、**除外Globパターン**が優先的に適用されます。
-
-> [注意]バッチオプションを設定する場合:
-> バッチ推論するモデルの性能に応じて**バッチサイズ**と**推論制限時間**を適切に設定する必要があります。
-> 入力した設定値が正しくない場合、バッチ推論が十分な性能を発揮できない場合があります。
-
-> [注意] GPUインスタンスを使用する場合:
-> GPUインスタンスを使用するバッチ推論はPod数に応じてGPUインスタンスを割り当てます。
-> `Pod数 / GPU数`が整数で割り切れない場合、、割り当てられないGPUが発生する場合があります。
-> 割り当てられないGPUはバッチ推論に使用されないため、GPUインスタンスを効率的に使用するために、Podの数を適切に設定してください。
+!!! danger "注意"
+    GPUインスタンスを使用するバッチ推論はPod数に応じてGPUインスタンスを割り当てます。
+    `Pod数 / GPU数`が整数で割り切れない場合、、割り当てられないGPUが発生する場合があります。
+    割り当てられないGPUはバッチ推論に使用されないため、GPUインスタンスを効率的に使用するために、Podの数を適切に設定してください。
 
 <a id="batch.inference.list"></a>
 
@@ -1305,10 +1297,11 @@ AI EasyMakerの基盤イメージは下表を確認してください。
 | Ubuntu 22.04 CPU TensorFlow Training | CPU  | TensorFlow | 2.12.0   | 3.10   | fb34a0a4-kr1-registry.container.nhncloud.com/easymaker/tensorflow-train:2.12.0-cpu-py310-ubuntu2204 |
 | Ubuntu 22.04 GPU TensorFlow Training | GPU  | TensorFlow | 2.12.0   | 3.10   | fb34a0a4-kr1-registry.container.nhncloud.com/easymaker/tensorflow-train:2.12.0-gpu-py310-ubuntu2204 |
 
-> [参考]個人イメージ使用制約事項:
->
-> - AI EasyMakerで提供する基盤イメージから派生した個人イメージのみ使用できます。
-> - 個人イメージが保存されるコンテナレジストリサービスは、NHN Container Registry(NCR)のみ連動可能です (2023年12月基準)。
+!!! tip "参考"
+    個人イメージが保存されるコンテナレジストリサービスは、NHN Container Registry(NCR)のみ連動可能です (2023年12月基準)。
+
+!!! danger "注意"
+    AI EasyMakerで提供する基盤イメージから派生した個人イメージのみ使用できます。
 
 <a id="personal.image.create"></a>
 
@@ -1356,14 +1349,14 @@ DockerfileでイメージをビルドしてNCRレジストリにイメージを�
     3. ノートパソコンコンテナイメージとして使用する個人イメージを選択します。
     4. その他ノートパソコン情報を入力して作成すると、個人イメージでノートパソコンが駆動されます。
 
-> [参考]> [参考]個人イメージ使用先：
-> 個人イメージはノートPC、学習、ハイパーパラメータチューニングに使用してリソースを作成できます。
+!!! tip "参考"
+    個人イメージはノートPC、学習、ハイパーパラメータチューニングに使用してリソースを作成できます。
 
-> [参考] コンテナレジストリサービス:  NHN Container Registry(NCR)
-> コンテナレジストサービスとしてNCRサービスのみ連動可能です (2023年12月基準)。
-> NCRサービスのアカウントIDとパスワードは、次の値を入力します。
-> ID: NHN CloudユーザーアカウントのUser Access Key
-> パスワード: NHN CloudユーザーアカウントのUser Secret Key
+!!! tip "参考"
+    コンテナレジストサービスとしてNCRサービスのみ連動可能です (2023年12月基準)。
+    NCRサービスのアカウントIDとパスワードは、次の値を入力します。
+    ID: NHN CloudユーザーアカウントのUser Access Key
+    パスワード: NHN CloudユーザーアカウントのUser Secret Key
 
 <a id="registry.account"></a>
 
@@ -1396,10 +1389,12 @@ AI EasyMakerが、個人イメージが保存されているユーザーのレ�
 - **レジストリアカウントの修正**ボタンをクリックします。
 - ID とパスワードを新たに入力した後、**確認**ボタンをクリックします。
 
-> [参考]
-> レジストリアカウントを変更すると、そのアカウントと連動されたイメージを使用する際、変更されたIDとパスワードでレジストリサービスにログインします。
-> 間違ったレジストリID、パスワードを入力すると、個人イメージPullの進行中にログインに失敗し、リソースの作成に失敗します。
-> レジストリアカウントが連動された個人イメージで作成中のリソースがあったり、実行中の学習やハイパーパラメータがある場合は修正できません。
+!!! tip "参考"
+    レジストリアカウントを変更すると、そのアカウントと連動されたイメージを使用する際、変更されたIDとパスワードでレジストリサービスにログインします。
+    間違ったレジストリID、パスワードを入力すると、個人イメージPullの進行中にログインに失敗し、リソースの作成に失敗します。
+
+!!! danger "注意"
+    レジストリアカウントが連動された個人イメージで作成中のリソースがあったり、実行中の学習やハイパーパラメータがある場合は修正できません。
 
 <a id="registry.account.modify.registry.account.change"></a>
 
@@ -1415,8 +1410,8 @@ AI EasyMakerが、個人イメージが保存されているユーザーのレ�
 
 削除するレジストリアカウントをリストから選択し、**レジストリアカウントの削除**ボタンをクリックします。
 
-> [参考]
-> イメージと連動されたレジストリアカウントは削除できません。 削除するには、連動されたイメージを先に削除した後、レジストリアカウントを削除する必要があります。
+!!! tip "参考"
+    イメージと連動されたレジストリアカウントは削除できません。 削除するには、連動されたイメージを先に削除した後、レジストリアカウントを削除する必要があります。
 
 <a id="pipeline"></a>
 
@@ -1425,26 +1420,21 @@ AI EasyMakerが、個人イメージが保存されているユーザーのレ�
 MLパイプラインは、移植可能でスケーラブルな機械学習ワークフローを管理・実行するための機能です。
 Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパイプラインを作成し、パイプラインを中間表現YAMLにコンパイルし、AI EasyMakerで実行することができます。
 
-> [参考]パイプラインとは？
-> パイプラインは、一つ以上のコンポーネントを組み合わせて方向非巡回グラフ(directed acyclic graph, DAG)を形成するワークフローの定義です。
-> 各コンポーネントは実行中に単一のコンテナを実行し、MLアーティファクトを作成ができます。
+!!! tip "参考"
+    **パイプライン**は、一つ以上のコンポーネントを組み合わせて方向非巡回グラフ(directed acyclic graph, DAG)を形成するワークフローの定義です。
+    - 各コンポーネントは実行中に単一のコンテナを実行し、MLアーティファクトを作成ができます。
+    - コンポーネントは入力を受け取り、出力を作成できます。I/Oタイプには2つのタイプがあります。パラメータ(parameters)とアーティファクト(artifacts)です：
+    - パラメータは、コンポーネント間で少量のデータを渡すのに便利です。
+    - アーティファクトタイプは、データセット、モデル、メトリックなどのMLアーティファクトを出力するためのものです。オブジェクトストレージに保存するための便利なメカニズムを提供します。
 
-> [参考] MLアーティファクトとは？
-> コンポーネントは入力を受け取り、出力を作成できます。I/Oタイプには2つのタイプがあります。パラメータ(parameters)とアーティファクト(artifacts)です：
+!!! tip "参考"
+    パイプラインを実行しながら発生するコンソール出力を照会する機能は提供されません。
+    パイプラインコードのログを確認するには、[SDKのLog送信機能](./sdk-guide/#nhn-cloud-log-crash-search)を利用してLog & Crash Searchに送信してご確認ください。
 
-> 1.パラメータは、コンポーネント間で少量のデータを渡すのに便利です。
-> 2.アーティファクトタイプは、データセット、モデル、メトリックなどのMLアーティファクトを出力するためのものです。オブジェクトストレージに保存するための便利なメカニズムを提供します。
-
-> [参考]パイプライン実行ログ照会
-> パイプラインを実行しながら発生するコンソール出力を照会する機能は提供されません。
-> パイプラインコードのログを確認するには、[SDKのLog送信機能](./sdk-guide/#nhn-cloud-log-crash-search)を利用してLog & Crash Searchに送信してご確認ください。
-
-ほとんどのパイプラインは、データセット、モデル、評価メトリックなどの1つ以上のMLアーティファクトを作成することを目的としています。
-
-> [参考] Kubeflow Pipelines(KFP)公式文書
-
-> - [KFPユーザーガイド](https://www.kubeflow.org/docs/components/pipelines/user-guides/)
-> - [KFP SDKリファレンス](https://kubeflow-pipelines.readthedocs.io/en/stable/)
+!!! tip "参考"
+    Kubeflow Pipelines(KFP)公式文書
+    - [KFPユーザーガイド](https://www.kubeflow.org/docs/components/pipelines/user-guides/)
+    - [KFP SDKリファレンス](https://kubeflow-pipelines.readthedocs.io/en/stable/)
 
 <a id="pipeline"></a>
 
@@ -1456,9 +1446,9 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 - **説明**:説明を入力します。
 - **ファイル登録**:アップロードするYAMLファイルを選択します。
 
-> [参考]パイプラインアップロード所要時間:
-> パイプラインのアップロードには数分かかる場合があります。
-> 初回リソース作成時、サービス環境構成のため、さらに数分の時間がかかります。
+!!! tip "参考"
+    パイプラインのアップロードには数分かかる場合があります。
+    初回リソース作成時、サービス環境構成のため、さらに数分の時間がかかります。
 
 <a id="pipeline.list"></a>
 
@@ -1493,8 +1483,8 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 2. **パイプライン削除**をクリックします。作成中のパイプラインは削除できません。
 3. リクエストされた削除作業はキャンセルできません。続行するには**削除**をクリックします。
 
-> [参考]関連するパイプラインスケジュールが存在する場合、パイプライン削除不可：
-> 削除しようとするパイプラインで作成されたスケジュールが存在する場合、パイプラインを削除することはできません。パイプラインスケジュールを先に削除してからパイプラインを削除してください。
+!!! tip "参考"
+    削除しようとするパイプラインで作成されたスケジュールが存在する場合、パイプラインを削除することはできません。パイプラインスケジュールを先に削除してからパイプラインを削除してください。
 
 <a id="pipeline.run"></a>
 
@@ -1527,12 +1517,12 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
     - **ログ管理**:パイプライン実行中に発生するログをNHN Cloud Log & Crash Searchサービスに保存できます。
         - 詳細は、[付録 > 2. NHN Cloud Log & Crash Searchサービス利用案内及びログ確認](./console-guide/#2-nhn-cloud-log-crash-search)を参照してください。
 
-> [注意] NHN Cloud NASを使用する場合:
-> AI EasyMakerと同じプロジェクトで作成されたNHN Cloud NASのみ使用可能です。
+!!! tip "参考"
+    パイプライン実行の作成には数分かかる場合があります。
+    初回リソース作成時、サービス環境構成のため、さらに数分の時間がかかります。
 
-> [参考]パイプライン実行の作成所要時間:
-> パイプライン実行の作成には数分かかる場合があります。
-> 初回リソース作成時、サービス環境構成のため、さらに数分の時間がかかります。
+!!! danger "注意"
+    AI EasyMakerと同じプロジェクトで作成されたNHN Cloud NASのみ使用可能です。
 
 <a id="pipeline.run.list"></a>
 
@@ -1570,8 +1560,8 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 
 ノード別詳細情報を通じて、作成されたアーティファクトをダウンロードできます。
 
-> [注意]パイプラインアーティファクト保管周期：
-> 120日が経過したアーティファクトは自動的に削除されます。
+!!! danger "注意"
+    120日が経過したアーティファクトは自動的に削除されます。
 
 <a id="pipeline.run.stop"></a>
 
@@ -1583,8 +1573,8 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 2. **実行停止**をクリックします。
 3. リクエストされた作業はキャンセルできません。続行するには**確認**をクリックします。
 
-> [参考]パイプライン実行停止所要時間:
-> パイプライン実行停止は数分かかる場合があります。
+!!! tip "参考"
+    パイプライン実行停止は数分かかる場合があります。
 
 <a id="pipeline.run.copy"></a>
 
@@ -1633,13 +1623,13 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
         - 例えば、パイプラインのスケジュールが一時的に中断され、その後再開された場合、**有効**に設定すると、不足しているパイプラインの実行に追いつきます。
         - パイプラインが内部的にバックフィル(backfill)を処理する場合、重複したバックフィル作業を防ぐために**未使用**に設定する必要があります。
 
-> [参考]パイプラインスケジュールの作成所要時間:
-> パイプラインスケジュールの作成は数分かかる場合があります。
-> 初回リソース作成時、サービス環境構成のため、さらに数分の時間がかかります。
+!!! tip "参考"
+    パイプラインスケジュールの作成は数分かかる場合があります。
+    初回リソース作成時、サービス環境構成のため、さらに数分の時間がかかります。
 
-> [参考] Cron式形式:
-> Cron式は、6つのスペースで区切られたフィールドを使用して時間を表します。
-> 詳細は[Cron式形式](https://pkg.go.dev/github.com/robfig/cron#hdr-CRON_Expression_Format)文書を参照してください。
+!!! tip "参考"
+    Cron式は、6つのスペースで区切られたフィールドを使用して時間を表します。
+    詳細は[Cron式形式](https://pkg.go.dev/github.com/robfig/cron#hdr-CRON_Expression_Format)文書を参照してください。
 
 <a id="pipeline.schedule.list"></a>
 
@@ -1689,8 +1679,8 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 2. **パイプラインスケジュールの削除**をクリックします。
 3. リクエストされた削除作業はキャンセルできません。続行するには**削除**をクリックします。
 
-> [参考]関連するパイプライン実行が進行中の場合、パイプラインスケジュール削除不可：
-> 削除しようとするパイプラインスケジュールによって作成された実行が進行中の場合は、削除できません。パイプライン実行が完了した後、パイプラインスケジュールを削除してください。
+!!! tip "参考"
+    削除しようとするパイプラインスケジュールによって作成された実行が進行中の場合は、削除できません。パイプライン実行が完了した後、パイプラインスケジュールを削除してください。
 
 <a id="rag"></a>
 
@@ -1751,11 +1741,14 @@ RAG(Retrieval-Augmented Generation、検索拡張生成)は、ユーザーのド
     - **ログ管理**: RAGの実行中に発生するログをNHN Cloud Log & Crash Searchサービスに保存できます。
         - 詳細は[付録 > 2. NHN Cloud Log & Crash Searchサービス利用のご案内及びログ確認](./console-guide/#2-nhn-cloud-log-crash-search)をご参照ください。
 
-> [注意] PostgreSQL Instanceを使用する場合、ポートを`15432`に設定する必要があります。
-> インスタンスを作成する方法は、[PostgreSQL Instance利用ガイド](https://docs.nhncloud.com/ko/Compute/Instance/ko/component-guide/#postgresql-instance)をご参照ください。
-> [注意] NHN Cloud NASを使用する場合
-> AI EasyMakerと同じプロジェクトで作成されたNHN Cloud NASのみ使用できます。
-> [参考] 収集で使用できるファイルの形式、サイズ、個数が制限される場合があります。詳細は[収集の同期](#rag_ingestion_sync)をご参照ください。
+!!! tip "参考"
+    収集で使用できるファイルの形式、サイズ、個数が制限される場合があります。詳細は[収集の同期](#rag_ingestion_sync)をご参照ください。
+
+!!! danger "注意"
+    インスタンスを作成する方法は、[PostgreSQL Instance利用ガイド](https://docs.nhncloud.com/ko/Compute/Instance/ko/component-guide/#postgresql-instance)をご参照ください。
+
+!!! danger "注意"
+    AI EasyMakerと同じプロジェクトで作成されたNHN Cloud NASのみ使用できます。
 
 <a id="rag.list"></a>
 
@@ -1822,6 +1815,9 @@ RAG(Retrieval-Augmented Generation、検索拡張生成)は、ユーザーのド
 - 質問をリクエストする際は、OpenAI Chat Completion APIのように`model`と`messages`をリクエストボディに含めてリクエストしてください。`model`にはRAG名を入れてリクエストしてください。
 - 詳細なリクエスト例は、以下をご参照ください。
 
+<details>
+<summary><strong>リクエスト例(cURL)</strong></summary>
+
 ```bash
 curl -X POST https://{APIエンドポイントアドレス}/rag/v1/query \
   -H "Content-Type: application/json" \
@@ -1835,6 +1831,110 @@ curl -X POST https://{APIエンドポイントアドレス}/rag/v1/query \
     ]
   }'
 ```
+
+</details>
+
+<details>
+<summary><strong>스트리밍 호출 예시(cURL)</strong></summary>
+
+```bash
+#!/bin/bash
+set -euo pipefail
+
+DEFAULT_URL="https://{API 엔드포인트 주소}/rag/v1/query"
+DEFAULT_MODEL="{RAG 이름}"
+DEFAULT_PROMPT="AI EasyMaker 서비스에 대해 설명해줘."
+
+usage() {
+  cat <<'EOF'
+사용법:
+  <파일 이름> -k <API_KEY> [-u URL] [-m MODEL] [-p PROMPT]
+
+옵션:
+  -k   API 키 (x-nhn-apikey: <API_KEY> 헤더로 전송)
+  -u   호출 URL
+  -m   모델명
+  -p   사용자 프롬프트
+  -h   도움말
+
+설명:
+  - OpenAI 호환 스펙으로 stream=true 호출을 수행하고,
+    스트리밍으로 전달되는 각 chunk의 choices[].delta.content 만을
+    표준출력에 순차적으로 기록합니다.
+
+필수 도구:
+  - curl, jq
+EOF
+}
+
+API_KEY=""
+URL="$DEFAULT_URL"
+MODEL="$DEFAULT_MODEL"
+PROMPT="$DEFAULT_PROMPT"
+
+while getopts ":k:u:m:p:h" opt; do
+  case "$opt" in
+    k) API_KEY="$OPTARG" ;;
+    u) URL="$OPTARG" ;;
+    m) MODEL="$OPTARG" ;;
+    p) PROMPT="$OPTARG" ;;
+    h) usage; exit 0 ;;
+    \?) echo "알 수 없는 옵션: -$OPTARG" >&2; usage; exit 2 ;;
+    :) echo "옵션 -$OPTARG 에 값이 필요합니다." >&2; usage; exit 2 ;;
+  esac
+done
+
+if ! command -v curl >/dev/null 2>&1; then
+  echo "에러: curl 이 필요합니다." >&2
+  exit 1
+fi
+if ! command -v jq >/dev/null 2>&1; then
+  echo "에러: jq 가 필요합니다." >&2
+  exit 1
+fi
+
+# JSON Payload 생성 (OpenAI Chat Completions 호환 형태)
+payload="$(jq -n \
+  --arg model "$MODEL" \
+  --arg prompt "$PROMPT" \
+  '{
+    model: $model,
+    messages: [ { role: "user", content: $prompt } ],
+    stream: true
+  }'
+)"
+
+headers=( -H "Content-Type: application/json" )
+if [[ -n "$API_KEY" ]]; then
+  headers+=( -H "x-nhn-apikey: $API_KEY" )
+fi
+
+echo "요청 URL: $URL" >&2
+echo "모델: $MODEL" >&2
+echo "---------------- 스트리밍 시작 ----------------" >&2
+
+# 스트리밍 처리: data: {json} 라인에서 delta.content 만 추출
+curl -sS -N -X POST "$URL" "${headers[@]}" --data-raw "$payload" \
+| while IFS= read -r line; do
+    [[ -z "$line" ]] && continue
+    if [[ "$line" == "data: [DONE]"* ]]; then
+      break
+    fi
+    if [[ "$line" == data:* ]]; then
+      json="${line#data: }"
+      # 여러 choice 가 있을 수 있으므로 모두 출력
+      # delta.content 가 없을 수도 있어 empty 로 처리
+      while IFS= read -r piece; do
+        printf "%s" "$piece"
+      done < <(printf '%s\n' "$json" | jq -r '.choices[]?.delta?.content // empty')
+    fi
+  done
+
+echo
+echo "---------------- 스트리밍 종료 ----------------" >&2
+```
+
+</details>
 
 <a id="appendix"></a>
 
@@ -1853,7 +1953,8 @@ AI EasyMakerの一部機能で入出力ストレージとしてユーザーのNH
 
 アクセスポリシー設定中にAI EasyMakerシステムアカウント以外のアカウントに対してユーザーのObject Storageアクセスを許可して発生したすべての結果に対する責任は「ユーザー」にあり、AI EasyMakerはそれに対して責任を負いません。
 
-[参考]機能によってAI EasyMakerがObject Stroageにアクセスして読み書きするファイルは次のとおりです。
+!!! tip "参考"
+    機能によってAI EasyMakerがObject Stroageにアクセスして読み書きするファイルは次のとおりです。
 
 | 機能 | 権限 | アクセス対象 |
 | --- | --- | --- |
@@ -2002,22 +2103,32 @@ AI EasyMakerサービスは、Log & Crash Searchサービスに次のように�
 
 - 学習後、Tensorboard画面で結果指標を確認するために、学習スクリプト作成時にTensorboardログ記憶領域を指定された位置(`EM_TENSORBOARD_LOG_DIR`)に設定する必要があります。
 
-> [注意] Tensorboard指標ログ保管周期：
-> 120日が経過した指標ログは自動的に削除されます。
+<details>
+<summary><strong>例</strong></summary>
 
-- **Tensorboardログ保存のサンプルコード(TensorFlow)**
+```python
+import tensorflow as tf
 
-        import tensorflow as tf
+# Tensorboardログパスの指定
+tb_log = tf.keras.callbacks.TensorBoard(log_dir=os.environ.get("EM_TENSORBOARD_LOG_DIR"))
 
-        # Tensorboardログパスの指定
-        tb_log = tf.keras.callbacks.TensorBoard(log_dir=os.environ.get("EM_TENSORBOARD_LOG_DIR"))
+model = ... # モデル実装
 
-        model = ... # モデル実装
+model.fit(x_train, y_train, validation_data=(x_test, y_test),
+        epochs=100, batch_size=20, callbacks=[tb_log])
+```
 
-        model.fit(x_train, y_train, validation_data=(x_test, y_test),
-                epochs=100, batch_size=20, callbacks=[tb_log])
+</details>
 
-![Tensorboardログ確認](http://static.toastoven.net/prod_ai_easymaker/console-guide_appendix_tensorboard.png)
+<details>
+<summary><strong>Tensorboardログ確認</strong></summary>
+
+<img src="http://static.toastoven.net/prod_ai_easymaker/console-guide_appendix_tensorboard.png" alt="Tensorboardログ確認">
+
+</details>
+
+!!! danger "注意"
+    120日が経過した指標ログは自動的に削除されます。
 
 <a id="appendix.6.framework.training.settings"></a>
 
@@ -2066,8 +2177,8 @@ AI EasyMakerサービスは、安定したサービスと新規機能を提供�
 2. ステージを再作成します。
 3. 新規ステージがACTIVE状態になったら、ステージエントポイントでAPI呼び出しと推論レスポンスが正常に来るか確認します。
 
-> [注意]
-> ステージを削除すると、エンドポイントが終了し、API呼び出しができなくなります。削除する前にサービス中でないステージであることを確認してください。
+!!! danger "注意"
+    ステージを削除すると、エンドポイントが終了し、API呼び出しができなくなります。削除する前にサービス中でないステージであることを確認してください。
 
 <a id="appendix.7.cluster.upgrade.endpoint.cluster.upgrade.default.stage.cluster.upgrade"></a>
 
@@ -2126,11 +2237,10 @@ OIPスペックの詳細は[OIPスペック](https://github.com/kserve/open-infe
 | OpenAI生成型モデル推論 | POST     | /{model_name}/openai/v1/completions                                     |
 | OpenAI生成型モデル推論 | POST     | /{model_name}/openai/v1/chat/completions                                |
 
-> [参考] OpenAI生成型モデル推論
-> OpenAI生成型モデル推論はOpenAIのGPT-4oのような生成型モデルを使用する場合に使用されます。
-> 推論に必要な入力値はOpenAIのAPIスペックに従って入力する必要があります。詳細は[OpenAI API文書](https://platform.openai.com/docs/api-reference/chat)を参照してください。
-> AI EasyMakerで提供するCompletion, Chat Completion APIをサポートするモデルは[Model endpoint compatibillity](https://platform.openai.com/docs/models/model-endpoint-compatibility)をご確認ください。
->
+!!! tip "参考"
+    OpenAI生成型モデル推論はOpenAIのGPT-4oのような生成型モデルを使用する場合に使用されます。
+    推論に必要な入力値はOpenAIのAPIスペックに従って入力する必要があります。詳細は[OpenAI API文書](https://platform.openai.com/docs/api-reference/chat)を参照してください。
+    AI EasyMakerで提供するCompletion, Chat Completion APIをサポートするモデルは[Model endpoint compatibillity](https://platform.openai.com/docs/models/model-endpoint-compatibility)をご確認ください。
 
 <a id="appendix.11.framework.note"></a>
 
@@ -2160,8 +2270,12 @@ model-archiverを使って作ったMARファイルを使うことを推奨し、
 | requirements.txt             | 人に   | サービングする時に必要なPythonパッケージをインストールするためのファイルです。        |
 | extra/                       | 選択   | ディレクトリにあるファイルはextra-filesパラメータで渡すことができます。         |
 
->[注意] TorchServeを直接使用する場合とAI EasyMakerサービングを使用する場合でリクエスト形式が異なるため、handler.pyを作成する際はご注意ください。
->以下のhandler.pyの例で渡される値を確認し、それに合わせてhandlerを作成してください。
+!!! tip "参考"
+    TorchServeを直接使用する場合とAI EasyMakerサービングを使用する場合でリクエスト形式が異なるため、handler.pyを作成する際はご注意ください。
+    以下のhandler.pyの例で渡される値を確認し、それに合わせてhandlerを作成してください。
+
+<details>
+<summary><strong>例(cURL)</strong></summary>
 
 ```bash
 # リクエスト例
@@ -2175,6 +2289,11 @@ curl --location --request POST '{API Gatewayリソースパス}' \
 }'
 ```
 
+</details>
+
+<details>
+<summary><strong>例(handler.py)</strong></summary>
+
 ```python
 class TestHandler(BaseHandler):
     # ...
@@ -2187,6 +2306,8 @@ class TestHandler(BaseHandler):
         return tensor
     # ...
 ```
+
+</details>
 
 <a id="appendix.11.framework.note.scikitlearn.framework"></a>
 
@@ -2214,14 +2335,14 @@ Hugging Face Runtimeサービングは微調整をサポートしていません
 4. モデルに応じて必要な入力値を入力してモデルを作成します。
 5. 作成されたモデルを確認し、エンドポイントを作成します。
 
-> [参考]サポートするHugging Face Task:
-> 現在Hugging Face RuntimeはHugging Faceの全体Taskをサポートしません。
-> サポートするTaskは`sequence_classification`, `token_classification`, `fill_mask`, `text_generation`, `text2text_generation`です。
-> サポートしないTaskを使用するにはTensorFlow/Pytorch Serving方法を使用してください。
+!!! tip "参考"
+    現在Hugging Face RuntimeはHugging Faceの全体Taskをサポートしません。
+    サポートするTaskは`sequence_classification`, `token_classification`, `fill_mask`, `text_generation`, `text2text_generation`です。
+    サポートしないTaskを使用するにはTensorFlow/Pytorch Serving方法を使用してください。
 
-> [参考] Gated Model:
-> Gated Modelをサービングするにはアクセスが許可されたアカウントのトークンをモデルパラメータとして入力する必要があります。
-> トークンを入力しなかったり、許可されていないアカウントのトークンを入力した場合、モデルの配布に失敗します。
+!!! tip "参考"
+    Gated Modelをサービングするにはアクセスが許可されたアカウントのトークンをモデルパラメータとして入力する必要があります。
+    トークンを入力しなかったり、許可されていないアカウントのトークンを入力した場合、モデルの配布に失敗します。
 
 <a id="appendix.11.framework.note.hugging.face.framework.tensorflow.pytorch.serving"></a>
 
