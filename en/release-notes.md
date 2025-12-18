@@ -13,7 +13,7 @@
 #### Feature Updates
 
 - Added Model Evaluation feature
-  - You can measure and compare the performance of models.
+    - You can measure and compare the performance of models.
 
 ### October 29, 2024
 

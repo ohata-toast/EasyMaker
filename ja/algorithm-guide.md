@@ -154,7 +154,7 @@ folder/train/annotations/0003.png
 
 ```
 
-* train.json
+- train.json
   imageとsegmentation mapのマッピングファイルを作成します。
 
 ```
@@ -174,8 +174,8 @@ folder/train/annotations/0003.png
 ]
 ```
 
-* image:画像ファイルのパスを作成します。
-* seg_map: segmentation mapファイルパスを作成します。
+- image:画像ファイルのパスを作成します。
+- seg_map: segmentation mapファイルパスを作成します。
 
 #### validation(必須)
 
@@ -196,7 +196,7 @@ folder/validation/annotations/0003.png
 
 ```
 
-* validation.json
+- validation.json
   imageとsegmentation mapのマッピングファイルを作成します。
 
 ```
@@ -216,8 +216,8 @@ folder/validation/annotations/0003.png
 ]
 ```
 
-* image:画像ファイルのパスを作成します。
-* seg_map: segmentation mapファイルパスを作成します。
+- image:画像ファイルのパスを作成します。
+- seg_map: segmentation mapファイルパスを作成します。
 
 #### resources(必須)
 
@@ -227,7 +227,7 @@ folder/validation/annotations/0003.png
 folder/resources/id2lable.json
 ```
 
-* id2lable.json
+- id2lable.json
 
 ```json
 {
@@ -258,7 +258,7 @@ folder/test/annotations/0003.png
 
 ```
 
-* test.json
+- test.json
 imageとsegmentation mapのマッピングファイルを作成します。
 
 ```
@@ -278,8 +278,8 @@ imageとsegmentation mapのマッピングファイルを作成します。
 ]
 ```
 
-* image:画像ファイルのパスを作成します。
-* seg_map: segmentation mapファイルパスを作成します。
+- image:画像ファイルのパスを作成します。
+- seg_map: segmentation mapファイルパスを作成します。
 
 ### 指標
 
@@ -349,7 +349,7 @@ folder/train/0003.png
 ...
 ```
 
-* _annotations.coco.jsonファイル
+- _annotations.coco.jsonファイル
 COCO Datasetの形式で作成します。
 詳細な形式は、[COCO Datasetのformat-data](https://cocodataset.org/#format-data)文書のData formatとObject Detection内容を参照してください。
 
@@ -470,7 +470,7 @@ folder/validation/0003.png
 ...
 ```
 
-* _annotations.coco.jsonファイル
+- _annotations.coco.jsonファイル
 COCO Datasetの形式で作成します。
 詳細な形式は、[COCO Datasetのformat-data](https://cocodataset.org/#format-data)文書のData formatとObject Detection内容を参照してください。
 
@@ -487,7 +487,7 @@ folder/test/0003.png
 ...
 ```
 
-* _annotations.coco.jsonファイル
+- _annotations.coco.jsonファイル
 COCO Datasetの形式で作成します。
 詳細な形式は、[COCO Datasetのformat-data](https://cocodataset.org/#format-data)文書のData formatとObject Detection内容を参照してください。
 
@@ -536,8 +536,8 @@ detectionされたobjectのbbox(xmin、ymin、xmax、ymax)リストを返しま�
 
 ### リクエスト
 
-* Request URI: POST <https://kr1-{apigwSeviceId}.api.nhncloudservice.com/inference>
-* Request Body
+- Request URI: POST <https://kr1-{apigwSeviceId}.api.nhncloudservice.com/inference>
+- Request Body
 
 ``` json
 {
@@ -549,7 +549,7 @@ detectionされたobjectのbbox(xmin、ymin、xmax、ymax)リストを返しま�
 }
 ```
 
-* image_to_bytes_array値は画像をBase64 Byte Array変換した値です。[参照]画像のバイト配列変換Pythonコード内容を参照してください。
+- image_to_bytes_array値は画像をBase64 Byte Array変換した値です。[参照]画像のバイト配列変換Pythonコード内容を参照してください。
 
 ### [参照]画像のバイト配列変換Pythonコード
 

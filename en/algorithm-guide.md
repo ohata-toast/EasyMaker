@@ -154,7 +154,7 @@ folder/train/annotations/0003.png
 
 ```
 
-* train.json
+- train.json
   Create a mapping file of image and segmentation map.
 
 ```
@@ -174,8 +174,8 @@ folder/train/annotations/0003.png
 ]
 ```
 
-* image: Write the image file path.
-* seg_map: Write the segmentation map file path.
+- image: Write the image file path.
+- seg_map: Write the segmentation map file path.
 
 #### Validation (required)
 
@@ -196,7 +196,7 @@ folder/validation/annotations/0003.png
 
 ```
 
-* validation.json
+- validation.json
   Create a mapping file of image and segmentation map.
 
 ```
@@ -216,8 +216,8 @@ folder/validation/annotations/0003.png
 ]
 ```
 
-* image: Write the image file path.
-* seg_map: Write the segmentation map file path.
+- image: Write the image file path.
+- seg_map: Write the segmentation map file path.
 
 #### Resources (required)
 
@@ -227,7 +227,7 @@ Create a dictionary in key-value format to map label IDs to label classes requir
 folder/resources/id2lable.json
 ```
 
-* id2lable.json
+- id2lable.json
 
 ```json
 {
@@ -258,7 +258,7 @@ folder/test/annotations/0003.png
 
 ```
 
-* test.json
+- test.json
 Create a mapping file of image and segmentation map.
 
 ```json
@@ -278,8 +278,8 @@ Create a mapping file of image and segmentation map.
 ]
 ```
 
-* image: Write the image file path.
-* seg_map: Write the segmentation map file path.
+- image: Write the image file path.
+- seg_map: Write the segmentation map file path.
 
 ### Indicators
 
@@ -349,7 +349,7 @@ folder/train/0003.png
 ...
 ```
 
-* \_annotations.coco.json file
+- \_annotations.coco.json file
 It is written in the format of COCO Dataset.
 For detailed format, refer to Data format and Object Detection in the [format-data document of COCO Dataset](https://cocodataset.org/#format-data).
 
@@ -470,7 +470,7 @@ folder/validation/0003.png
 ...
 ```
 
-* \_annotations.coco.json file
+- \_annotations.coco.json file
 It is written in the format of COCO Dataset.
 For detailed format, refer to Data format and Object Detection in the [format-data document of COCO Dataset](https://cocodataset.org/#format-data).
 
@@ -487,7 +487,7 @@ folder/test/0003.png
 ...
 ```
 
-* \_annotations.coco.json file
+- \_annotations.coco.json file
 It is written in the format of COCO Dataset.
 For detailed format, refer to Data format and Object Detection in the [format-data document of COCO Dataset](https://cocodataset.org/#format-data).
 
@@ -536,8 +536,8 @@ Please refer to the following guide to create an endpoint and perform inference 
 
 ### Request
 
-* Request URI: POST <https://kr1-{apigwSeviceId}.api.nhncloudservice.com/inference>
-* Request Body
+- Request URI: POST <https://kr1-{apigwSeviceId}.api.nhncloudservice.com/inference>
+- Request Body
 
 ```json
 {
@@ -549,7 +549,7 @@ Please refer to the following guide to create an endpoint and perform inference 
 }
 ```
 
-* The image_to_bytes_array value is a value obtained by converting the image to a Base64 Byte Array. [Note] Please refer to the image byte array conversion python code.
+- The image_to_bytes_array value is a value obtained by converting the image to a Base64 Byte Array. [Note] Please refer to the image byte array conversion python code.
 
 ### [Note] Image byte array conversion python code
 

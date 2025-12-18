@@ -844,7 +844,7 @@ pipeline_run = easymaker.PipelineRun().create(
     ],
     nas_list=[
         easymaker.Nas(mount_dir_name="user_nas", nas_uri="nas://{NAS ID}:/{path}"),
-    ], 
+    ],
     # wait=False,
 )
 ```

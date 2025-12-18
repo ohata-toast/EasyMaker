@@ -163,7 +163,7 @@ training_list = easymaker.Training.get_list()
 for training in training_list:
     training.print_info()
 ```
-    
+
 ### 学習の削除
 
 [パラメータ]
@@ -727,7 +727,7 @@ pipeline_run = easymaker.PipelineRun().create(
     ],
     nas_list=[
         easymaker.Nas(mount_dir_name="user_nas", nas_uri="nas://{NAS ID}:/{path}"),
-    ],    
+    ],
     # wait=False,
 )
 ```
@@ -857,4 +857,3 @@ easymaker.download(
     password='nhn_object_storage_api_password'
 )
 ```
-
