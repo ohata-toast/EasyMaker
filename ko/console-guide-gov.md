@@ -1497,13 +1497,9 @@ Kubeflow Pipelines(KFP) Python SDK를 사용하여 컴포넌트 및 파이프라
 > [참고] 연관된 파이프라인 실행이 진행 중인 경우 파이프라인 일정 삭제 불가:
 > 삭제하려는 파이프라인 일정에 의해 생성된 실행이 진행 중인 경우 삭제할 수 없습니다. 파이프라인 실행이 완료된 후 파이프라인 일정을 삭제하세요.
 
-<a id="rag"></a>
-
 ## RAG
 
 RAG(Retrieval-Augmented Generation, 검색 증강 생성)는 사용자의 문서를 벡터화하여 저장하고, 질문과 관련된 내용을 검색하여 LLM(Large Language Model, 대규모 언어 모델) 응답의 정확도를 높이는 기술입니다. AI EasyMaker는 벡터 스토어, 임베딩 모델, LLM을 통합하여 RAG 시스템을 생성하고 관리할 수 있습니다.
-
-<a id="rag_create"></a>
 
 ### RAG 생성
 
@@ -1550,8 +1546,6 @@ RAG(Retrieval-Augmented Generation, 검색 증강 생성)는 사용자의 문서
 
 > [참고] 수집에서 사용할 수 있는 파일의 포맷과 크기, 개수가 제한될 수 있습니다. 자세한 내용은 [수집 동기화](#rag_ingestion_sync)를 참고하세요.
 
-<a id="rag_list"></a>
-
 ### RAG 목록
 
 생성된 RAG 목록을 확인하고 관리합니다. 목록에서 RAG를 선택하면 상세 정보를 확인할 수 있습니다.
@@ -1581,8 +1575,6 @@ RAG(Retrieval-Augmented Generation, 검색 증강 생성)는 사용자의 문서
 - **API 통계**: RAG를 선택하면 표시되는 상세 화면의 **API 통계** 탭에서 API 통계 정보를 확인할 수 있습니다.
 - **모니터링**: RAG를 선택하면 표시되는 상세 화면의 **모니터링** 탭에서 모니터링 대상 인스턴스 목록과 기본 지표 차트를 확인할 수 있습니다.
 
-<a id="rag_ingestion_sync"></a>
-
 ### 수집 동기화
 
 - RAG를 선택하면 표시되는 상세 화면의 **벡터 스토어** 탭에 수집 동기화 기능을 사용할 수 있습니다.
@@ -1601,14 +1593,10 @@ RAG(Retrieval-Augmented Generation, 검색 증강 생성)는 사용자의 문서
 | 스프레드시트 | `.csv`, `.xls`, `.xlsx` | 3MB |
 | 프레젠테이션 | `.ppt`, `.pptx` | 50MB |
 
-<a id="rag_delete"></a>
-
 ### RAG 삭제
 
 - 생성 또는 삭제가 진행 중인 RAG는 삭제할 수 없습니다.
 - 요청된 삭제 작업은 취소할 수 없습니다.
-
-<a id="rag_query_guide"></a>
 
 ### RAG 질문 요청 가이드
 
