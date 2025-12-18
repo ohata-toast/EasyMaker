@@ -36,7 +36,7 @@ train、validation、testデータセットを準備します。
 
 トレーニング用のデータセットです。データセットは次のように定義されたディレクトリ構造で準備する必要があります。
 
-```
+```text
 folder/train/{lable}/image_file.png
 ```
 
@@ -44,7 +44,7 @@ folder/train/{lable}/image_file.png
 
 [例] Cat-Dog分類trainデータセット
 
-```
+```text
 folder/train/cat/bengal.png
 folder/train/cat/main_coon.png
 folder/train/dog/chihuahua.png
@@ -58,7 +58,7 @@ folder/train/dog/golden_retriever.png
 
 検証用のデータセットです。データセットは次のように定義されたディレクトリ構造で準備する必要があります。
 
-```
+```text
 folder/validation/{lable}/image_file.png
 ```
 
@@ -66,7 +66,7 @@ folder/validation/{lable}/image_file.png
 
 [例] Cat-Dog分類validationデータセット
 
-```
+```text
 folder/validation/cat/abyssinian.png
 folder/validation/cat/aegean.png
 folder/validation/dog/billy.png
@@ -80,7 +80,7 @@ folder/validation/dog/calupoh.png
 
 テスト用のデータセットです。データセットは次のように定義されたディレクトリ構造で準備する必要があります。
 
-```
+```text
 folder/test/{lable}/image_file.png
 ```
 
@@ -88,7 +88,7 @@ folder/test/{lable}/image_file.png
 
 [例] Cat-Dog分類testデータセット
 
-```
+```text
 folder/test/cat/arabian_mau.png
 folder/test/cat/american_curl.png
 folder/test/dog/boerboel.png
@@ -124,7 +124,7 @@ Image Classificationアルゴリズムは、次の指標を作成します。
 
 [例] Cat-Dog分類の推論APIレスポンス本文
 
-``` json
+```json
 [
     {
         "score": 0.9992493987083435,
@@ -166,7 +166,7 @@ train、validation、resources、testデータセットを準備します。
 
 トレーニング用のデータセットです。データセットは次のように定義されたディレクトリ構造で準備する必要があります。
 
-```
+```text
 
 folder/train/train.json
 
@@ -185,7 +185,7 @@ folder/train/annotations/0003.png
 - train.json
   imageとsegmentation mapのマッピングファイルを作成します。
 
-```
+```json
 [
     {
         "image": "images/0001.png",
@@ -211,7 +211,7 @@ folder/train/annotations/0003.png
 
 検証用のデータセットです。データセットは次のように定義されたディレクトリ構造で準備する必要があります。
 
-```
+```text
 folder/validation/validation.json
 
 folder/validation/images/0001.png
@@ -229,7 +229,7 @@ folder/validation/annotations/0003.png
 - validation.json
   imageとsegmentation mapのマッピングファイルを作成します。
 
-```
+```json
 [
     {
         "image": "images/0001.png",
@@ -255,7 +255,7 @@ folder/validation/annotations/0003.png
 
 モデル設定時に必要なラベルクラスにラベルIDをマッピングするためのKey-Value形式のDictionaryを作成します。
 
-```
+```text
 folder/resources/id2lable.json
 ```
 
@@ -277,7 +277,7 @@ folder/resources/id2lable.json
 
 テスト用のデータセットです。データセットは次のように定義されたディレクトリ構造で準備する必要があります。
 
-```
+```text
 folder/test/train.json
 
 folder/test/images/0001.png
@@ -295,7 +295,7 @@ folder/test/annotations/0003.png
 - test.json
 imageとsegmentation mapのマッピングファイルを作成します。
 
-```
+```json
 [
     {
         "image": "images/0001.png",
@@ -342,7 +342,7 @@ Semantic Segmentationアルゴリズムは、次の指標を作成します。
 
 リクエスト画像を512 X 512サイズに調整後、各画像のピクセルごとにlabel値が配列形式でレスポンスされます。
 
-```
+```json
 {
     "predictions": [
         [
@@ -388,7 +388,7 @@ train、testデータセットを準備します。
 
 トレーニング用のデータセットです。データセットは次のように定義されたディレクトリ構造で準備する必要があります。
 
-```
+```text
 folder/train/_annotations.coco.json
 
 folder/train/0001.png
@@ -403,7 +403,7 @@ COCO Datasetの形式で作成します。
 
 [例] Balloon Object Detection例
 
-``` json
+```json
 {
     "info": {
         "year": "2022",
@@ -511,7 +511,7 @@ COCO Datasetの形式で作成します。
 
 検証用のデータセットです。データセットは次のように定義されたディレクトリ構造で準備する必要があります。
 
-```
+```text
 folder/validation/_annotations.coco.json
 
 folder/validation/0001.png
@@ -530,7 +530,7 @@ COCO Datasetの形式で作成します。
 
 test用のデータセットです。データセットは次のように定義されたディレクトリ構造で準備する必要があります。
 
-```
+```text
 folder/test/_annotations.coco.json
 
 folder/test/0001.png
@@ -555,7 +555,7 @@ COCO Datasetの形式で作成します。
 
 detectionされたobjectのbbox(xmin、ymin、xmax、ymax)リストを返します。
 
-``` json
+```json
 {
    "predictions": [
       [
@@ -599,7 +599,7 @@ detectionされたobjectのbbox(xmin、ymin、xmax、ymax)リストを返しま�
 - Request URI: POST <https://kr1-{apigwSeviceId}.api.nhncloudservice.com/inference>
 - Request Body
 
-``` json
+```json
 {
     "instances": [
         {

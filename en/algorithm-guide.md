@@ -36,7 +36,7 @@ Prepare train, validation, and test data sets.
 
 A data set for training. Data sets should be prepared in a directory structure defined as follows.
 
-```
+```text
 folder/train/{lable}/image_file.png
 ```
 
@@ -44,7 +44,7 @@ Creates a label ({label}) directory for image types, and stores image files in s
 
 [Example] Cat-Dog classification train data set
 
-```
+```text
 folder/train/cat/bengal.png
 folder/train/cat/main_coon.png
 folder/train/dog/chihuahua.png
@@ -58,7 +58,7 @@ folder/train/dog/golden_retriever.png
 
 This is the data set for validation. Data sets should be prepared in a directory structure defined as follows.
 
-```
+```text
 folder/validation/{lable}/image_file.png
 ```
 
@@ -66,7 +66,7 @@ Creates a label ({label}) directory for image types, and stores image files in s
 
 [Example] Cat-Dog classification validation data set
 
-```
+```text
 folder/validation/cat/abyssinian.png
 folder/validation/cat/aegean.png
 folder/validation/dog/billy.png
@@ -80,7 +80,7 @@ folder/validation/dog/calupoh.png
 
 This is the data set for testing. Data sets should be prepared in a directory structure defined as follows.
 
-```
+```text
 folder/test/{lable}/image_file.png
 ```
 
@@ -88,7 +88,7 @@ Creates a label ({label}) directory for image types, and stores image files in s
 
 [Example] Cat-Dog classification test data set
 
-```
+```text
 folder/test/cat/arabian_mau.png
 folder/test/cat/american_curl.png
 folder/test/dog/boerboel.png
@@ -124,7 +124,7 @@ The score value for each image type (label) is answered.
 
 [Example] Inference API response body of Cat-Dog classification
 
-``` json
+```json
 [
     {
         "score": 0.9992493987083435,
@@ -166,7 +166,7 @@ Prepare train, validation, resources, and test data sets.
 
 A data set for training. Datasets should be prepared in a defined directory structure like this:
 
-```
+```text
 
 folder/train/train.json
 
@@ -185,7 +185,7 @@ folder/train/annotations/0003.png
 - train.json
   Create a mapping file of image and segmentation map.
 
-```
+```json
 [
     {
         "image": "images/0001.png",
@@ -211,7 +211,7 @@ folder/train/annotations/0003.png
 
 This is the data set for validation. Datasets should be prepared in a defined directory structure like this:
 
-```
+```text
 folder/validation/validation.json
 
 folder/validation/images/0001.png
@@ -229,7 +229,7 @@ folder/validation/annotations/0003.png
 - validation.json
   Create a mapping file of image and segmentation map.
 
-```
+```json
 [
     {
         "image": "images/0001.png",
@@ -255,7 +255,7 @@ folder/validation/annotations/0003.png
 
 Create a dictionary in key-value format to map label IDs to label classes required when setting up the model.
 
-```
+```text
 folder/resources/id2lable.json
 ```
 
@@ -277,7 +277,7 @@ folder/resources/id2lable.json
 
 This is the data set for testing. Datasets should be prepared in a defined directory structure like this:
 
-```
+```text
 folder/test/train.json
 
 folder/test/images/0001.png
@@ -388,7 +388,7 @@ Prepare the train and test data sets.
 
 A data set for training. Datasets should be prepared in a defined directory structure like this:
 
-```
+```text
 folder/train/_annotations.coco.json
 
 folder/train/0001.png
@@ -403,7 +403,7 @@ For detailed format, refer to Data format and Object Detection in the [format-da
 
 [Example] Example of Balloon Object Detection
 
-``` json
+```json
 {
     "info": {
         "year": "2022",
@@ -511,7 +511,7 @@ For detailed format, refer to Data format and Object Detection in the [format-da
 
 This is the data set for validation. Data sets should be prepared in a directory structure defined as follows.
 
-```
+```text
 folder/validation/_annotations.coco.json
 
 folder/validation/0001.png
@@ -530,7 +530,7 @@ For detailed format, refer to Data format and Object Detection in the [format-da
 
 This is the data set for test. Datasets should be prepared in a defined directory structure like this:
 
-```
+```text
 folder/test/_annotations.coco.json
 
 folder/test/0001.png
@@ -555,7 +555,7 @@ To create an endpoint with a trained model and request inference, see [Create En
 
 Returns a list of bboxes (xmin, ymin, xmax, ymax) of detected objects.
 
-``` json
+```json
 {
    "predictions": [
       [
