@@ -1494,7 +1494,7 @@ Kubeflow Pipelines(KFP) Python SDK를 사용하여 컴포넌트 및 파이프라
     - **실험**: 파이프라인 실행이 포함될 실험을 선택합니다. 실험은 연관된 파이프라인 실행을 그룹화합니다. 생성된 실험이 없는 경우 **추가**를 클릭하여 실험을 생성합니다.
 - **실행 정보**
     - **실행 파라미터**: 파이프라인에 정의된 입력 파라미터가 있는 경우에 값을 입력합니다.
-    - **실행 유형**: 파이프라인 실행 유형을 선택합니다. **일회성**을 선택한 경우 파이프라인을 한 번만 실행합니다. 파이프라인을 주기적으로 반복 실행하려면 **일정 설정**을 선택한 후 [파이프라인 일정 생성](#notebook.user.virtual.run.environment.configuration2)을 참고하여 일정을 구성하세요.
+    - **실행 유형**: 파이프라인 실행 유형을 선택합니다. **일회성**을 선택한 경우 파이프라인을 한 번만 실행합니다. 파이프라인을 주기적으로 반복 실행하려면 **일정 설정**을 선택한 후 [파이프라인 일정 생성](#pipeline.recurring.run.create)을 참고하여 일정을 구성하세요.
 - **인스턴스 정보**
     - **인스턴스 타입**: 파이프라인을 실행할 인스턴스 타입을 선택합니다.
     - **인스턴스 수**: 파이프라인 실행에 사용할 인스턴스 수를 입력합니다.
@@ -1949,7 +1949,7 @@ NHN Cloud Object Storage에 AI EasyMaker 시스템 계정의 읽기/쓰기 권�
 1. **[학습]** 또는 **[모델]** 탭 > **AI EasyMaker 시스템 계정 정보**를 클릭합니다.
 2. AI EasyMaker 시스템 계정 정보인 **AI EasyMaker 테넌트 ID**와 **AI EasyMaker API 사용자 ID**를 보관합니다.
 3. NHN Cloud Object Storage 콘솔로 이동합니다.
-4. [특정 프로젝트 또는 특정 사용자에게 읽기/쓰기 허용](https://docs.gov-nhncloud.com/ko/Storage/Object%20Storage/ko/acl-guide-gov/#_4) 문서를 참고하여 NHN Cloud Object Storage 콘솔에서 AI EasyMaker 시스템 계정에 필요한 읽기 및 쓰기 허용 권한을 추가합니다.
+4. [특정 프로젝트 또는 특정 사용자에게 읽기/쓰기 허용](https://docs.gov-nhncloud.com/ko/Storage/Object%20Storage/ko/acl-guide-gov/#role-based-access-allow-rw-project-or-user) 문서를 참고하여 NHN Cloud Object Storage 콘솔에서 AI EasyMaker 시스템 계정에 필요한 읽기 및 쓰기 허용 권한을 추가합니다.
 
 <a id="appendix.2.lncs.service.usage.guide.and.log.inquiry.guide"></a>
 

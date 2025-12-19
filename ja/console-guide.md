@@ -1505,7 +1505,7 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
     - **実験**:パイプライン実行を含む実験を選択します。実験は、関連するパイプライン実行をグループ化します。作成された実験がない場合は、**追加**をクリックして実験を作成します。
 - **実行情報**
     - **実行パラメータ**:パイプラインに定義された入力パラメータがある場合は、その値を入力します。
-    - **実行タイプ**:パイプラインの実行タイプを選択します。**一回性**を選択した場合、パイプラインを一度だけ実行します。パイプラインを定期的に繰り返し実行する場合は、**スケジュール設定**を選択した後、[パイプラインスケジュールの作成](#notebook.user.virtual.run.environment.configuration2)を参照してスケジュールを設定してください。
+    - **実行タイプ**:パイプラインの実行タイプを選択します。**一回性**を選択した場合、パイプラインを一度だけ実行します。パイプラインを定期的に繰り返し実行する場合は、**スケジュール設定**を選択した後、[パイプラインスケジュールの作成](#pipeline.recurring.run.create)を参照してスケジュールを設定してください。
 - **インスタンス情報**
     - **インスタンスタイプ**:パイプラインを実行するインスタンスタイプを選択します。
     - **インスタンス数**:パイプライン実行に使用するインスタンス数を入力します。
@@ -1968,7 +1968,7 @@ NHN Cloud Object StorageにAI EasyMakerシステムアカウントの読み取�
 1. **[学習]**または**[モデル]**タブ > **AI EasyMakerシステムアカウント情報**をクリックします。
 2. AI EasyMakerシステムアカウント情報の**AI EasyMakerテナントID**と**AI EasyMaker APIユーザーID**をアーカイブします。
 3. NHN Cloud Object Storageコンソールに移動します。
-4. [特定プロジェクトまたは特定ユーザーに読み取り/書き込み許可](https://docs.nhncloud.com/ja/Storage/Object%20Storage/ja/acl-guide/#_4)文書を参照してNHN Cloud Object StorageコンソールでAI EasyMakerシステムアカウントに必要な読み取りおよび書き込み許可権限を追加します。
+4. [特定プロジェクトまたは特定ユーザーに読み取り/書き込み許可](https://docs.nhncloud.com/ja/Storage/Object%20Storage/ja/acl-guide/#role-based-access-allow-rw-project-or-user)文書を参照してNHN Cloud Object StorageコンソールでAI EasyMakerシステムアカウントに必要な読み取りおよび書き込み許可権限を追加します。
 
 <a id="appendix.2.lncs.service.usage.guide.and.log.inquiry.guide"></a>
 

@@ -168,7 +168,7 @@ Stop the running notebook or start the stopped notebook.
 
 !!! danger "Caution"
     When stopping and starting the notebook, the virtual environment and external libraries that the user create can be initialized.
-    In order to retain, configure your virtual environment by referring to [User Virtual Execution Environment Configuration](##notebook.user.virtual.run.environment.configuration).
+    In order to retain, configure your virtual environment by referring to [User Virtual Execution Environment Configuration](#notebook.user.virtual.run.environment.configuration).
 
 <a id="notebook.instance.type.change"></a>
 
@@ -302,7 +302,7 @@ Set the training environment by selecting the instance and OS image to be traine
                 - Creating **requirements.txt** in the same path will install the required python packages from the script.
             - **hyperparameter**
                 - To add parameters for training, click **the + button** to enter parameters in Key-Value format. Up to 100 parameters can be entered.
-                - The entered hyperparameters are entered as execution arguments when the entry point is executed. For detailed usage, please refer to [Appendix > 3. Hyperparameters](#appendix.3.hyperparameter-hyperparameters).
+                - The entered hyperparameters are entered as execution arguments when the entry point is executed. For detailed usage, please refer to [Appendix > 3. Hyperparameters](#appendix.3.hyperparameter).
 
 - **Image** : Choose an image for your instance that matches the environment in which you need to run your training.
 
@@ -1500,7 +1500,7 @@ Run the pipeline.
     - **Experiment**: Select an experiment that will include pipeline execution. Experiments group related pipeline runs. If no experiments have been created, click **Add** to create an experiment.
 - **Execution Information**
     - **Execution Parameters**: Enter a value if the pipeline has defined input parameters.
-    - **Execution Type**: Select the type of pipeline execution. If you select **One-time**, the pipeline runs only once. To run the pipeline repeatedly at regular intervals, select **Enable Recurring Run** and then see [Create Recurring Run](#notebook.user.virtual.run.environment.configuration2) to configure recurring runs.
+    - **Execution Type**: Select the type of pipeline execution. If you select **One-time**, the pipeline runs only once. To run the pipeline repeatedly at regular intervals, select **Enable Recurring Run** and then see [Create Recurring Run](#pipeline.recurring.run.create) to configure recurring runs.
 - **Instance Information**
     - **Instance Type**: Select the instance type to run the pipeline on.
     - **Number of Instances**: Enter the number of instances to use to run the pipeline.
