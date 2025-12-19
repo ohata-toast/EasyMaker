@@ -1429,7 +1429,7 @@ Kubeflow Pipelines(KFP) Python SDKを使用してコンポーネント及びパ�
 
 !!! tip "参考"
     パイプラインを実行しながら発生するコンソール出力を照会する機能は提供されません。
-    パイプラインコードのログを確認するには、[SDKのLog送信機能](./sdk-guide/#feature.log.and.crash.search.log)を利用してLog & Crash Searchに送信してご確認ください。
+    パイプラインコードのログを確認するには、[SDKのLog送信機能](./sdk-guide/#feature.lncs.log.send)を利用してLog & Crash Searchに送信してご確認ください。
 
 !!! tip "参考"
     Kubeflow Pipelines(KFP)公式文書

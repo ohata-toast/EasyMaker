@@ -592,7 +592,7 @@ Please refer to the following guide to create an endpoint and perform inference 
 4. Click the created endpoint name and select a stage.
 5. You can request the real-time inference API through the stage endpoint URL.
 
-<a id="endpoint.create.inference.request"></a>
+<a id="endpoint.create.inference.request.format"></a>
 
 ### Request
 

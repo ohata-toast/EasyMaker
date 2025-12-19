@@ -592,7 +592,7 @@ detection된 object의 bbox(xmin, ymin, xmax, ymax) 목록을 반환합니다.
 4. 생성 완료된 엔드포인트 이름을 클릭하고, 스테이지를 선택합니다.
 5. 스테이지 엔드포인트 URL을 통해 실시간 추론 API를 요청할 수 있습니다.
 
-<a id="endpoint.create.inference.request"></a>
+<a id="endpoint.create.inference.request.format"></a>
 
 ### 요청
 

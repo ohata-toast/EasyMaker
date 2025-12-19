@@ -592,7 +592,7 @@ detectionされたobjectのbbox(xmin、ymin、xmax、ymax)リストを返しま�
 4. 作成が完了したエンドポイントの名前をクリックし、ステージを選択します。
 5. ステージエンドポイントURLを通じてリアルタイム推論APIをリクエストできます。
 
-<a id="endpoint.create.inference.request"></a>
+<a id="endpoint.create.inference.request.format"></a>
 
 ### リクエスト
 

@@ -1418,7 +1418,7 @@ Kubeflow Pipelines(KFP) Python SDK를 사용하여 컴포넌트 및 파이프라
 
 !!! tip "알아두기"
     파이프라인을 실행하면서 발생하는 콘솔 출력을 조회하는 기능은 제공되지 않습니다.
-    파이프라인 코드의 로그를 확인하시려면 [SDK의 Log 전송 기능](./sdk-guide/#feature.log.and.crash.search.log)을 이용하여 Log & Crash Search로 전송하여 확인하세요.
+    파이프라인 코드의 로그를 확인하시려면 [SDK의 Log 전송 기능](./sdk-guide/#feature.lncs.log.send)을 이용하여 Log & Crash Search로 전송하여 확인하세요.
 
 !!! tip "알아두기"
     Kubeflow Pipelines(KFP) 공식 문서

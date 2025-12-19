@@ -1,4 +1,4 @@
-<a id="ai.easymaker.sdk.usage.guide"></a>
+<a id="ai.easymaker.sdk.guide"></a>
 
 ## Machine Learning > AI EasyMaker > SDK使用ガイド
 
@@ -506,7 +506,7 @@ endpoint = easymaker.Endpoint().create(
 )
 ```
 
-<a id="endpoint.stage"></a>
+<a id="endpoint.stage.create"></a>
 
 ### ステージの追加
 
@@ -568,7 +568,7 @@ endpoint_stage = easymaker.EndpointStage().create(
 endpoint_stage_list = easymaker.Endpoint(endpoint_id).get_stage_list()
 ```
 
-<a id="endpoint"></a>
+<a id="endpoint.inference.request"></a>
 
 ### エンドポイントインファレンス
 
@@ -925,7 +925,7 @@ easymaker.PipelineRecurringRun(pipeline_recurring_run_id).delete()
 
 ## その他機能
 
-<a id="feature.log.and.crash.search.log"></a>
+<a id="feature.lncs.log.send"></a>
 
 ### NHN Cloud - Log & Crash Searchログ転送
 
@@ -938,7 +938,7 @@ easymaker_logger.send(log_message='log meassage',
                       parameters={'serviceType'：'EasyMakerSample'})  # Add custom parameters
 ```
 
-<a id="feature.object.storage"></a>
+<a id="feature.object.storage.file.send"></a>
 
 ### NHN Cloud - Object Storageファイル転送
 

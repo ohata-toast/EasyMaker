@@ -1424,7 +1424,7 @@ You can use the Kubeflow Pipelines (KFP) Python SDK to write components and pipe
 
 !!! tip "Note"
     The feature to view console output generated while executing a pipeline is not provided.
-    To check the logs of pipeline code, use the [SDK's Log Send feature] (./sdk-guide/#feature.log.and.crash.search.log) to send the logs to Log & Crash Search.
+    To check the logs of pipeline code, use the [SDK's Log Send feature] (./sdk-guide/#feature.lncs.log.send) to send the logs to Log & Crash Search.
 
 !!! tip "Note"
     Kubeflow Pipelines (KFP) official documentation
