@@ -1,12 +1,20 @@
+<a id="ai.easymaker.sdk.guide"></a>
+
 ## Machine Learning > AI EasyMaker > SDK User Guide
 
+<a id="sdk.settings"></a>
+
 ## SDK Settings
+
+<a id="sdk.settings.sdk.install"></a>
 
 ### Install AI EasyMaker Python SDK
 
 python -m pip install easymaker
 
 - AI EasyMaker is installed in the notebook by default.
+
+<a id="sdk.settings.sdk.init"></a>
 
 ### Initialize AI EasyMaker SDK
 
@@ -26,7 +34,11 @@ easymaker.init(
 )
 ```
 
+<a id="experiment"></a>
+
 ## Experiment
+
+<a id="experiment.create"></a>
 
 ### Create Experiment
 
@@ -48,6 +60,8 @@ experiment = easymaker.Experiment().create(
 )
 ```
 
+<a id="experiment.list"></a>
+
 ### List Experiments
 
 ```python
@@ -55,6 +69,8 @@ experiment_list = easymaker.Experiment.get_list()
 for experiment in experiment_list:
     experiment.print_info()
 ```
+
+<a id="experiment.delete"></a>
 
 ### Delete Experiment
 
@@ -68,7 +84,11 @@ for experiment in experiment_list:
 easymaker.Experiment(experiment_id).delete()
 ```
 
+<a id="training"></a>
+
 ## Training
+
+<a id="training.image.list"></a>
 
 ### List Images
 
@@ -78,6 +98,8 @@ for image in image_list:
     image.print_info()
 ```
 
+<a id="training.instance.list"></a>
+
 ### List Instances
 
 ```python
@@ -85,6 +107,8 @@ instance_type_list = easymaker.Training.get_instance_type_list()
 for instance in instance_type_list:
     instance.print_info()
 ```
+
+<a id="training.create"></a>
 
 ### Create Training
 
@@ -157,6 +181,8 @@ training = easymaker.Training().run(
 )
 ```
 
+<a id="training.list"></a>
+
 ### List of Training
 
 ```python
@@ -164,6 +190,8 @@ training_list = easymaker.Training.get_list()
 for training in training_list:
     training.print_info()
 ```
+
+<a id="training.delete"></a>
 
 ### Delete Training
 
@@ -177,7 +205,11 @@ for training in training_list:
 easymaker.Training(training_id).delete()
 ```
 
+<a id="hyperparameter.tuning"></a>
+
 ## Hyperparameter Tuning
+
+<a id="hyperparameter.tuning.image.list"></a>
 
 ### List Images
 
@@ -187,6 +219,8 @@ for image in image_list:
     image.print_info()
 ```
 
+<a id="hyperparameter.tuning.instance.list"></a>
+
 ### List Instances
 
 ```python
@@ -194,6 +228,8 @@ instance_type_list = easymaker.HyperparameterTuning.get_instance_type_list()
 for instance in instance_type_list:
     instance.print_info()
 ```
+
+<a id="hyperparameter.tuning.create"></a>
 
 ### Create Hyperparameter Tuning
 
@@ -305,6 +341,8 @@ hyperparameter_tuning = easymaker.HyperparameterTuning().run(
 )
 ```
 
+<a id="hyperparameter.tuning.list"></a>
+
 ### List Hyperparameter Tuning
 
 ```python
@@ -312,6 +350,8 @@ hyperparameter_tuning_list = easymaker.HyperparameterTuning.get_list()
 for hyperparameter_tuning in hyperparameter_tuning_list:
     hyperparameter_tuning.print_info()
 ```
+
+<a id="hyperparameter.tuning.delete"></a>
 
 ### Delete Hyperparameter Tuning
 
@@ -325,7 +365,11 @@ for hyperparameter_tuning in hyperparameter_tuning_list:
 easymaker.HyperparameterTuning(hyperparameter_tuning_id).delete()
 ```
 
+<a id="model"></a>
+
 ## Model
+
+<a id="model.create"></a>
 
 ### Create Model
 
@@ -387,6 +431,8 @@ model = easymaker.Model().create_hugging_face_model(
 )
 ```
 
+<a id="model.list"></a>
+
 ### List Models
 
 ```python
@@ -394,6 +440,8 @@ model_list = easymaker.Model.get_list()
 for model in model_list:
     model.print_info()
 ```
+
+<a id="model.delete"></a>
 
 ### Delete Model
 
@@ -407,7 +455,11 @@ for model in model_list:
 easymaker.Model(model_id).delete()
 ```
 
+<a id="model.evaluation"></a>
+
 ## Evaluate Models
+
+<a id="model.evaluation.instance.list"></a>
 
 ### List Instances
 
@@ -416,6 +468,8 @@ instance_type_list = easymaker.ModelEvaluation.get_instance_type_list()
 for instance in instance_type_list:
     instance.print_info()
 ```
+
+<a id="model.evaluation.create"></a>
 
 ### Create a model evaluation
 
@@ -488,6 +542,8 @@ classification_model_evaluation  = easymaker.ModelEvaluation().create(
 )
 ```
 
+<a id="model.evaluation.list"></a>
+
 ### List Model Evaluations
 
 ```python
@@ -495,6 +551,8 @@ model_evaluation_list = easymaker.ModelEvaluation.get_list()
 for model_evaluation in model_evaluation_list:
     model_evaluation.print_info()
 ```
+
+<a id="model.evaluation.delete"></a>
 
 ### Delete a model evaluation
 
@@ -508,7 +566,11 @@ for model_evaluation in model_evaluation_list:
 easymaker.ModelEvaluation(model_evaluation_id).delete()
 ```
 
+<a id="endpoint"></a>
+
 ## Endpoint
+
+<a id="endpoint.instance.list"></a>
 
 ### List Instances
 
@@ -517,6 +579,8 @@ instance_type_list = easymaker.Endpoint.get_instance_type_list()
 for instance in instance_type_list:
     instance.print_info()
 ```
+
+<a id="endpoint.create"></a>
 
 ### Create Endpoint
 
@@ -571,6 +635,8 @@ Use the created endpoint
 endpoint = easymaker.Endpoint(endpoint_id)
 ```
 
+<a id="endpoint.stage.create"></a>
+
 ### Add Stage
 
 You can add a new stage to existing endpoints.
@@ -621,6 +687,8 @@ endpoint_stage = easymaker.EndpointStage().create(
 )
 ```
 
+<a id="endpoint.stage.list"></a>
+
 ### Retrieve Stages
 
 Retrieves endpoint stages.
@@ -628,6 +696,8 @@ Retrieves endpoint stages.
 ```python
 endpoint_stage_list = easymaker.Endpoint(endpoint_id).get_stage_list()
 ```
+
+<a id="endpoint.inference.request"></a>
 
 ### Endpoint Inference
 
@@ -651,6 +721,8 @@ easymaker.EndpointStage('endpoint_stage_id').predict(
 )
 ```
 
+<a id="endpoint.list"></a>
+
 ### List Endpoints
 
 ```python
@@ -658,6 +730,8 @@ endpoint_list = easymaker.Endpoint.get_list()
 for endpoint in endpoint_list:
     endpoint.print_info()
 ```
+
+<a id="endpoint.delete"></a>
 
 ### Delete Endpoint
 
@@ -671,6 +745,8 @@ for endpoint in endpoint_list:
 easymaker.Endpoint(endpoint_id).delete()
 ```
 
+<a id="endpoint.stage.delete"></a>
+
 ### Delete Endpoint Stage
 
 [Parameter]
@@ -683,7 +759,11 @@ easymaker.Endpoint(endpoint_id).delete()
 easymaker.EndpointStage(stage_id).delete()
 ```
 
+<a id="batch.inference"></a>
+
 ## Batch Inference
+
+<a id="batch.inference.instance.list"></a>
 
 ### List Instances
 
@@ -692,6 +772,8 @@ instance_type_list = easymaker.BatchInference.get_instance_type_list()
 for instance in instance_type_list:
     instance.print_info()
 ```
+
+<a id="batch.inference.create"></a>
 
 ### Create Batch Inference
 
@@ -739,6 +821,8 @@ batch_inference = easymaker.BatchInference().run(
 )
 ```
 
+<a id="batch.inference.list"></a>
+
 ### List of Batch Inference
 
 ```python
@@ -746,6 +830,8 @@ batch_inference_list = easymaker.BatchInference.get_list()
 for batch_inference in batch_inference_list:
     batch_inference.print_info()
 ```
+
+<a id="batch.inference.delete"></a>
 
 ### Delete Batch Inference
 
@@ -759,7 +845,11 @@ for batch_inference in batch_inference_list:
 easymaker.BatchInference(batch_inference_id).delete()
 ```
 
+<a id="pipeline"></a>
+
 ## Pipeline
+
+<a id="pipeline.create"></a>
 
 ### Create Pipeline
 
@@ -781,6 +871,8 @@ pipeline = easymaker.Pipeline().upload(
 )
 ```
 
+<a id="pipeline.list"></a>
+
 ### List of Pipeline
 
 ```python
@@ -788,6 +880,8 @@ pipeline_list = easymaker.Pipeline.get_list()
 for pipeline in pipeline_list:
     pipeline.print_info()
 ```
+
+<a id="pipeline.delete"></a>
 
 ### Delete Pipeline
 
@@ -801,6 +895,8 @@ for pipeline in pipeline_list:
 easymaker.Pipeline(pipeline_id).delete()
 ```
 
+<a id="pipeline.instance.list"></a>
+
 ### List Instances
 
 ```python
@@ -808,6 +904,8 @@ instance_type_list = easymaker.PipelineRun.get_instance_type_list()
 for instance in instance_type_list:
     instance.print_info()
 ```
+
+<a id="pipeline.run.create"></a>
 
 ### Create Pipeline Run
 
@@ -844,10 +942,12 @@ pipeline_run = easymaker.PipelineRun().create(
     ],
     nas_list=[
         easymaker.Nas(mount_dir_name="user_nas", nas_uri="nas://{NAS ID}:/{path}"),
-    ], 
+    ],
     # wait=False,
 )
 ```
+
+<a id="pipeline.run.list"></a>
 
 ### List of Pipeline Run
 
@@ -856,6 +956,8 @@ pipeline_run_list = easymaker.PipelineRun.get_list()
 for pipeline_run in pipeline_run_list:
     pipeline_run.print_info()
 ```
+
+<a id="pipeline.run.delete"></a>
 
 ### Delete Pipeline Run
 
@@ -868,6 +970,8 @@ for pipeline_run in pipeline_run_list:
 ```python
 easymaker.PipelineRun(pipeline_run_id).delete()
 ```
+
+<a id="pipeline.recurring.run.create"></a>
 
 ### Create Pipeline Schedule
 
@@ -917,6 +1021,8 @@ pipeline_recurring_run = easymaker.PipelineRecurringRun().create(
 )
 ```
 
+<a id="pipeline.recurring.run.stop.start"></a>
+
 ### Stop/Restart Pipeline Schedule
 
 [Parameter]
@@ -931,6 +1037,8 @@ easymaker.PipelineRecurringRun(pipeline_recurring_run_id).start()
 
 ```
 
+<a id="pipeline.recurring.run.list"></a>
+
 ### List of Pipeline Schedule
 
 ```python
@@ -938,6 +1046,8 @@ pipeline_recurring_run_list = easymaker.PipelineRecurringRun.get_list()
 for pipeline_recurring_run in pipeline_recurring_run_list:
     pipeline_recurring_run.print_info()
 ```
+
+<a id="pipeline.recurring.run.delete"></a>
 
 ### Delete Pipeline Schedule
 
@@ -951,7 +1061,11 @@ for pipeline_recurring_run in pipeline_recurring_run_list:
 easymaker.PipelineRecurringRun(pipeline_recurring_run_id).delete()
 ```
 
+<a id="feature"></a>
+
 ## Other Features
+
+<a id="feature.lncs.log.send"></a>
 
 ### NHN Cloud - Log & Crash Search Log Sending Feature
 
@@ -963,6 +1077,8 @@ easymaker_logger.send(log_message='log meassage',
                       project_version='2.0.0',  # default: 1.0.0
                       parameters={'serviceType': 'EasyMakerSample'})  # Add custom parameters
 ```
+
+<a id="feature.object.storage.file.send"></a>
 
 ### NHN Cloud - Object Storage File Sending Feature
 
