@@ -1843,7 +1843,7 @@ set -euo pipefail
 
 DEFAULT_URL="https://{API 엔드포인트 주소}/rag/v1/query"
 DEFAULT_MODEL="{RAG 이름}"
-DEFAULT_PROMPT="AI EasyMaker 서비스에 대해 설명해줘."
+DEFAULT_PROMPT="AI EasyMaker 서비스에 대해 설명하세요."
 
 usage() {
   cat <<'EOF'

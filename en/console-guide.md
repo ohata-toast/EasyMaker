@@ -1106,8 +1106,8 @@ A list of resources created under the endpoint stage is displayed.
 1. In the endpoint list, click the **endpoint name** to move it to the Endpoint Stage list.
 2. In the endpoint stage list, click the endpoint stage on which the stage resource you want to delete is deployed. When you click, the stage details screen will be displayed at the bottom.
 3. On the **Stage Resource** tab of the details screen, select the stage resource you want to delete.
-3. Click **Delete Stage Resource**.
-4. Requested deletion cannot be undone. Click **OK** to proceed.
+4. Click **Delete Stage Resource**.
+5. Requested deletion cannot be undone. Click **OK** to proceed.
 
 <a id="endpoint.default.stage.change"></a>
 
@@ -1838,7 +1838,7 @@ set -euo pipefail
 
 DEFAULT_URL="https://{API 엔드포인트 주소}/rag/v1/query"
 DEFAULT_MODEL="{RAG 이름}"
-DEFAULT_PROMPT="AI EasyMaker 서비스에 대해 설명해줘."
+DEFAULT_PROMPT="AI EasyMaker 서비스에 대해 설명하세요."
 
 usage() {
   cat <<'EOF'
