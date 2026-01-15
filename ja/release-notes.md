@@ -1,4 +1,8 @@
+<a id="ai.easymaker"></a>
+
 ## Machine Learning > AI EasyMaker > リリースノート
+
+<a id="ai.easymaker.release.notes.2025.10.28"></a>
 
 ### 2025. 10. 28.
 
@@ -7,46 +11,64 @@
 
 - NVIDIA Triton Inference Serverのサポート
     - Triton形式のモデルを作成し、デプロイできる機能が追加されました。
-    
+
+<a id="ai.easymaker.release.notes.2025.06.24"></a>
+
 ### 2025. 06. 24.
+
+<a id="ai.easymaker.release.notes.2025.06.24.feature.change"></a>
 
 #### 機能改善・変更
 
 - モデル評価機能追加
     - モデルの性能を測定し、比較できます。
-  
+
+<a id="ai.easymaker.release.notes.2024.10.29"></a>
+
 ### 2024. 10. 29.
 
 - エンドポイント機能改善
     - リソース割り当て値を直接設定できるようにサポートします。
 - Hugging Faceモデルのサービングをサポート
     - Hugging FaceモデルをAI EasyMakerに登録してエンドポイント、バッチ推論でサービングできるようにサポートします。
-    
+
+<a id="ai.easymaker.release.notes.2024.07.23"></a>
+
 ### 2024. 07. 23.
+
+<a id="ai.easymaker.release.notes.2024.07.23.feature.change"></a>
 
 #### 機能改善・変更
 
 - MLパイプライン機能追加
     - MLパイプラインは、移植可能で拡張可能な機械学習ワークフローを管理・実行するための機能です。
-    - 詳細は[MLパイプラインガイド](./console-guide/#_68)を参照してください。
+    - 詳細は[MLパイプラインガイド](./console-guide/#pipeline)を参照してください。
 - エンドポイント機能の改善
     - リソースの割り当てを最適化しました。
 - PyTorch no-archiveモデルサービングをサポート
     - PyTorch no-archiveモデルをAI EasyMakerに登録し、エンドポイントとして提供できるようにサポートします。
 
+<a id="ai.easymaker.release.notes.2024.05.10"></a>
+
 ### 2024. 05. 10.
+
+<a id="ai.easymaker.release.notes.2024.05.10.feature.change"></a>
 
 #### 機能改善・変更
 
 - ノートパソコン再起動機能を追加
 
+<a id="ai.easymaker.release.notes.2024.04.23"></a>
+
 ### 2024. 04. 23.
+
+<a id="ai.easymaker.release.notes.2024.04.23.feature.change"></a>
 
 #### 機能改善・変更
 
 - バッチ推論機能を追加
     - AI EasyMakerのモデルでバッチ推論し、推論結果を統計で確認できる環境を提供します。
-    - 詳細は、[バッチ推論ガイド](./console-guide/#_51)文書を参照してください。
+    - 詳細は、[バッチ推論ガイド](./console-guide/#batch.inference)文書を参照してください。
 - リソース検索機能を追加
     - コンソール画面でリソースを検索し、リンクを介して他のリソース画面に移動できます。
 - ノートPCNAS変更機能を追加
@@ -60,7 +82,11 @@
     - チェックポイント保存関連のハイパーパラメータsave_stepsを削除しました。
     - 適切なsave_stepsの数値をアルゴリズム内で自動的に計算し、最大3つまで保存します。
 
+<a id="ai.easymaker.release.notes.2023.12.19"></a>
+
 ### 2023. 12. 19.
+
+<a id="ai.easymaker.release.notes.2023.12.19.feature.change"></a>
 
 #### 機能改善・変更
 
@@ -74,7 +100,11 @@
 - エンドポイント > オートスケーラー
     - エンドポイントノードの増設/縮小ポリシーを設定してノード数を動的に管理できます。
 
+<a id="ai.easymaker.release.notes.2023.09.26"></a>
+
 ### 2023. 09. 26.
+
+<a id="ai.easymaker.release.notes.2023.09.26.feature.change"></a>
 
 #### 機能改善・変更
 
@@ -94,20 +124,28 @@
 - ハイパーパラメータチューニング並列学習をサポート
     - 並列学習数を調整してハイパーパラメータチューニング作業の性能を最適化できます。
 
+<a id="ai.easymaker.release.notes.2023.06.27"></a>
+
 ### 2023. 06. 27.
+
+<a id="ai.easymaker.release.notes.2023.06.27.feature.change"></a>
 
 #### 機能改善・変更
 
 - ハイパーパラメータチューニング機能を追加
     - ハイパーパラメータチューニングは、マシンラーニングモデルの予測精度と性能を高めるために最適化されたハイパーパラメータを見つけられるように実験を自動化する機能です。
-    - 詳細は[ハイパーパラメータチューニングガイド](./console-guide/#_18)文書を参照してください。
+    - 詳細は[ハイパーパラメータチューニングガイド](./console-guide/#hyperparameter.tuning)文書を参照してください。
 - NHN Cloud AI EasyMakerが提供する基本アルゴリズムを3種追加
     - 詳細については、各アルゴリズムのガイド文書を参照してください。
-    - [Image Classificationガイド](./algorithm-guide/#image-classification)
-    - [Object Detectionガイド](./algorithm-guide/#object-detection)
-    - [Semantic Segmentationガイド](./algorithm-guide/#semantic-segmentation)
+    - [Image Classificationガイド](./algorithm-guide/#image.classification)
+    - [Object Detectionガイド](./algorithm-guide/#object.detection)
+    - [Semantic Segmentationガイド](./algorithm-guide/#semantic.segmentation)
+
+<a id="ai.easymaker.release.notes.2022.12.27"></a>
 
 ### 2022. 12. 27.
+
+<a id="ai.easymaker.release.notes.2022.12.27.service"></a>
 
 #### 新規サービスリリース
 

@@ -1,6 +1,12 @@
+<a id="machine.learning"></a>
+
 ## Machine Learning > AI EasyMaker > 릴리스 노트
 
+<a id="ai.easymaker.2025.11.25"></a>
+
 ### 2025. 11. 25.
+
+<a id="ai.easymaker.2025.11.25.service"></a>
 
 #### 신규 서비스 출시
 

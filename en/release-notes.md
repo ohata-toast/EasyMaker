@@ -1,4 +1,8 @@
+<a id="ai.easymaker"></a>
+
 ## Machine Learning > AI EasyMaker > Release Notes
+
+<a id="ai.easymaker.release.notes.2025.10.28"></a>
 
 ### October 28, 2025
 
@@ -8,12 +12,18 @@
 - Support for NVIDIA Triton Inference Server
     - Added the feature to allow users to generate and deploy Triton-format models.
 
+<a id="ai.easymaker.release.notes.2025.06.24"></a>
+
 ### June 24, 2025
+
+<a id="ai.easymaker.release.notes.2025.06.24.feature.change"></a>
 
 #### Feature Updates
 
 - Added Model Evaluation feature
-  - You can measure and compare the performance of models.
+    - You can measure and compare the performance of models.
+
+<a id="ai.easymaker.release.notes.2024.10.29"></a>
 
 ### October 29, 2024
 
@@ -22,7 +32,11 @@
 - Added support for Hugging Face model
     - Added the Hugging Face model to AI EasyMaker to serve as an endpoint, batch inference.
 
+<a id="ai.easymaker.release.notes.2024.07.23"></a>
+
 ### July 23, 2024
+
+<a id="ai.easymaker.release.notes.2024.07.23.feature.change"></a>
 
 #### Feature Updates
 
@@ -34,19 +48,27 @@
 - Support for serving PyTorch no-archive model
     - Enabled PyTorch no-archive models to be registered in AI EasyMaker to serve as endpoints.
 
+<a id="ai.easymaker.release.notes.2024.05.10"></a>
+
 ### May 10, 2024
+
+<a id="ai.easymaker.release.notes.2024.05.10.feature.change"></a>
 
 #### Feature Updates
 
 - Added the feature to reboot notebooks
 
+<a id="ai.easymaker.release.notes.2024.04.23"></a>
+
 ### April 23, 2024
+
+<a id="ai.easymaker.release.notes.2024.04.23.feature.change"></a>
 
 #### Feature Updates
 
 - Added the batch inference feature
     - Provides an environment to make batch inferences from an AI EasyMaker model and view inference results in statistics.
-    - For more information, see the [Batch Inference Guide](./console-guide/#_51) article.
+    - For more information, see the [Batch Inference Guide](./console-guide/#batch.inference) article.
 - Added the resource search feature
     - You can search for resources from the console screen, and navigate to other resource screens via links.
 - Added the feature to change NAS of notebooks
@@ -60,7 +82,11 @@
     - Removed the hyperparameter save_steps related to saving checkpoints.
     - The algorithm automatically calculates the appropriate number of save_steps and saves up to three.
 
+<a id="ai.easymaker.release.notes.2023.12.19"></a>
+
 ### December 19, 2023
+
+<a id="ai.easymaker.release.notes.2023.12.19.feature.change"></a>
 
 #### Feature Updates
 
@@ -74,7 +100,11 @@
 - Endpoint > Autoscaler
     - You can dynamically manage the number of nodes by setting policies to scale up/scale down endpoint nodes.
 
+<a id="ai.easymaker.release.notes.2023.09.26"></a>
+
 ### September 26, 2023
+
+<a id="ai.easymaker.release.notes.2023.09.26.feature.change"></a>
 
 #### Feature Updates
 
@@ -94,20 +124,28 @@
 - Parallel training for hyperparameter tuning
     - You can optimize the performance of hyperparameter tuning by adjusting the number of parallel trainings.
 
+<a id="ai.easymaker.release.notes.2023.06.27"></a>
+
 ### June 27, 2023
+
+<a id="ai.easymaker.release.notes.2023.06.27.feature.change"></a>
 
 #### Feature Updates
 
 - Added hyperparameter tuning feature
     - Hyperparameter tuning is the feature to automate repetitive experiments to find optimized hyperparameters to improve the predictive accuracy and performance of machine learning models.
-    - For more information, please see the [Hyperparameter Tuning Guide](./console-guide/#hyperparameter-tuning).
+    - For more information, please see the [Hyperparameter Tuning Guide](./console-guide/#hyperparameter.tuning).
 - Added 3 basic algorithms provided by NHN Cloud AI EasyMaker
     - For more information, please see the guide document of each algorithm.
-    - [Image Classification Guide](./algorithm-guide/#image-classification)
-    - [Object Detection Guide](./algorithm-guide/#object-detection)
-    - [Semantic Segmentation Guide](./algorithm-guide/#semantic-segmentation)
+    - [Image Classification Guide](./algorithm-guide/#image.classification)
+    - [Object Detection Guide](./algorithm-guide/#object.detection)
+    - [Semantic Segmentation Guide](./algorithm-guide/#semantic.segmentation)
+
+<a id="ai.easymaker.release.notes.2022.12.27"></a>
 
 ### December 27, 2022
+
+<a id="ai.easymaker.release.notes.2022.12.27.service"></a>
 
 #### Release of a New Service
 
