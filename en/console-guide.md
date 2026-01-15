@@ -1854,8 +1854,8 @@ usage() {
 
 설명:
   - OpenAI 호환 스펙으로 stream=true 호출을 수행하고,
-    스트리밍으로 전달되는 각 chunk의 choices[].delta.content 만을
-    표준출력에 순차적으로 기록합니다.
+    스트리밍으로 전달되는 각 chunk의 choices[].delta.content만을
+    표준 출력에 순차적으로 기록합니다.
 
 필수 도구:
   - curl, jq
@@ -1917,8 +1917,8 @@ curl -sS -N -X POST "$URL" "${headers[@]}" --data-raw "$payload" \
     fi
     if [[ "$line" == data:* ]]; then
       json="${line#data: }"
-      # 여러 choice 가 있을 수 있으므로 모두 출력
-      # delta.content 가 없을 수도 있어 empty 로 처리
+      # 여러 choice가 있을 수 있으므로 모두 출력
+      # delta.content가 없을 수도 있어 empty로 처리
       while IFS= read -r piece; do
         printf "%s" "$piece"
       done < <(printf '%s\n' "$json" | jq -r '.choices[]?.delta?.content // empty')
