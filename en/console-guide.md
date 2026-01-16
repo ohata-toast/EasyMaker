@@ -88,13 +88,13 @@ A list of notebooks are displayed. Select a notebook in the list to check detail
     | CREATE REQUESTED   | Notebook creation is requested.                                                        |
     | CREATE IN PROGRESS | Notebook instance is in the process of creation.                                                    |
     | ACTIVE (HEALTHY)   | Notebook application is in normal operation.                                            |
-    | ACTIVE (UNHEALTHY) | Notebook application is not operating properly. If this condition persists after restarting the notebook, please contact customer service center. |
+    | ACTIVE (UNHEALTHY) | Notebook application is not operating properly. If this condition persists after restarting the notebook, please contact Customer Support. |
     | STOP IN PROGRESS   | Notebook stop in progress.                                                         |
     | STOPPED            | Notebook stopped.                                                           |
     | START IN PROGRESS  | Notebook start in progress                                                         |
     | REBOOT IN PROGRESS | Notebook reboot in progress.                                                         |
     | DELETE IN PROGRESS | Notebook delete in progress.                                                         |
-    | CREATE FAILED      | Failed to crate notebook. If keep fails to create, please contact Customer service center.                        |
+    | CREATE FAILED      | Failed to crate notebook. If keep fails to create, please contact Customer Support.                        |
     | STOP FAILED        | Failed to stop notebook. Please try to stop again.                                            |
     | START FAILED       | Failed to start notebook. Please try to start again.                                            |
     | REBOOT FAILED      | Failed to reboot notebook. Please try to start again.                                           |
@@ -352,7 +352,7 @@ A list of studies is displayed. If you select a training from the list, you can 
     | COMPLETE | Training has been completed normally. |
     | STOP IN PROGRESS | Training is stopping. |
     | FAIL TRAIN | This is a failed state during training. Detailed failure information can be checked through the Log & Crash Search log when log management is enabled. |
-    | CREATE FAILED | The training creation failed. If creation continues to fail, please contact customer service. |
+    | CREATE FAILED | The training creation failed. If creation continues to fail, please contact Customer Support. |
     | FAIL TRAIN IN PROGRESS, COMPLETE IN PROGRESS | The resources used for training are being cleaned up. |
 
 - **Operation**
@@ -518,7 +518,7 @@ A list of hyperparameter tunings is displayed. Select a hyperparameter tuning fr
     | COMPLETE | Hyperparameter tuning has been successfully completed. |
     | STOP IN PROGRESS | Hyperparameter tuning is stopping. |
     | FAIL HYPERPARAMETER TUNING | A failed state during hyperparameter tuning in progress. Detailed failure information can be checked through the Log & Crash Search log when log management is enabled. |
-    | CREATE FAILED | Hyperparameter tuning generation failed. If creation continues to fail, please contact customer service. |
+    | CREATE FAILED | Hyperparameter tuning generation failed. If creation continues to fail, please contact Customer Support. |
     | FAIL HYPERPARAMETER TUNING IN PROGRESS, COMPLETE IN PROGRESS, STOP IN PROGRESS | Resources used for hyperparameter tuning are being cleaned up. |
 
 - **Status Details**: The bracketed content in the `COMPLETE` status is the status details. See the table below for key details.
@@ -715,7 +715,7 @@ Model list is displayed. Selecting a model in the list allows to check detailed 
     | CREATE IN PROGRESS | Resource required for the model is being created.                                        |
     | DELETE IN PROGRESS | Model is being deleted.                                                      |
     | ACTIVE             | Model is created successfully.                                              |
-    | CREATE FAILED      | Failed to created a model. If creation fails repeatedly, contact the Customer Center. |
+    | CREATE FAILED      | Failed to created a model. If creation fails repeatedly, contact Customer Support. |
     | DELETE FAILED      | Failed to delete a model. Please try again.                                   |
 
 - **Training Name**: For models created from training, training name that is based is displayed.
@@ -926,7 +926,7 @@ Create and manage endpoints that can serve the model.
 
 !!! tip "Note"
     Endpoint creation can take several minutes.
-    Creation of the initial resources (notebooks, training, experiments, endpoints) takes additional few minutes to configure the service environment.
+    Creation of the initial resources takes additional few minutes to configure the service environment.
 
 !!! tip "Note"
     When you create a new endpoint, create a new API Gateway service.
@@ -949,7 +949,7 @@ Endpoints list is displayed. Select an endpoint in the list to check details and
     | UPDATE IN PROGRESS | Some of endpoint stages have tasks in progress.<br/>You can check the status of task for each stage in the endpoint stage list. |
     | DELETE IN PROGRESS | Endpoint deletion is in progress. |
     | ACTIVE | Endpoint is in normal operation. |
-    | CREATE FAILED | Endpoint creation has failed. <br/>You must delete and recreate the endpoint. If the creation fails repeatedly, please contact the Customer Center. |
+    | CREATE FAILED | Endpoint creation has failed. <br/>You must delete and recreate the endpoint. If the creation fails repeatedly, please contact Customer Support. |
     | UPDATE FAILED | Some of endpoint stages are not serviced properly. You must delete and recreate the stages with issues. |
 
 - **API Gateway Status**: Displays API Gateway status information for default stage of endpoint. Please refer to the table below for main status.
@@ -1068,7 +1068,7 @@ A list of resources created under the endpoint stage is displayed.
 
 ### Call Endpoint Inference
 
-1. When you click Stage in Endpoint > Endpoint Stage, Stage details screen is displayed at the bottom.
+1. When you click Stage in **Endpoint** > **Endpoint Stage**, Stage details screen is displayed at the bottom.
 2. Check the API Gateway resource path from the details screen on the Stage Resource tab.
 3. When the API Gateway resource path is called the HTTP POST Method, inference API is called.
     - Request and response specifications of the inference API differ depending on the algorithm user created.
@@ -1230,7 +1230,7 @@ Displays a list of batch inferences. Select a batch inference from the list to c
     | COMPLETE | Batch inference has been completed successfully. |
     | STOP IN PROGRESS | Batch inference is stopping. |
     | FAIL BATCH INFERENCE | This is a failed state during batch inference. Detailed failure information can be checked through the Log & Crash Search log when log management is enabled. |
-    | Stage resource is being deleted. | The batch inference creation failed. If creation continues to fail, please contact customer service. |
+    | CREATE FAILED | The batch inference creation failed. If creation continues to fail, please contact Customer Support. |
     | FAIL BATCH INFERENCE IN PROGRESS, COMPLETE IN PROGRESS | The resources used for batch inference are being cleaned up. |
 
 - **Operation**
@@ -1414,6 +1414,7 @@ Select the registry account you want to delete from the list, and click **Delete
 
 ML Pipeline is a feature for managing and executing portable and scalable machine learning workflows.
 You can use the Kubeflow Pipelines (KFP) Python SDK to write components and pipelines, compile pipelines into intermediate representation YAML, and run them in AI EasyMaker.
+Most pipelines are designed to produce one or more ML artifacts, such as datasets, models, and evaluation metrics.
 
 !!! tip "Note"
     A **pipeline** is a definition of a workflow that combines one or more components to form a directed acyclic graph (DAG).
@@ -1717,10 +1718,10 @@ Create a new RAG.
             - **VPC ID**: enter the VPC ID to be used for RDS for PostgreSQL.
             - **Subnet ID**: enter the subnet ID to be used for RDS for PostgreSQL.
         - **PostgreSQL Instance**: use user-created NHN Cloud PostgreSQL instance as a vector store.
-            - **User ID**: enter the user ID set when creating PostgreSQL Instance.
-            - **Password**: enter the password set when creating PostgreSQL Instance.
-            - **VPC ID**: enter the VPC ID used for PostgreSQL Instance.
-            - **Subnet ID**: enter the subnet ID used for PostgreSQL Instance.
+            - **User ID**: enter the user ID to access PostgreSQL Instance.
+            - **Password**: enter the password to access PostgreSQL Instance.
+            - **VPC ID**: enter the VPC ID of PostgreSQL Instance.
+            - **Subnet ID**: enter the subnet ID of PostgreSQL Instance.
             - **PostgreSQL instance IP**: enter the IP address of the created PostgreSQL Instance.
     - **Ingestion setting**
         - **Data path**: enter the data path where the documents to be collected are stored in the vector store.
@@ -1760,9 +1761,9 @@ View and manage the list of generated RAGs. Select a RAG from the list to view d
 | ACTIVE | RAG is operating normally. |
 | UPDATE IN PROGRESS | RAG ingestion is in progress. |
 | DELETE IN PROGRESS | RAG deletion is in progress. |
-| CREATE FAILED | RAG creation has failed.<br/>Delete the RAG and create it again. If creation fails repeatedly, contact Customer Service. |
-| UPDATE FAILED | RAG ingestion has failed.<br/>Try **Synchronize ingestions** again. If update fails repeatedly, contact Customer Service. |
-| DELETE FAILED | RAG deletion has failed.<br/>Try deletion again. If deletion fails repeatedly, contact Customer Service. |
+| CREATE FAILED | RAG creation has failed.<br/>Delete the RAG and create it again. If creation fails repeatedly, contact Customer Support. |
+| UPDATE FAILED | RAG ingestion has failed.<br/>Try **Synchronize ingestions** again. If update fails repeatedly, contact Customer Support. |
+| DELETE FAILED | RAG deletion has failed.<br/>Try deletion again. If deletion fails repeatedly, contact Customer Support. |
 
 - **API Gateway Status**: the deployment status information for API Gateway basic stage.
 
@@ -1830,34 +1831,34 @@ curl -X POST https://{API endpoint address}/rag/v1/query \
 </details>
 
 <details>
-<summary><strong>스트리밍 호출 예시(cURL)</strong></summary>
+<summary><strong>Stream request example (cURL)</strong></summary>
 
 ```bash
 #!/bin/bash
 set -euo pipefail
 
-DEFAULT_URL="https://{API 엔드포인트 주소}/rag/v1/query"
-DEFAULT_MODEL="{RAG 이름}"
-DEFAULT_PROMPT="AI EasyMaker 서비스에 대해 설명하세요."
+DEFAULT_URL="https://{API endpoint address}/rag/v1/query"
+DEFAULT_MODEL="{RAG name}"
+DEFAULT_PROMPT="Describe AI EasyMaker service."
 
 usage() {
   cat <<'EOF'
-사용법:
-  <파일 이름> -k <API_KEY> [-u URL] [-m MODEL] [-p PROMPT]
+How to use:
+  <File name> -k <API_KEY> [-u URL] [-m MODEL] [-p PROMPT]
 
-옵션:
-  -k   API 키 (x-nhn-apikey: <API_KEY> 헤더로 전송)
-  -u   호출 URL
-  -m   모델명
-  -p   사용자 프롬프트
-  -h   도움말
+Option:
+  -k   API key (x-nhn-apikey: send to <API_KEY> header)
+  -u   Call URL
+  -m   Model name
+  -p   User prompt
+  -h   Help
 
-설명:
-  - OpenAI 호환 스펙으로 stream=true 호출을 수행하고,
-    스트리밍으로 전달되는 각 chunk의 choices[].delta.content만을
-    표준 출력에 순차적으로 기록합니다.
+Description:
+  - Call stream=true with an OpenAI-compatible specification,
+    and sequentially write only the choices[].delta.content of
+    each chunk delivered via streaming to standard output.
 
-필수 도구:
+Required tool:
   - curl, jq
 EOF
 }
@@ -1874,21 +1875,21 @@ while getopts ":k:u:m:p:h" opt; do
     m) MODEL="$OPTARG" ;;
     p) PROMPT="$OPTARG" ;;
     h) usage; exit 0 ;;
-    \?) echo "알 수 없는 옵션: -$OPTARG" >&2; usage; exit 2 ;;
-    :) echo "옵션 -$OPTARG 에 값이 필요합니다." >&2; usage; exit 2 ;;
+    \?) echo "Unknown option: -$OPTARG" >&2; usage; exit 2 ;;
+    :) echo "The option -$OPTARG needs the value." >&2; usage; exit 2 ;;
   esac
 done
 
 if ! command -v curl >/dev/null 2>&1; then
-  echo "에러: curl 이 필요합니다." >&2
+  echo "Error: curl required." >&2
   exit 1
 fi
 if ! command -v jq >/dev/null 2>&1; then
-  echo "에러: jq 가 필요합니다." >&2
+  echo "Error: jq required." >&2
   exit 1
 fi
 
-# JSON Payload 생성 (OpenAI Chat Completions 호환 형태)
+# Create JSON Payload (OpenAI Chat Completions compatible)
 payload="$(jq -n \
   --arg model "$MODEL" \
   --arg prompt "$PROMPT" \
@@ -1904,11 +1905,11 @@ if [[ -n "$API_KEY" ]]; then
   headers+=( -H "x-nhn-apikey: $API_KEY" )
 fi
 
-echo "요청 URL: $URL" >&2
-echo "모델: $MODEL" >&2
-echo "---------------- 스트리밍 시작 ----------------" >&2
+echo "request URL: $URL" >&2
+echo "model: $MODEL" >&2
+echo "---------------- Start stream ----------------" >&2
 
-# 스트리밍 처리: data: {json} 라인에서 delta.content 만 추출
+# Streaming processing: Extract only delta.content from the data: {json} line
 curl -sS -N -X POST "$URL" "${headers[@]}" --data-raw "$payload" \
 | while IFS= read -r line; do
     [[ -z "$line" ]] && continue
@@ -1917,8 +1918,8 @@ curl -sS -N -X POST "$URL" "${headers[@]}" --data-raw "$payload" \
     fi
     if [[ "$line" == data:* ]]; then
       json="${line#data: }"
-      # 여러 choice가 있을 수 있으므로 모두 출력
-      # delta.content가 없을 수도 있어 empty로 처리
+      # There may be multiple choices, so print them all.
+      # Delta.content may not be present, so it is treated as empty.
       while IFS= read -r piece; do
         printf "%s" "$piece"
       done < <(printf '%s\n' "$json" | jq -r '.choices[]?.delta?.content // empty')
@@ -1926,7 +1927,7 @@ curl -sS -N -X POST "$URL" "${headers[@]}" --data-raw "$payload" \
   done
 
 echo
-echo "---------------- 스트리밍 종료 ----------------" >&2
+echo "---------------- End stream ----------------" >&2
 ```
 
 </details>
@@ -1953,10 +1954,14 @@ The 'User' take responsibility for all consequences of allowing the user to acce
 
 | Feature | Access Right | Access target |
 | --- | --- | --- |
-| Training | Read | Algorithm path entered by user, training input data path |
-| Training | Write | User-entered training output data, checkpoint path|
+| Training, hyperparameter tuning | Read | Algorithm path entered by user, training input data path |
+| Training, hyperparameter tuning | Write | User-entered training output data, checkpoint path|
 | Model | Read | Model artifact path entered by user |
-| Endpoint | Read | Model artifact path entered by user |
+| Model evaluation | Read | User-supplied input data path |
+| Model evaluation | Write | User-supplied output data path |
+| Batch inference | Read | User-supplied input data path |
+| Batch inference | Write | User-supplied output data path |
+| RAG | read | User-supplied ingestion data path |
 
 To add read/write permissions to AI EasyMaker system account in Object Storage, refer to the following:
 
@@ -2047,19 +2052,20 @@ AI EasyMaker service sends logs to Log & Crash Search service in the following d
 As shown in the example below, you can use hyperparameter values entered during training creation.<br>
 ![HyperParameter Input Screen](http://static.toastoven.net/prod_ai_easymaker/console-guide_appendix_hyperparameter_en.png)
 
-        import argparse
+    ```python
+import argparse
 
-        model_version = os.environ.get("EM_HP_MODEL_VERSION")
+model_version = os.environ.get("EM_HP_MODEL_VERSION")
 
-        def parse_hyperparameters():
+def parse_hyperparameters():
             parser = argparse.ArgumentParser()
 
-            # Parsing the entered hyper parameter
-            parser.add_argument("--epochs", type=int, default=500)
-            parser.add_argument("--batch_size", type=int, default=32)
-            ...
+    # Parsing the entered hyper parameter
+    parser.add_argument("--epochs", type=int, default=500)
+    parser.add_argument("--batch_size", type=int, default=32)
+    ...
 
-            return parser.parse_known_args()
+    return parser.parse_known_args()
 
 <a id="appendix.4.environment"></a>
 
@@ -2087,22 +2093,24 @@ As shown in the example below, you can use hyperparameter values entered during 
 
 - **Example code for utilizing environment variables**
 
-        import os
-        import tensorflow
+```python
+import os
+import tensorflow
 
-        dataset_dir = os.environ.get("EM_DATASET_TRAIN")
-        train_data = read_data(dataset_dir, "train.csv")
+dataset_dir = os.environ.get("EM_DATASET_TRAIN")
+train_data = read_data(dataset_dir, "train.csv")
 
-        model = ... # Implement the model using input data
-        model.load_weights(os.environ.get('EM_CHECKPOINT_INPUT_DIR', None))
-        callbacks = [
-            tensorflow.keras.callbacks.ModelCheckpoint(filepath=f'{os.environ.get("EM_CHECKPOINT_DIR")}/cp-{{epoch:04d}}.ckpt', save_freq='epoch', period=50),
-            tensorflow.keras.callbacks.TensorBoard(log_dir=f'{os.environ.get("EM_TENSORBOARD_LOG_DIR")}'),
-        ]
-        model.fit(..., callbacks)
+model = ... # Implement the model using the input data
+model.load_weights(os.environ.get('EM_CHECKPOINT_INPUT_DIR', None))
+callbacks = [
+    tensorflow.keras.callbacks.ModelCheckpoint(filepath=f'{os.environ.get("EM_CHECKPOINT_DIR")}/cp-{{epoch:04d}}.ckpt', save_freq='epoch', period=50),
+    tensorflow.keras.callbacks.TensorBoard(log_dir=f'{os.environ.get("EM_TENSORBOARD_LOG_DIR")}'),
+]
+model.fit(..., callbacks)
 
-        model_dir = os.environ.get("EM_MODEL_DIR")
-        model.save(model_dir)
+model_dir = os.environ.get("EM_MODEL_DIR")
+model.save(model_dir)
+```
 
 <a id="appendix.5.tensorboard.store.metric.log"></a>
 
